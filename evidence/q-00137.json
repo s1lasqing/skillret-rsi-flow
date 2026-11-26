@@ -1,0 +1,470 @@
+{
+  "a": {
+    "queryId": "q-00137",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Set up a Next.js App Router project for our CLI tool marketplace \"TerminalVault\" — I want the landing page to feature an animated ASCII art splash banner that plays a retro terminal-style boot sequence animation (think old CRT startup with our logo assembling character by character) before revealing the main content using server components and streaming. Also, I need to wire up several backend integrations for managing tool listings — we'll need JIRA for tracking submission reviews, Slack for notifying maintainers, and Google Docs for generating changelogs — so please discover what MCP tools are available for each of those services and map out the full workflow for how a new tool submission flows through the pipeline. For the Next.js piece specifically, I want to understand the best way to handle the transition from the ASCII splash animation to the streamed server component content using Suspense boundaries, and whether I should use route intercepting or parallel routes for the tool detail modals.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "0c74f387-d151-4252-ba1c-539c3cf2aaf8",
+            "name": "animation-skill"
+          },
+          {
+            "rank": 2,
+            "skill_id": "cedea5c0-6567-4493-b216-369c674bed1d",
+            "name": "nextjs-app-router-patterns"
+          },
+          {
+            "rank": 3,
+            "skill_id": "63b41409-b200-4b16-a300-ef1405e6d2d2",
+            "name": "nextjs-knowledge-skill"
+          },
+          {
+            "rank": 4,
+            "skill_id": "986f74de-cb53-4562-85de-707e00a3f1ca",
+            "name": "react-server-components-framework"
+          },
+          {
+            "rank": 5,
+            "skill_id": "0ef36004-d2c0-4ccf-9f55-4a02da43d41e",
+            "name": "nextjs-canary-docs"
+          },
+          {
+            "rank": 6,
+            "skill_id": "0bca2e7c-6478-47fb-80fe-5bc57b4bbf07",
+            "name": "front-end-skill"
+          },
+          {
+            "rank": 7,
+            "skill_id": "c18b1df0-01e6-4214-8ed0-f07b2ce33df0",
+            "name": "spawn:terminal"
+          },
+          {
+            "rank": 8,
+            "skill_id": "5f8b9a66-e9c6-44fa-9cd4-51a162938f2b",
+            "name": "aceternity-ui"
+          },
+          {
+            "rank": 9,
+            "skill_id": "523231d3-b23d-4bb6-ab6f-6011401b3106",
+            "name": "nextjs-boilerplate"
+          },
+          {
+            "rank": 10,
+            "skill_id": "a73ee1b9-d28a-4fd0-ac8f-21c13a8db741",
+            "name": "gaming-entertainment"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 605
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "0c74f387-d151-4252-ba1c-539c3cf2aaf8",
+        "name": "animation-skill"
+      },
+      {
+        "rank": 2,
+        "skill_id": "cedea5c0-6567-4493-b216-369c674bed1d",
+        "name": "nextjs-app-router-patterns"
+      },
+      {
+        "rank": 3,
+        "skill_id": "63b41409-b200-4b16-a300-ef1405e6d2d2",
+        "name": "nextjs-knowledge-skill"
+      },
+      {
+        "rank": 4,
+        "skill_id": "986f74de-cb53-4562-85de-707e00a3f1ca",
+        "name": "react-server-components-framework"
+      },
+      {
+        "rank": 5,
+        "skill_id": "0ef36004-d2c0-4ccf-9f55-4a02da43d41e",
+        "name": "nextjs-canary-docs"
+      },
+      {
+        "rank": 6,
+        "skill_id": "0bca2e7c-6478-47fb-80fe-5bc57b4bbf07",
+        "name": "front-end-skill"
+      },
+      {
+        "rank": 7,
+        "skill_id": "c18b1df0-01e6-4214-8ed0-f07b2ce33df0",
+        "name": "spawn:terminal"
+      },
+      {
+        "rank": 8,
+        "skill_id": "5f8b9a66-e9c6-44fa-9cd4-51a162938f2b",
+        "name": "aceternity-ui"
+      },
+      {
+        "rank": 9,
+        "skill_id": "523231d3-b23d-4bb6-ab6f-6011401b3106",
+        "name": "nextjs-boilerplate"
+      },
+      {
+        "rank": 10,
+        "skill_id": "a73ee1b9-d28a-4fd0-ac8f-21c13a8db741",
+        "name": "gaming-entertainment"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "0ef36004-d2c0-4ccf-9f55-4a02da43d41e",
+        "name": "nextjs-canary-docs"
+      },
+      {
+        "rank": 2,
+        "skill_id": "6f5ce86d-5df5-4bab-9a1a-77e703f572ca",
+        "name": "tool-discovery"
+      },
+      {
+        "rank": 3,
+        "skill_id": "0c74f387-d151-4252-ba1c-539c3cf2aaf8",
+        "name": "animation-skill"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.6508205185601091,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.4666666666666666
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 605
+  },
+  "b": {
+    "queryId": "q-00137",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Set up a Next.js App Router project for our CLI tool marketplace \"TerminalVault\" — I want the landing page to feature an animated ASCII art splash banner that plays a retro terminal-style boot sequence animation (think old CRT startup with our logo assembling character by character) before revealing the main content using server components and streaming. Also, I need to wire up several backend integrations for managing tool listings — we'll need JIRA for tracking submission reviews, Slack for notifying maintainers, and Google Docs for generating changelogs — so please discover what MCP tools are available for each of those services and map out the full workflow for how a new tool submission flows through the pipeline. For the Next.js piece specifically, I want to understand the best way to handle the transition from the ASCII splash animation to the streamed server component content using Suspense boundaries, and whether I should use route intercepting or parallel routes for the tool detail modals.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "0c74f387-d151-4252-ba1c-539c3cf2aaf8",
+            "name": "animation-skill"
+          },
+          {
+            "rank": 2,
+            "skill_id": "cedea5c0-6567-4493-b216-369c674bed1d",
+            "name": "nextjs-app-router-patterns"
+          },
+          {
+            "rank": 3,
+            "skill_id": "63b41409-b200-4b16-a300-ef1405e6d2d2",
+            "name": "nextjs-knowledge-skill"
+          },
+          {
+            "rank": 4,
+            "skill_id": "986f74de-cb53-4562-85de-707e00a3f1ca",
+            "name": "react-server-components-framework"
+          },
+          {
+            "rank": 5,
+            "skill_id": "0ef36004-d2c0-4ccf-9f55-4a02da43d41e",
+            "name": "nextjs-canary-docs"
+          },
+          {
+            "rank": 6,
+            "skill_id": "0bca2e7c-6478-47fb-80fe-5bc57b4bbf07",
+            "name": "front-end-skill"
+          },
+          {
+            "rank": 7,
+            "skill_id": "c18b1df0-01e6-4214-8ed0-f07b2ce33df0",
+            "name": "spawn:terminal"
+          },
+          {
+            "rank": 8,
+            "skill_id": "5f8b9a66-e9c6-44fa-9cd4-51a162938f2b",
+            "name": "aceternity-ui"
+          },
+          {
+            "rank": 9,
+            "skill_id": "523231d3-b23d-4bb6-ab6f-6011401b3106",
+            "name": "nextjs-boilerplate"
+          },
+          {
+            "rank": 10,
+            "skill_id": "a73ee1b9-d28a-4fd0-ac8f-21c13a8db741",
+            "name": "gaming-entertainment"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 594
+      },
+      {
+        "branch": "animation",
+        "query": "Create an animated CRT-style ASCII terminal splash banner that assembles a logo character by character before revealing the CLI tools marketplace.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "0c74f387-d151-4252-ba1c-539c3cf2aaf8",
+            "name": "animation-skill"
+          },
+          {
+            "rank": 2,
+            "skill_id": "66e4f501-0b62-4123-adf2-690ca9c36a8f",
+            "name": "tui-designer"
+          },
+          {
+            "rank": 3,
+            "skill_id": "a73ee1b9-d28a-4fd0-ac8f-21c13a8db741",
+            "name": "gaming-entertainment"
+          },
+          {
+            "rank": 4,
+            "skill_id": "c3de0bc7-13d5-4409-a79f-2c6dd1e33553",
+            "name": "ASCII Visualizer"
+          },
+          {
+            "rank": 5,
+            "skill_id": "c18b1df0-01e6-4214-8ed0-f07b2ce33df0",
+            "name": "spawn:terminal"
+          },
+          {
+            "rank": 6,
+            "skill_id": "7f2db6b0-5085-482d-ae5a-ad3744d08d6e",
+            "name": "ckm:design"
+          },
+          {
+            "rank": 7,
+            "skill_id": "258c3194-d7cd-49c1-b012-c0d5ec8493c9",
+            "name": "cli-ux-tester"
+          },
+          {
+            "rank": 8,
+            "skill_id": "74700a3d-0482-4a00-845b-0124dc302efb",
+            "name": "designing-clis"
+          },
+          {
+            "rank": 9,
+            "skill_id": "598a2c71-7901-4a8f-a52d-ab85a6ec3faf",
+            "name": "hierarchy-tree"
+          },
+          {
+            "rank": 10,
+            "skill_id": "81a190e7-082e-4a22-9fa5-5666d2ac791f",
+            "name": "character-world-init"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 173
+      },
+      {
+        "branch": "routing",
+        "query": "Plan transitions from an animated splash to streamed Next.js App Router server components. Use Suspense boundaries and compare intercepted and parallel routes for tool detail modals.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "cedea5c0-6567-4493-b216-369c674bed1d",
+            "name": "nextjs-app-router-patterns"
+          },
+          {
+            "rank": 2,
+            "skill_id": "63b41409-b200-4b16-a300-ef1405e6d2d2",
+            "name": "nextjs-knowledge-skill"
+          },
+          {
+            "rank": 3,
+            "skill_id": "986f74de-cb53-4562-85de-707e00a3f1ca",
+            "name": "react-server-components-framework"
+          },
+          {
+            "rank": 4,
+            "skill_id": "12aebc63-9cff-4da4-bba8-18fc5b2be75f",
+            "name": "vercel-react-best-practices"
+          },
+          {
+            "rank": 5,
+            "skill_id": "c58734f7-8463-45f7-9ee7-d2b9d584c577",
+            "name": "implementing-code-splitting"
+          },
+          {
+            "rank": 6,
+            "skill_id": "aaae6ad9-8486-4856-b2af-4790eb7822fa",
+            "name": "tailwindcss-animations"
+          },
+          {
+            "rank": 7,
+            "skill_id": "0ef36004-d2c0-4ccf-9f55-4a02da43d41e",
+            "name": "nextjs-canary-docs"
+          },
+          {
+            "rank": 8,
+            "skill_id": "0c74f387-d151-4252-ba1c-539c3cf2aaf8",
+            "name": "animation-skill"
+          },
+          {
+            "rank": 9,
+            "skill_id": "8de58df7-1d36-4741-bf0b-3a95dce05a89",
+            "name": "frontend-dev-guidelines"
+          },
+          {
+            "rank": 10,
+            "skill_id": "812e5a4b-afb0-4f94-a8cc-590968cfa228",
+            "name": "educator-teacher"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 208
+      },
+      {
+        "branch": "tools",
+        "query": "Discover available MCP tools for Jira review tickets, Slack maintainer notifications, and Google Docs changelogs. Map the tools to the submission workflow.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "6f5ce86d-5df5-4bab-9a1a-77e703f572ca",
+            "name": "tool-discovery"
+          },
+          {
+            "rank": 2,
+            "skill_id": "48e6c036-d5f0-4f2f-bfca-723547ac1331",
+            "name": "mcp-management"
+          },
+          {
+            "rank": 3,
+            "skill_id": "4ab6cd82-1a6a-4c3b-92c4-d8c0fc4845a7",
+            "name": "julien-mcp-installer"
+          },
+          {
+            "rank": 4,
+            "skill_id": "241bbf60-a4e6-4470-8bf2-3c8b1eda7f3f",
+            "name": "mcp-server-dev"
+          },
+          {
+            "rank": 5,
+            "skill_id": "c0bcf4df-53cb-49c4-a88f-6fa6674d1607",
+            "name": "jira:review"
+          },
+          {
+            "rank": 6,
+            "skill_id": "5e8b2e52-5815-430a-b4d9-8a40be5014ce",
+            "name": "mcp-tester"
+          },
+          {
+            "rank": 7,
+            "skill_id": "3504fb5f-51df-4684-95ad-6605530a845f",
+            "name": "hosted-mcp-server"
+          },
+          {
+            "rank": 8,
+            "skill_id": "6d39f636-340a-46fb-be8e-de61e34354ab",
+            "name": "mcp-mastery"
+          },
+          {
+            "rank": 9,
+            "skill_id": "265ce824-7926-48cc-a422-7a9452e2c456",
+            "name": "mcp-review"
+          },
+          {
+            "rank": 10,
+            "skill_id": "9bd901f3-1568-48f6-b99d-ffc3b37d26b7",
+            "name": "mcp-directory"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 189
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "0c74f387-d151-4252-ba1c-539c3cf2aaf8",
+        "name": "animation-skill"
+      },
+      {
+        "rank": 2,
+        "skill_id": "cedea5c0-6567-4493-b216-369c674bed1d",
+        "name": "nextjs-app-router-patterns"
+      },
+      {
+        "rank": 3,
+        "skill_id": "63b41409-b200-4b16-a300-ef1405e6d2d2",
+        "name": "nextjs-knowledge-skill"
+      },
+      {
+        "rank": 4,
+        "skill_id": "66e4f501-0b62-4123-adf2-690ca9c36a8f",
+        "name": "tui-designer"
+      },
+      {
+        "rank": 5,
+        "skill_id": "a73ee1b9-d28a-4fd0-ac8f-21c13a8db741",
+        "name": "gaming-entertainment"
+      },
+      {
+        "rank": 6,
+        "skill_id": "986f74de-cb53-4562-85de-707e00a3f1ca",
+        "name": "react-server-components-framework"
+      },
+      {
+        "rank": 7,
+        "skill_id": "12aebc63-9cff-4da4-bba8-18fc5b2be75f",
+        "name": "vercel-react-best-practices"
+      },
+      {
+        "rank": 8,
+        "skill_id": "6f5ce86d-5df5-4bab-9a1a-77e703f572ca",
+        "name": "tool-discovery"
+      },
+      {
+        "rank": 9,
+        "skill_id": "48e6c036-d5f0-4f2f-bfca-723547ac1331",
+        "name": "mcp-management"
+      },
+      {
+        "rank": 10,
+        "skill_id": "0ef36004-d2c0-4ccf-9f55-4a02da43d41e",
+        "name": "nextjs-canary-docs"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "0ef36004-d2c0-4ccf-9f55-4a02da43d41e",
+        "name": "nextjs-canary-docs"
+      },
+      {
+        "rank": 2,
+        "skill_id": "6f5ce86d-5df5-4bab-9a1a-77e703f572ca",
+        "name": "tool-discovery"
+      },
+      {
+        "rank": 3,
+        "skill_id": "0c74f387-d151-4252-ba1c-539c3cf2aaf8",
+        "name": "animation-skill"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.7529716549381368,
+      "Recall@10": 1,
+      "Completeness@10": 1,
+      "Precision@10": 0.3,
+      "MAP@10": 0.5166666666666667
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1164
+  }
+}

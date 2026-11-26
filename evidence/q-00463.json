@@ -1,0 +1,470 @@
+{
+  "a": {
+    "queryId": "q-00463",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Our design system team at \"Clarion Health\" is wrapping up a React component library for our patient portal — we need a `StatusBadge` component built with Tailwind CSS v4 and CVA that has variants for appointment status (scheduled, in-progress, completed, cancelled, no-show) with appropriate color tokens defined as CSS variables, plus a `size` variant (sm, md, lg) and an optional `pulsing` prop for real-time statuses. Beyond the component itself, we're deploying this portal across four environments (local dev, staging, UAT, production) on Kubernetes, and each environment connects to different FHIR API endpoints, uses different OAuth client secrets, and has separate feature flags — I need a solid configuration distribution strategy using External Secrets Operator syncing from AWS Secrets Manager, with env-specific ConfigMaps for non-sensitive settings and a documented change process for secret rotation that doesn't cause downtime. Finally, this is the last sprint before go-live and our compliance officer needs us to run formal validation: we need to trace every component and config behavior back to the original requirements doc (REQ-Portal-2024-v3), build a system test suite that covers all StatusBadge variant rendering plus correct config injection per environment, set up a UAT session plan with structured interview scripts for three stakeholder groups (clinical staff, IT ops, compliance), and produce a defect traceability matrix that maps any issues found back to whether they originated in the design phase or the requirements gathering phase. Can you help me put all three of these pieces together?",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "2ec3293e-263b-48e3-b825-6948188bdb8f",
+            "name": "styling-with-tailwind-cva"
+          },
+          {
+            "rank": 2,
+            "skill_id": "1a0378a6-863b-47b5-a30b-6d627758aa6c",
+            "name": "disciplined-validation"
+          },
+          {
+            "rank": 3,
+            "skill_id": "55ecb59d-bc52-4007-9685-94cfc146e2ef",
+            "name": "disciplined-verification"
+          },
+          {
+            "rank": 4,
+            "skill_id": "200f849c-d217-4c52-b8b2-7a744cd76374",
+            "name": "Tailwind CSS Design System"
+          },
+          {
+            "rank": 5,
+            "skill_id": "b9889711-8d2f-44de-acd2-1fb463de6622",
+            "name": "create-documentation"
+          },
+          {
+            "rank": 6,
+            "skill_id": "6b88256a-fd3c-405b-9c0a-56144655bfe7",
+            "name": "tailwind-ui-patterns"
+          },
+          {
+            "rank": 7,
+            "skill_id": "533f3a71-4a88-4fc1-9452-00839b25f939",
+            "name": "tailwindcss"
+          },
+          {
+            "rank": 8,
+            "skill_id": "d5163dad-163b-4f44-8ffe-a20be13144bd",
+            "name": "c4-component"
+          },
+          {
+            "rank": 9,
+            "skill_id": "929703f1-e0a0-4a24-b271-8869a6cad23c",
+            "name": "secrets-env-manager"
+          },
+          {
+            "rank": 10,
+            "skill_id": "dc1b1650-e6b0-4955-95bc-c3549f07b484",
+            "name": "design-to-component-translator"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 921
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "2ec3293e-263b-48e3-b825-6948188bdb8f",
+        "name": "styling-with-tailwind-cva"
+      },
+      {
+        "rank": 2,
+        "skill_id": "1a0378a6-863b-47b5-a30b-6d627758aa6c",
+        "name": "disciplined-validation"
+      },
+      {
+        "rank": 3,
+        "skill_id": "55ecb59d-bc52-4007-9685-94cfc146e2ef",
+        "name": "disciplined-verification"
+      },
+      {
+        "rank": 4,
+        "skill_id": "200f849c-d217-4c52-b8b2-7a744cd76374",
+        "name": "Tailwind CSS Design System"
+      },
+      {
+        "rank": 5,
+        "skill_id": "b9889711-8d2f-44de-acd2-1fb463de6622",
+        "name": "create-documentation"
+      },
+      {
+        "rank": 6,
+        "skill_id": "6b88256a-fd3c-405b-9c0a-56144655bfe7",
+        "name": "tailwind-ui-patterns"
+      },
+      {
+        "rank": 7,
+        "skill_id": "533f3a71-4a88-4fc1-9452-00839b25f939",
+        "name": "tailwindcss"
+      },
+      {
+        "rank": 8,
+        "skill_id": "d5163dad-163b-4f44-8ffe-a20be13144bd",
+        "name": "c4-component"
+      },
+      {
+        "rank": 9,
+        "skill_id": "929703f1-e0a0-4a24-b271-8869a6cad23c",
+        "name": "secrets-env-manager"
+      },
+      {
+        "rank": 10,
+        "skill_id": "dc1b1650-e6b0-4955-95bc-c3549f07b484",
+        "name": "design-to-component-translator"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "2ec3293e-263b-48e3-b825-6948188bdb8f",
+        "name": "styling-with-tailwind-cva"
+      },
+      {
+        "rank": 2,
+        "skill_id": "c897ba07-a0b5-4a78-8e23-e2bc0819a732",
+        "name": "Config Distribution"
+      },
+      {
+        "rank": 3,
+        "skill_id": "1a0378a6-863b-47b5-a30b-6d627758aa6c",
+        "name": "disciplined-validation"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.7653606369886217,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.6666666666666666
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 921
+  },
+  "b": {
+    "queryId": "q-00463",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Our design system team at \"Clarion Health\" is wrapping up a React component library for our patient portal — we need a `StatusBadge` component built with Tailwind CSS v4 and CVA that has variants for appointment status (scheduled, in-progress, completed, cancelled, no-show) with appropriate color tokens defined as CSS variables, plus a `size` variant (sm, md, lg) and an optional `pulsing` prop for real-time statuses. Beyond the component itself, we're deploying this portal across four environments (local dev, staging, UAT, production) on Kubernetes, and each environment connects to different FHIR API endpoints, uses different OAuth client secrets, and has separate feature flags — I need a solid configuration distribution strategy using External Secrets Operator syncing from AWS Secrets Manager, with env-specific ConfigMaps for non-sensitive settings and a documented change process for secret rotation that doesn't cause downtime. Finally, this is the last sprint before go-live and our compliance officer needs us to run formal validation: we need to trace every component and config behavior back to the original requirements doc (REQ-Portal-2024-v3), build a system test suite that covers all StatusBadge variant rendering plus correct config injection per environment, set up a UAT session plan with structured interview scripts for three stakeholder groups (clinical staff, IT ops, compliance), and produce a defect traceability matrix that maps any issues found back to whether they originated in the design phase or the requirements gathering phase. Can you help me put all three of these pieces together?",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "2ec3293e-263b-48e3-b825-6948188bdb8f",
+            "name": "styling-with-tailwind-cva"
+          },
+          {
+            "rank": 2,
+            "skill_id": "1a0378a6-863b-47b5-a30b-6d627758aa6c",
+            "name": "disciplined-validation"
+          },
+          {
+            "rank": 3,
+            "skill_id": "55ecb59d-bc52-4007-9685-94cfc146e2ef",
+            "name": "disciplined-verification"
+          },
+          {
+            "rank": 4,
+            "skill_id": "200f849c-d217-4c52-b8b2-7a744cd76374",
+            "name": "Tailwind CSS Design System"
+          },
+          {
+            "rank": 5,
+            "skill_id": "b9889711-8d2f-44de-acd2-1fb463de6622",
+            "name": "create-documentation"
+          },
+          {
+            "rank": 6,
+            "skill_id": "6b88256a-fd3c-405b-9c0a-56144655bfe7",
+            "name": "tailwind-ui-patterns"
+          },
+          {
+            "rank": 7,
+            "skill_id": "533f3a71-4a88-4fc1-9452-00839b25f939",
+            "name": "tailwindcss"
+          },
+          {
+            "rank": 8,
+            "skill_id": "d5163dad-163b-4f44-8ffe-a20be13144bd",
+            "name": "c4-component"
+          },
+          {
+            "rank": 9,
+            "skill_id": "929703f1-e0a0-4a24-b271-8869a6cad23c",
+            "name": "secrets-env-manager"
+          },
+          {
+            "rank": 10,
+            "skill_id": "dc1b1650-e6b0-4955-95bc-c3549f07b484",
+            "name": "design-to-component-translator"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 930
+      },
+      {
+        "branch": "component",
+        "query": "Define a React StatusBadge with Tailwind CSS v4 and CVA for appointment statuses, CSS variable color tokens, three size variants, and optional pulsing.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "2ec3293e-263b-48e3-b825-6948188bdb8f",
+            "name": "styling-with-tailwind-cva"
+          },
+          {
+            "rank": 2,
+            "skill_id": "5e345671-9d42-4594-bb95-3a609a34cb51",
+            "name": "panda-css"
+          },
+          {
+            "rank": 3,
+            "skill_id": "6b88256a-fd3c-405b-9c0a-56144655bfe7",
+            "name": "tailwind-ui-patterns"
+          },
+          {
+            "rank": 4,
+            "skill_id": "cca98ded-021c-4c03-a0f3-c4385df343e1",
+            "name": "design-system"
+          },
+          {
+            "rank": 5,
+            "skill_id": "84e7f816-07c2-46b7-963f-cd58bac5a9b4",
+            "name": "diagrammer-tailwind-style"
+          },
+          {
+            "rank": 6,
+            "skill_id": "533f3a71-4a88-4fc1-9452-00839b25f939",
+            "name": "tailwindcss"
+          },
+          {
+            "rank": 7,
+            "skill_id": "c3067389-c58c-4a37-8c8a-39d6d50563ed",
+            "name": "restartability"
+          },
+          {
+            "rank": 8,
+            "skill_id": "5a35354e-ff40-40c5-a5c6-ff56b7183ca6",
+            "name": "tailwindcss-performance"
+          },
+          {
+            "rank": 9,
+            "skill_id": "58c3d5d9-b1a6-4241-820d-67497f3d3769",
+            "name": "tailwindcss"
+          },
+          {
+            "rank": 10,
+            "skill_id": "8f325ff0-fb5d-4027-9366-cf7d503ca1a3",
+            "name": "tailwindcss-core"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 193
+      },
+      {
+        "branch": "configuration",
+        "query": "Design Kubernetes configuration across local, staging, UAT and production. Use External Secrets Operator for AWS Secrets Manager, ConfigMaps for non-sensitive settings, and a rotation procedure.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "1bdfd4e9-41b8-4f33-861d-3506354438d0",
+            "name": "infra-security-reviewer"
+          },
+          {
+            "rank": 2,
+            "skill_id": "905b487a-2753-4fa7-94e5-f70e9c292faa",
+            "name": "kubernetes-best-practices"
+          },
+          {
+            "rank": 3,
+            "skill_id": "1f96e3bd-b7ba-4d82-ae10-e1c118934ae5",
+            "name": "kubernetes"
+          },
+          {
+            "rank": 4,
+            "skill_id": "2e26da07-cd60-4f23-949b-4fedead42f9e",
+            "name": "environment-manager"
+          },
+          {
+            "rank": 5,
+            "skill_id": "f7717320-61d9-4fb6-8e5f-08a426a805a3",
+            "name": "kubernetes-architect"
+          },
+          {
+            "rank": 6,
+            "skill_id": "b37533c3-9186-4b7a-a1f7-52491e4f89ce",
+            "name": "kubernetes-operations"
+          },
+          {
+            "rank": 7,
+            "skill_id": "74cfb329-cc61-4b78-9fe9-9b4686495a51",
+            "name": "kubernetes-deployment"
+          },
+          {
+            "rank": 8,
+            "skill_id": "fd145f6d-abb1-4c71-8471-113550533576",
+            "name": "Orchestrating with Kubernetes"
+          },
+          {
+            "rank": 9,
+            "skill_id": "f623f9a0-305d-4a7d-9ece-4ef4f0a90082",
+            "name": "kubernetes-specialist"
+          },
+          {
+            "rank": 10,
+            "skill_id": "e758a785-b02b-48a4-99b3-21dddae61b16",
+            "name": "DevOps Practices"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 202
+      },
+      {
+        "branch": "validation",
+        "query": "Trace component rendering and configuration behavior to REQ-Portal-2024-v3. Plan system tests for variants and config injection, UAT for three stakeholder groups, and a defect traceability matrix.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "55ecb59d-bc52-4007-9685-94cfc146e2ef",
+            "name": "disciplined-verification"
+          },
+          {
+            "rank": 2,
+            "skill_id": "d83f69f6-06ea-4b40-b9d9-9525a40824da",
+            "name": "create-coverage-report"
+          },
+          {
+            "rank": 3,
+            "skill_id": "d0adf064-88fd-4a1d-9a7e-3a5f7c3539bf",
+            "name": "commit-with-req-tag"
+          },
+          {
+            "rank": 4,
+            "skill_id": "8826dcb8-4252-4980-bc74-846987af242c",
+            "name": "dependency-tracking"
+          },
+          {
+            "rank": 5,
+            "skill_id": "5bd89b51-7eb3-43f1-9b4b-22237fbae512",
+            "name": "component-definition-builder"
+          },
+          {
+            "rank": 6,
+            "skill_id": "b40730d6-8c33-41df-b946-084d3ab9dc8d",
+            "name": "List Components"
+          },
+          {
+            "rank": 7,
+            "skill_id": "56465d61-ec4c-4aaf-b67f-5f7b60d43072",
+            "name": "content-variants"
+          },
+          {
+            "rank": 8,
+            "skill_id": "890e37fc-0e25-4ca2-9322-9a24bb365f23",
+            "name": "telemetry-tagging"
+          },
+          {
+            "rank": 9,
+            "skill_id": "c38b0f68-636d-4ca1-a5ba-6fb9ebfb073f",
+            "name": "request-tracing"
+          },
+          {
+            "rank": 10,
+            "skill_id": "40830dfc-1c94-4c9f-9dca-db5f2831c0d7",
+            "name": "langsmith-testing"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 226
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "2ec3293e-263b-48e3-b825-6948188bdb8f",
+        "name": "styling-with-tailwind-cva"
+      },
+      {
+        "rank": 2,
+        "skill_id": "1a0378a6-863b-47b5-a30b-6d627758aa6c",
+        "name": "disciplined-validation"
+      },
+      {
+        "rank": 3,
+        "skill_id": "55ecb59d-bc52-4007-9685-94cfc146e2ef",
+        "name": "disciplined-verification"
+      },
+      {
+        "rank": 4,
+        "skill_id": "5e345671-9d42-4594-bb95-3a609a34cb51",
+        "name": "panda-css"
+      },
+      {
+        "rank": 5,
+        "skill_id": "6b88256a-fd3c-405b-9c0a-56144655bfe7",
+        "name": "tailwind-ui-patterns"
+      },
+      {
+        "rank": 6,
+        "skill_id": "1bdfd4e9-41b8-4f33-861d-3506354438d0",
+        "name": "infra-security-reviewer"
+      },
+      {
+        "rank": 7,
+        "skill_id": "905b487a-2753-4fa7-94e5-f70e9c292faa",
+        "name": "kubernetes-best-practices"
+      },
+      {
+        "rank": 8,
+        "skill_id": "d83f69f6-06ea-4b40-b9d9-9525a40824da",
+        "name": "create-coverage-report"
+      },
+      {
+        "rank": 9,
+        "skill_id": "d0adf064-88fd-4a1d-9a7e-3a5f7c3539bf",
+        "name": "commit-with-req-tag"
+      },
+      {
+        "rank": 10,
+        "skill_id": "200f849c-d217-4c52-b8b2-7a744cd76374",
+        "name": "Tailwind CSS Design System"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "2ec3293e-263b-48e3-b825-6948188bdb8f",
+        "name": "styling-with-tailwind-cva"
+      },
+      {
+        "rank": 2,
+        "skill_id": "c897ba07-a0b5-4a78-8e23-e2bc0819a732",
+        "name": "Config Distribution"
+      },
+      {
+        "rank": 3,
+        "skill_id": "1a0378a6-863b-47b5-a30b-6d627758aa6c",
+        "name": "disciplined-validation"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.7653606369886217,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.6666666666666666
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1551
+  }
+}

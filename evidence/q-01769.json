@@ -1,0 +1,470 @@
+{
+  "a": {
+    "queryId": "q-01769",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Our \"TidalNet\" coastal research network spans 14 remote sensor stations across the Pacific Northwest, connected via a mix of LoRaWAN gateways, satellite uplinks, and two redundant fiber backhauls to our Portland data center. We need a full infrastructure health and performance report covering all segments — packet loss trends on the LoRa mesh, satellite link latency/jitter, fiber utilization rates, and capacity forecasts for next year's planned expansion to 22 stations. While pulling this together, we realized our runbooks and architecture docs are badly out of date — the last update was before we migrated three stations from cellular to LoRaWAN eight months ago, and nobody documented the new VLAN segmentation or the failover procedures we developed during the January storm outage. I need the infrastructure report generated, the existing documentation audited for gaps and accuracy against current topology, and then updated docs produced that reflect the real state of the network. Also, during the January outage we discovered that our alerting thresholds for satellite link degradation were way too conservative — we didn't get paged until 40% packet loss when we should have been alerted at 15%. Document that finding as a reusable pattern for threshold tuning so other teams in our organization running similar remote sensor networks can benefit from what we learned, and flag any other operational insights from the report that should be captured as shared best practices.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "81894315-ba4c-4027-8c17-fc51292af08e",
+            "name": "network-engineer"
+          },
+          {
+            "rank": 2,
+            "skill_id": "f3d2c28a-6799-43e6-a57b-b10f03c75d5b",
+            "name": "infrastructure-reporting"
+          },
+          {
+            "rank": 3,
+            "skill_id": "c454f6a1-3fe9-43fe-8364-7d2dbc16dfb4",
+            "name": "Social Media Reporter"
+          },
+          {
+            "rank": 4,
+            "skill_id": "7d769049-b56c-4c5c-ab76-6cb3b9d5c79a",
+            "name": "discover-infrastructure"
+          },
+          {
+            "rank": 5,
+            "skill_id": "9d27e6e1-49cf-4929-94d4-1b0f041fdcbc",
+            "name": "Device Inspection"
+          },
+          {
+            "rank": 6,
+            "skill_id": "dfc3ec07-26d8-4cbf-b1d4-2dba2729b447",
+            "name": "network-agent"
+          },
+          {
+            "rank": 7,
+            "skill_id": "4e192509-e8cb-45e4-8e98-e6c60bf94dd5",
+            "name": "infrastructure-cost-optimization"
+          },
+          {
+            "rank": 8,
+            "skill_id": "ce10c528-7019-4dbc-84cb-4b3c86f65b3c",
+            "name": "dependency-tracker"
+          },
+          {
+            "rank": 9,
+            "skill_id": "00dbeb09-ea77-4a6f-ae49-f31741abe2c9",
+            "name": "network-monitoring"
+          },
+          {
+            "rank": 10,
+            "skill_id": "7da7403b-ca48-4f17-a762-51623595f696",
+            "name": "wa-reliability-review"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 818
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "81894315-ba4c-4027-8c17-fc51292af08e",
+        "name": "network-engineer"
+      },
+      {
+        "rank": 2,
+        "skill_id": "f3d2c28a-6799-43e6-a57b-b10f03c75d5b",
+        "name": "infrastructure-reporting"
+      },
+      {
+        "rank": 3,
+        "skill_id": "c454f6a1-3fe9-43fe-8364-7d2dbc16dfb4",
+        "name": "Social Media Reporter"
+      },
+      {
+        "rank": 4,
+        "skill_id": "7d769049-b56c-4c5c-ab76-6cb3b9d5c79a",
+        "name": "discover-infrastructure"
+      },
+      {
+        "rank": 5,
+        "skill_id": "9d27e6e1-49cf-4929-94d4-1b0f041fdcbc",
+        "name": "Device Inspection"
+      },
+      {
+        "rank": 6,
+        "skill_id": "dfc3ec07-26d8-4cbf-b1d4-2dba2729b447",
+        "name": "network-agent"
+      },
+      {
+        "rank": 7,
+        "skill_id": "4e192509-e8cb-45e4-8e98-e6c60bf94dd5",
+        "name": "infrastructure-cost-optimization"
+      },
+      {
+        "rank": 8,
+        "skill_id": "ce10c528-7019-4dbc-84cb-4b3c86f65b3c",
+        "name": "dependency-tracker"
+      },
+      {
+        "rank": 9,
+        "skill_id": "00dbeb09-ea77-4a6f-ae49-f31741abe2c9",
+        "name": "network-monitoring"
+      },
+      {
+        "rank": 10,
+        "skill_id": "7da7403b-ca48-4f17-a762-51623595f696",
+        "name": "wa-reliability-review"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "f3d2c28a-6799-43e6-a57b-b10f03c75d5b",
+        "name": "infrastructure-reporting"
+      },
+      {
+        "rank": 2,
+        "skill_id": "46deafc0-20d4-46af-ac87-dce941c4c9cc",
+        "name": "skill-learning-patterns"
+      },
+      {
+        "rank": 3,
+        "skill_id": "49ea6091-0ec0-42c8-b18b-54a5b4d8aa61",
+        "name": "doc-management"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.2960819109658652,
+      "Recall@10": 0.3333333333333333,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.16666666666666666
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 818
+  },
+  "b": {
+    "queryId": "q-01769",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Our \"TidalNet\" coastal research network spans 14 remote sensor stations across the Pacific Northwest, connected via a mix of LoRaWAN gateways, satellite uplinks, and two redundant fiber backhauls to our Portland data center. We need a full infrastructure health and performance report covering all segments — packet loss trends on the LoRa mesh, satellite link latency/jitter, fiber utilization rates, and capacity forecasts for next year's planned expansion to 22 stations. While pulling this together, we realized our runbooks and architecture docs are badly out of date — the last update was before we migrated three stations from cellular to LoRaWAN eight months ago, and nobody documented the new VLAN segmentation or the failover procedures we developed during the January storm outage. I need the infrastructure report generated, the existing documentation audited for gaps and accuracy against current topology, and then updated docs produced that reflect the real state of the network. Also, during the January outage we discovered that our alerting thresholds for satellite link degradation were way too conservative — we didn't get paged until 40% packet loss when we should have been alerted at 15%. Document that finding as a reusable pattern for threshold tuning so other teams in our organization running similar remote sensor networks can benefit from what we learned, and flag any other operational insights from the report that should be captured as shared best practices.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "81894315-ba4c-4027-8c17-fc51292af08e",
+            "name": "network-engineer"
+          },
+          {
+            "rank": 2,
+            "skill_id": "f3d2c28a-6799-43e6-a57b-b10f03c75d5b",
+            "name": "infrastructure-reporting"
+          },
+          {
+            "rank": 3,
+            "skill_id": "c454f6a1-3fe9-43fe-8364-7d2dbc16dfb4",
+            "name": "Social Media Reporter"
+          },
+          {
+            "rank": 4,
+            "skill_id": "7d769049-b56c-4c5c-ab76-6cb3b9d5c79a",
+            "name": "discover-infrastructure"
+          },
+          {
+            "rank": 5,
+            "skill_id": "9d27e6e1-49cf-4929-94d4-1b0f041fdcbc",
+            "name": "Device Inspection"
+          },
+          {
+            "rank": 6,
+            "skill_id": "dfc3ec07-26d8-4cbf-b1d4-2dba2729b447",
+            "name": "network-agent"
+          },
+          {
+            "rank": 7,
+            "skill_id": "4e192509-e8cb-45e4-8e98-e6c60bf94dd5",
+            "name": "infrastructure-cost-optimization"
+          },
+          {
+            "rank": 8,
+            "skill_id": "ce10c528-7019-4dbc-84cb-4b3c86f65b3c",
+            "name": "dependency-tracker"
+          },
+          {
+            "rank": 9,
+            "skill_id": "00dbeb09-ea77-4a6f-ae49-f31741abe2c9",
+            "name": "network-monitoring"
+          },
+          {
+            "rank": 10,
+            "skill_id": "7da7403b-ca48-4f17-a762-51623595f696",
+            "name": "wa-reliability-review"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 851
+      },
+      {
+        "branch": "health",
+        "query": "Report health and performance for a 14-station coastal sensor network. Compare LoRaWAN loss, satellite latency and jitter, fiber utilization, and capacity for expansion to 22 stations.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "f3d2c28a-6799-43e6-a57b-b10f03c75d5b",
+            "name": "infrastructure-reporting"
+          },
+          {
+            "rank": 2,
+            "skill_id": "9d27e6e1-49cf-4929-94d4-1b0f041fdcbc",
+            "name": "Device Inspection"
+          },
+          {
+            "rank": 3,
+            "skill_id": "00dbeb09-ea77-4a6f-ae49-f31741abe2c9",
+            "name": "network-monitoring"
+          },
+          {
+            "rank": 4,
+            "skill_id": "472fe6e5-0109-4228-b416-2e2214d0108a",
+            "name": "ghe-report"
+          },
+          {
+            "rank": 5,
+            "skill_id": "81894315-ba4c-4027-8c17-fc51292af08e",
+            "name": "network-engineer"
+          },
+          {
+            "rank": 6,
+            "skill_id": "27af2c3f-e1ce-4b48-89bd-0600aa1a3b26",
+            "name": "ops-monitor"
+          },
+          {
+            "rank": 7,
+            "skill_id": "c454f6a1-3fe9-43fe-8364-7d2dbc16dfb4",
+            "name": "Social Media Reporter"
+          },
+          {
+            "rank": 8,
+            "skill_id": "f6d4df43-f937-4170-bacd-6218f5a0f941",
+            "name": "lunar-landers-expert"
+          },
+          {
+            "rank": 9,
+            "skill_id": "59a30fbd-8b58-4dcc-8e71-aae4921f7565",
+            "name": "fine-tuning-expert"
+          },
+          {
+            "rank": 10,
+            "skill_id": "b8ae7f4c-ee2d-4059-b9d2-cb579a5b41e0",
+            "name": "stakeholder-ops"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 221
+      },
+      {
+        "branch": "documentation",
+        "query": "Audit runbooks and architecture documents against current network topology. Capture cellular-to-LoRaWAN migrations, new VLAN segmentation, and storm failover procedures in updated documentation.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "81894315-ba4c-4027-8c17-fc51292af08e",
+            "name": "network-engineer"
+          },
+          {
+            "rank": 2,
+            "skill_id": "dfc3ec07-26d8-4cbf-b1d4-2dba2729b447",
+            "name": "network-agent"
+          },
+          {
+            "rank": 3,
+            "skill_id": "505cc3ed-ed9c-4e85-a31b-c83dad6a2ad2",
+            "name": "Runbooks & Ops"
+          },
+          {
+            "rank": 4,
+            "skill_id": "0a3410ac-d973-4402-b9d4-94690161413c",
+            "name": "axiom-networking-diag"
+          },
+          {
+            "rank": 5,
+            "skill_id": "9d27e6e1-49cf-4929-94d4-1b0f041fdcbc",
+            "name": "Device Inspection"
+          },
+          {
+            "rank": 6,
+            "skill_id": "618200ac-561a-4c9b-8ac2-4ffd73773502",
+            "name": "axiom-ios-networking"
+          },
+          {
+            "rank": 7,
+            "skill_id": "bc8bc0ea-9124-4bf9-9a24-af9b8565de0a",
+            "name": "runbook-creation"
+          },
+          {
+            "rank": 8,
+            "skill_id": "86fa1235-8f4b-49ee-8a38-527fe1d22942",
+            "name": "debugging-workflows"
+          },
+          {
+            "rank": 9,
+            "skill_id": "826ad244-13f5-4335-82c9-beab5d04dacc",
+            "name": "workbench-docs"
+          },
+          {
+            "rank": 10,
+            "skill_id": "ccf92465-f089-4b57-a3a6-09608a287911",
+            "name": "architecture-docs"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 207
+      },
+      {
+        "branch": "lessons",
+        "query": "Record a reusable operational learning pattern from storm alerting. Explain the actual 40% loss paging threshold, the desired 15% threshold, threshold tuning and transferable best practices.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "083e3200-0da8-42d9-8436-819acc7ccc0f",
+            "name": "skill-harvester"
+          },
+          {
+            "rank": 2,
+            "skill_id": "09ac298f-07c0-4ddf-a4d8-51022c2b4eeb",
+            "name": "learned-patterns"
+          },
+          {
+            "rank": 3,
+            "skill_id": "fa754596-405e-4d04-ad94-1bcbafe5e096",
+            "name": "meta-learning"
+          },
+          {
+            "rank": 4,
+            "skill_id": "ac7525a1-c4ca-4977-a754-fe3ce080c488",
+            "name": "opence-compound"
+          },
+          {
+            "rank": 5,
+            "skill_id": "46deafc0-20d4-46af-ac87-dce941c4c9cc",
+            "name": "skill-learning-patterns"
+          },
+          {
+            "rank": 6,
+            "skill_id": "4f5e320f-a152-47c8-83b5-eb87c5611df3",
+            "name": "episode-complete"
+          },
+          {
+            "rank": 7,
+            "skill_id": "e0ed70cf-5788-4151-a64c-9fad070a3605",
+            "name": "mem-save"
+          },
+          {
+            "rank": 8,
+            "skill_id": "ff9f4593-7ba3-4509-a1dd-24f32639423a",
+            "name": "alert-optimizer"
+          },
+          {
+            "rank": 9,
+            "skill_id": "cec42902-8d01-420a-8de7-83a5dd97ee47",
+            "name": "shared-patterns"
+          },
+          {
+            "rank": 10,
+            "skill_id": "7072ceca-8d23-4e7a-892e-169b547cb0d7",
+            "name": "knowledge-management"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 214
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "81894315-ba4c-4027-8c17-fc51292af08e",
+        "name": "network-engineer"
+      },
+      {
+        "rank": 2,
+        "skill_id": "f3d2c28a-6799-43e6-a57b-b10f03c75d5b",
+        "name": "infrastructure-reporting"
+      },
+      {
+        "rank": 3,
+        "skill_id": "c454f6a1-3fe9-43fe-8364-7d2dbc16dfb4",
+        "name": "Social Media Reporter"
+      },
+      {
+        "rank": 4,
+        "skill_id": "9d27e6e1-49cf-4929-94d4-1b0f041fdcbc",
+        "name": "Device Inspection"
+      },
+      {
+        "rank": 5,
+        "skill_id": "00dbeb09-ea77-4a6f-ae49-f31741abe2c9",
+        "name": "network-monitoring"
+      },
+      {
+        "rank": 6,
+        "skill_id": "dfc3ec07-26d8-4cbf-b1d4-2dba2729b447",
+        "name": "network-agent"
+      },
+      {
+        "rank": 7,
+        "skill_id": "505cc3ed-ed9c-4e85-a31b-c83dad6a2ad2",
+        "name": "Runbooks & Ops"
+      },
+      {
+        "rank": 8,
+        "skill_id": "083e3200-0da8-42d9-8436-819acc7ccc0f",
+        "name": "skill-harvester"
+      },
+      {
+        "rank": 9,
+        "skill_id": "09ac298f-07c0-4ddf-a4d8-51022c2b4eeb",
+        "name": "learned-patterns"
+      },
+      {
+        "rank": 10,
+        "skill_id": "7d769049-b56c-4c5c-ab76-6cb3b9d5c79a",
+        "name": "discover-infrastructure"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "f3d2c28a-6799-43e6-a57b-b10f03c75d5b",
+        "name": "infrastructure-reporting"
+      },
+      {
+        "rank": 2,
+        "skill_id": "46deafc0-20d4-46af-ac87-dce941c4c9cc",
+        "name": "skill-learning-patterns"
+      },
+      {
+        "rank": 3,
+        "skill_id": "49ea6091-0ec0-42c8-b18b-54a5b4d8aa61",
+        "name": "doc-management"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.2960819109658652,
+      "Recall@10": 0.3333333333333333,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.16666666666666666
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1493
+  }
+}

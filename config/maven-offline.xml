@@ -1,0 +1,19 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0">
+  <mirrors>
+    <mirror>
+      <id>maven-default-http-blocker</id><mirrorOf>external:http:*,!releases</mirrorOf>
+      <url>http://0.0.0.0/</url><blocked>true</blocked>
+    </mirror>
+  </mirrors>
+  <profiles>
+    <profile>
+      <id>challenge-cache</id><activation><activeByDefault>true</activeByDefault></activation>
+      <repositories>
+        <repository><id>alimaven</id><url>https://maven.aliyun.com/repository/public</url></repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository><id>alimaven</id><url>https://maven.aliyun.com/repository/public</url></pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+</settings>

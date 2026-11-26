@@ -1,0 +1,470 @@
+{
+  "a": {
+    "queryId": "q-01901",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We have a SuperSpec document (`specs/onboarding-flow.superspec.yaml`) that describes our new user onboarding wizard for the \"Canopy\" fintech app — it covers a multi-step account setup with identity verification, funding source selection, and a portfolio preferences questionnaire. Before we start building, I need you to go through the spec and check it for correctness, completeness, and proper SuperSpec formatting (flag any missing edge cases, inconsistent state transitions, or ambiguous acceptance criteria). Then, based on what the spec describes, design the full interaction layer for the wizard: step-to-step transitions with directional slide animations, inline field validation micro-interactions (shake + red glow on error, green checkmark fade-in on success), a pulsing skeleton loader for the identity verification async check, hover/focus states for all interactive elements that meet WCAG 2.1 AA, and a celebratory confetti burst on completion. Document all of this as a new `docs/onboarding-interactions.md` file alongside any fixes or annotations you make to the spec itself, then auto-stage everything and commit with a proper semantic commit message — I want this fully committed without me having to manually stage files since I'm handing the whole changeset to you.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "3e4dd76f-9598-457c-8a74-f52e6ae29033",
+            "name": "spec-validation"
+          },
+          {
+            "rank": 2,
+            "skill_id": "94771876-9f7e-4a94-801b-22baefdb0d4f",
+            "name": "interaction-design"
+          },
+          {
+            "rank": 3,
+            "skill_id": "2f0f8d07-fe14-406a-9a82-5232d1b6f2f7",
+            "name": "using-superpowers-sdd"
+          },
+          {
+            "rank": 4,
+            "skill_id": "80f0cdcc-6766-4ad6-9f0e-9b3e03609042",
+            "name": "audio-effect"
+          },
+          {
+            "rank": 5,
+            "skill_id": "007515de-4b75-415c-a719-6e4cc4c48c59",
+            "name": "implementation-spec"
+          },
+          {
+            "rank": 6,
+            "skill_id": "b65652e0-9c10-4d7e-a5bf-71ab9cc90611",
+            "name": "spec-interview"
+          },
+          {
+            "rank": 7,
+            "skill_id": "05c64ebd-0d80-451b-ae2f-4a7d44ed9751",
+            "name": "interaction-design"
+          },
+          {
+            "rank": 8,
+            "skill_id": "50bb52a0-f544-4f96-854a-b60dc07cd68c",
+            "name": "animation-interaction-validator"
+          },
+          {
+            "rank": 9,
+            "skill_id": "73a2b2a9-2c4e-4626-8437-752ab9ebbff5",
+            "name": "disciplined-specification"
+          },
+          {
+            "rank": 10,
+            "skill_id": "2355a203-9bd9-4513-87b3-c9350b98f253",
+            "name": "specification-phase"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 757
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "3e4dd76f-9598-457c-8a74-f52e6ae29033",
+        "name": "spec-validation"
+      },
+      {
+        "rank": 2,
+        "skill_id": "94771876-9f7e-4a94-801b-22baefdb0d4f",
+        "name": "interaction-design"
+      },
+      {
+        "rank": 3,
+        "skill_id": "2f0f8d07-fe14-406a-9a82-5232d1b6f2f7",
+        "name": "using-superpowers-sdd"
+      },
+      {
+        "rank": 4,
+        "skill_id": "80f0cdcc-6766-4ad6-9f0e-9b3e03609042",
+        "name": "audio-effect"
+      },
+      {
+        "rank": 5,
+        "skill_id": "007515de-4b75-415c-a719-6e4cc4c48c59",
+        "name": "implementation-spec"
+      },
+      {
+        "rank": 6,
+        "skill_id": "b65652e0-9c10-4d7e-a5bf-71ab9cc90611",
+        "name": "spec-interview"
+      },
+      {
+        "rank": 7,
+        "skill_id": "05c64ebd-0d80-451b-ae2f-4a7d44ed9751",
+        "name": "interaction-design"
+      },
+      {
+        "rank": 8,
+        "skill_id": "50bb52a0-f544-4f96-854a-b60dc07cd68c",
+        "name": "animation-interaction-validator"
+      },
+      {
+        "rank": 9,
+        "skill_id": "73a2b2a9-2c4e-4626-8437-752ab9ebbff5",
+        "name": "disciplined-specification"
+      },
+      {
+        "rank": 10,
+        "skill_id": "2355a203-9bd9-4513-87b3-c9350b98f253",
+        "name": "specification-phase"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "3e4dd76f-9598-457c-8a74-f52e6ae29033",
+        "name": "spec-validation"
+      },
+      {
+        "rank": 2,
+        "skill_id": "761fae6a-dc51-4e11-97d6-d6fd98e6d51c",
+        "name": "semantic-commit-autostage"
+      },
+      {
+        "rank": 3,
+        "skill_id": "05c64ebd-0d80-451b-ae2f-4a7d44ed9751",
+        "name": "interaction-design"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.6257049680303419,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.42857142857142855
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 757
+  },
+  "b": {
+    "queryId": "q-01901",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We have a SuperSpec document (`specs/onboarding-flow.superspec.yaml`) that describes our new user onboarding wizard for the \"Canopy\" fintech app — it covers a multi-step account setup with identity verification, funding source selection, and a portfolio preferences questionnaire. Before we start building, I need you to go through the spec and check it for correctness, completeness, and proper SuperSpec formatting (flag any missing edge cases, inconsistent state transitions, or ambiguous acceptance criteria). Then, based on what the spec describes, design the full interaction layer for the wizard: step-to-step transitions with directional slide animations, inline field validation micro-interactions (shake + red glow on error, green checkmark fade-in on success), a pulsing skeleton loader for the identity verification async check, hover/focus states for all interactive elements that meet WCAG 2.1 AA, and a celebratory confetti burst on completion. Document all of this as a new `docs/onboarding-interactions.md` file alongside any fixes or annotations you make to the spec itself, then auto-stage everything and commit with a proper semantic commit message — I want this fully committed without me having to manually stage files since I'm handing the whole changeset to you.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "3e4dd76f-9598-457c-8a74-f52e6ae29033",
+            "name": "spec-validation"
+          },
+          {
+            "rank": 2,
+            "skill_id": "94771876-9f7e-4a94-801b-22baefdb0d4f",
+            "name": "interaction-design"
+          },
+          {
+            "rank": 3,
+            "skill_id": "2f0f8d07-fe14-406a-9a82-5232d1b6f2f7",
+            "name": "using-superpowers-sdd"
+          },
+          {
+            "rank": 4,
+            "skill_id": "80f0cdcc-6766-4ad6-9f0e-9b3e03609042",
+            "name": "audio-effect"
+          },
+          {
+            "rank": 5,
+            "skill_id": "007515de-4b75-415c-a719-6e4cc4c48c59",
+            "name": "implementation-spec"
+          },
+          {
+            "rank": 6,
+            "skill_id": "b65652e0-9c10-4d7e-a5bf-71ab9cc90611",
+            "name": "spec-interview"
+          },
+          {
+            "rank": 7,
+            "skill_id": "05c64ebd-0d80-451b-ae2f-4a7d44ed9751",
+            "name": "interaction-design"
+          },
+          {
+            "rank": 8,
+            "skill_id": "50bb52a0-f544-4f96-854a-b60dc07cd68c",
+            "name": "animation-interaction-validator"
+          },
+          {
+            "rank": 9,
+            "skill_id": "73a2b2a9-2c4e-4626-8437-752ab9ebbff5",
+            "name": "disciplined-specification"
+          },
+          {
+            "rank": 10,
+            "skill_id": "2355a203-9bd9-4513-87b3-c9350b98f253",
+            "name": "specification-phase"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 751
+      },
+      {
+        "branch": "spec",
+        "query": "Validate specs/onboarding-flow.superspec.yaml for required structure, completeness, edge cases, consistent state transitions, and testable acceptance criteria for identity, funding and preferences.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "3e4dd76f-9598-457c-8a74-f52e6ae29033",
+            "name": "spec-validation"
+          },
+          {
+            "rank": 2,
+            "skill_id": "4b3a72fd-7526-47dd-9fce-c3bf165ec5f3",
+            "name": "spec-flow-analyzer"
+          },
+          {
+            "rank": 3,
+            "skill_id": "ac8a450b-44ad-4e04-88fc-f907b481785c",
+            "name": "spec-validator"
+          },
+          {
+            "rank": 4,
+            "skill_id": "a42f1eda-6aeb-4bea-b6f6-872db8b96adb",
+            "name": "flow-next-interview"
+          },
+          {
+            "rank": 5,
+            "skill_id": "6510d88b-bea1-448e-9fb0-636b1b8e1355",
+            "name": "openspec-check"
+          },
+          {
+            "rank": 6,
+            "skill_id": "4f886f51-6a32-47d2-8566-56696fcb6ef7",
+            "name": "test-spec"
+          },
+          {
+            "rank": 7,
+            "skill_id": "172c3e18-a532-4eb6-b2ec-34d13fbcd6b8",
+            "name": "spec-verification"
+          },
+          {
+            "rank": 8,
+            "skill_id": "a7322035-4b5e-4907-9cbd-42a87db2a086",
+            "name": "ac-expander"
+          },
+          {
+            "rank": 9,
+            "skill_id": "b162e585-0c17-47fb-97a2-914b2f4ed451",
+            "name": "requirement-validator"
+          },
+          {
+            "rank": 10,
+            "skill_id": "b65652e0-9c10-4d7e-a5bf-71ab9cc90611",
+            "name": "spec-interview"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 213
+      },
+      {
+        "branch": "interactions",
+        "query": "Specify multi-step onboarding transitions, inclusive focus and hover states, error and success feedback, skeleton loading during async identity verification, and final completion interaction.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "50bb52a0-f544-4f96-854a-b60dc07cd68c",
+            "name": "animation-interaction-validator"
+          },
+          {
+            "rank": 2,
+            "skill_id": "0eefd6b5-b37c-4e8b-9640-9005c9af7c2e",
+            "name": "state-machine"
+          },
+          {
+            "rank": 3,
+            "skill_id": "53fec485-11c1-4028-a0d4-d1a86462589b",
+            "name": "interaction-design"
+          },
+          {
+            "rank": 4,
+            "skill_id": "660e675a-e9d2-48b9-9fa4-e3622491ce24",
+            "name": "ux-component-states"
+          },
+          {
+            "rank": 5,
+            "skill_id": "94771876-9f7e-4a94-801b-22baefdb0d4f",
+            "name": "interaction-design"
+          },
+          {
+            "rank": 6,
+            "skill_id": "aaae6ad9-8486-4856-b2af-4790eb7822fa",
+            "name": "tailwindcss-animations"
+          },
+          {
+            "rank": 7,
+            "skill_id": "6b472026-f236-4efa-88c5-0bbab10c5340",
+            "name": "recovery-app-onboarding"
+          },
+          {
+            "rank": 8,
+            "skill_id": "bd80051d-5bb4-4af3-a73a-c89b14e96b77",
+            "name": "ui-animation"
+          },
+          {
+            "rank": 9,
+            "skill_id": "eae19ddc-3c59-4cda-8b87-cc1f7bff933c",
+            "name": "Example Skill"
+          },
+          {
+            "rank": 10,
+            "skill_id": "28d98a12-c9ea-4b61-b748-0cadb2350ef8",
+            "name": "form-wizard-builder"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 203
+      },
+      {
+        "branch": "commit",
+        "query": "Stage the storefront onboarding specification corrections and onboarding-interactions documentation together, then prepare one semantic commit message for the changeset.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "e7455ec6-94e5-412a-a1e9-e737822de3b6",
+            "name": "onboarding-helper"
+          },
+          {
+            "rank": 2,
+            "skill_id": "761fae6a-dc51-4e11-97d6-d6fd98e6d51c",
+            "name": "semantic-commit-autostage"
+          },
+          {
+            "rank": 3,
+            "skill_id": "9e4bcf03-e0bb-4423-b12e-c94b240f3dfc",
+            "name": "git-commit-standards"
+          },
+          {
+            "rank": 4,
+            "skill_id": "defab4e9-9890-469d-8002-96eb82acdef4",
+            "name": "git-workflow-management"
+          },
+          {
+            "rank": 5,
+            "skill_id": "6bf40a91-9106-4de5-a27d-41f37dff80a7",
+            "name": "git-commit"
+          },
+          {
+            "rank": 6,
+            "skill_id": "04de7a6a-d4f4-4331-a2f6-e1091058f654",
+            "name": "shipping-methodology"
+          },
+          {
+            "rank": 7,
+            "skill_id": "50336d6c-a477-4454-b16e-a0b513568b0c",
+            "name": "review-and-commit"
+          },
+          {
+            "rank": 8,
+            "skill_id": "ace18050-d5f0-43ab-b396-577371a3e97f",
+            "name": "full-dev-cycle"
+          },
+          {
+            "rank": 9,
+            "skill_id": "28745ffc-efe3-41ee-92bf-1a5ceb99a97e",
+            "name": "commit-coauthor"
+          },
+          {
+            "rank": 10,
+            "skill_id": "6b472026-f236-4efa-88c5-0bbab10c5340",
+            "name": "recovery-app-onboarding"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 194
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "3e4dd76f-9598-457c-8a74-f52e6ae29033",
+        "name": "spec-validation"
+      },
+      {
+        "rank": 2,
+        "skill_id": "94771876-9f7e-4a94-801b-22baefdb0d4f",
+        "name": "interaction-design"
+      },
+      {
+        "rank": 3,
+        "skill_id": "2f0f8d07-fe14-406a-9a82-5232d1b6f2f7",
+        "name": "using-superpowers-sdd"
+      },
+      {
+        "rank": 4,
+        "skill_id": "4b3a72fd-7526-47dd-9fce-c3bf165ec5f3",
+        "name": "spec-flow-analyzer"
+      },
+      {
+        "rank": 5,
+        "skill_id": "ac8a450b-44ad-4e04-88fc-f907b481785c",
+        "name": "spec-validator"
+      },
+      {
+        "rank": 6,
+        "skill_id": "50bb52a0-f544-4f96-854a-b60dc07cd68c",
+        "name": "animation-interaction-validator"
+      },
+      {
+        "rank": 7,
+        "skill_id": "0eefd6b5-b37c-4e8b-9640-9005c9af7c2e",
+        "name": "state-machine"
+      },
+      {
+        "rank": 8,
+        "skill_id": "e7455ec6-94e5-412a-a1e9-e737822de3b6",
+        "name": "onboarding-helper"
+      },
+      {
+        "rank": 9,
+        "skill_id": "761fae6a-dc51-4e11-97d6-d6fd98e6d51c",
+        "name": "semantic-commit-autostage"
+      },
+      {
+        "rank": 10,
+        "skill_id": "80f0cdcc-6766-4ad6-9f0e-9b3e03609042",
+        "name": "audio-effect"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "3e4dd76f-9598-457c-8a74-f52e6ae29033",
+        "name": "spec-validation"
+      },
+      {
+        "rank": 2,
+        "skill_id": "761fae6a-dc51-4e11-97d6-d6fd98e6d51c",
+        "name": "semantic-commit-autostage"
+      },
+      {
+        "rank": 3,
+        "skill_id": "05c64ebd-0d80-451b-ae2f-4a7d44ed9751",
+        "name": "interaction-design"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.6105456988825855,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.40740740740740744
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1361
+  }
+}

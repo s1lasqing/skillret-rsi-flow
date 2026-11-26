@@ -1,0 +1,402 @@
+{
+  "a": {
+    "queryId": "q-02870",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We have a screenplay repo called \"EchoTide\" on GitHub — it's a sci-fi feature script written in Fountain format, and we want to set up a GitHub Actions workflow that automatically parses the .fountain file on every push to `main`, counts the total pages based on standard screenplay formatting (dialogue-heavy scenes vs. action-heavy scenes with appropriate genre adjustments for sci-fi pacing), estimates the projected runtime using the one-page-per-minute baseline with corrections, and then posts a comment on the commit with a summary like \"Current page count: X, Estimated runtime: Y min, Target delta: ±Z min from the 110-minute feature target.\" If the estimated runtime drifts more than 15 minutes over or under the target, the workflow should also open an issue labeled `length-warning` with details about which acts are running long or short. Can you write the full workflow YAML plus the Python script it calls to do the page counting and runtime estimation?",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "1b12e925-8f97-4d43-98d8-a0f830b0e609",
+            "name": "page-estimation"
+          },
+          {
+            "rank": 2,
+            "skill_id": "15185e12-eb96-4c65-91ae-9283c182f119",
+            "name": "action-description"
+          },
+          {
+            "rank": 3,
+            "skill_id": "21c14dfc-27e5-4d93-aa24-f10f0befe406",
+            "name": "format-export"
+          },
+          {
+            "rank": 4,
+            "skill_id": "aab2dc63-4aef-49a5-9199-edbe763af68d",
+            "name": "story-structure"
+          },
+          {
+            "rank": 5,
+            "skill_id": "fc1793e3-db85-477a-8104-2f1a461a4f42",
+            "name": "script-writer"
+          },
+          {
+            "rank": 6,
+            "skill_id": "f1e06ea8-4a70-4638-a88d-cf64c009db32",
+            "name": "GithubPages"
+          },
+          {
+            "rank": 7,
+            "skill_id": "892a8d00-930c-4445-b4d4-8767bdd24cb0",
+            "name": "ci-cd-devops"
+          },
+          {
+            "rank": 8,
+            "skill_id": "68fd1834-9b88-45b7-8f14-b5827691382f",
+            "name": "workflow-management"
+          },
+          {
+            "rank": 9,
+            "skill_id": "e2122ecd-56b4-4e6f-b02c-824928cc4202",
+            "name": "devops"
+          },
+          {
+            "rank": 10,
+            "skill_id": "921d6884-ef1b-4ba4-9065-931bac74cda9",
+            "name": "github-actions"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 651
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "1b12e925-8f97-4d43-98d8-a0f830b0e609",
+        "name": "page-estimation"
+      },
+      {
+        "rank": 2,
+        "skill_id": "15185e12-eb96-4c65-91ae-9283c182f119",
+        "name": "action-description"
+      },
+      {
+        "rank": 3,
+        "skill_id": "21c14dfc-27e5-4d93-aa24-f10f0befe406",
+        "name": "format-export"
+      },
+      {
+        "rank": 4,
+        "skill_id": "aab2dc63-4aef-49a5-9199-edbe763af68d",
+        "name": "story-structure"
+      },
+      {
+        "rank": 5,
+        "skill_id": "fc1793e3-db85-477a-8104-2f1a461a4f42",
+        "name": "script-writer"
+      },
+      {
+        "rank": 6,
+        "skill_id": "f1e06ea8-4a70-4638-a88d-cf64c009db32",
+        "name": "GithubPages"
+      },
+      {
+        "rank": 7,
+        "skill_id": "892a8d00-930c-4445-b4d4-8767bdd24cb0",
+        "name": "ci-cd-devops"
+      },
+      {
+        "rank": 8,
+        "skill_id": "68fd1834-9b88-45b7-8f14-b5827691382f",
+        "name": "workflow-management"
+      },
+      {
+        "rank": 9,
+        "skill_id": "e2122ecd-56b4-4e6f-b02c-824928cc4202",
+        "name": "devops"
+      },
+      {
+        "rank": 10,
+        "skill_id": "921d6884-ef1b-4ba4-9065-931bac74cda9",
+        "name": "github-actions"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "1f54f026-f775-43d7-ae2f-7b3afa776f5d",
+        "name": "developer"
+      },
+      {
+        "rank": 2,
+        "skill_id": "1b12e925-8f97-4d43-98d8-a0f830b0e609",
+        "name": "page-estimation"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.6131471927654584,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.5
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 651
+  },
+  "b": {
+    "queryId": "q-02870",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We have a screenplay repo called \"EchoTide\" on GitHub — it's a sci-fi feature script written in Fountain format, and we want to set up a GitHub Actions workflow that automatically parses the .fountain file on every push to `main`, counts the total pages based on standard screenplay formatting (dialogue-heavy scenes vs. action-heavy scenes with appropriate genre adjustments for sci-fi pacing), estimates the projected runtime using the one-page-per-minute baseline with corrections, and then posts a comment on the commit with a summary like \"Current page count: X, Estimated runtime: Y min, Target delta: ±Z min from the 110-minute feature target.\" If the estimated runtime drifts more than 15 minutes over or under the target, the workflow should also open an issue labeled `length-warning` with details about which acts are running long or short. Can you write the full workflow YAML plus the Python script it calls to do the page counting and runtime estimation?",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "1b12e925-8f97-4d43-98d8-a0f830b0e609",
+            "name": "page-estimation"
+          },
+          {
+            "rank": 2,
+            "skill_id": "15185e12-eb96-4c65-91ae-9283c182f119",
+            "name": "action-description"
+          },
+          {
+            "rank": 3,
+            "skill_id": "21c14dfc-27e5-4d93-aa24-f10f0befe406",
+            "name": "format-export"
+          },
+          {
+            "rank": 4,
+            "skill_id": "aab2dc63-4aef-49a5-9199-edbe763af68d",
+            "name": "story-structure"
+          },
+          {
+            "rank": 5,
+            "skill_id": "fc1793e3-db85-477a-8104-2f1a461a4f42",
+            "name": "script-writer"
+          },
+          {
+            "rank": 6,
+            "skill_id": "f1e06ea8-4a70-4638-a88d-cf64c009db32",
+            "name": "GithubPages"
+          },
+          {
+            "rank": 7,
+            "skill_id": "892a8d00-930c-4445-b4d4-8767bdd24cb0",
+            "name": "ci-cd-devops"
+          },
+          {
+            "rank": 8,
+            "skill_id": "68fd1834-9b88-45b7-8f14-b5827691382f",
+            "name": "workflow-management"
+          },
+          {
+            "rank": 9,
+            "skill_id": "e2122ecd-56b4-4e6f-b02c-824928cc4202",
+            "name": "devops"
+          },
+          {
+            "rank": 10,
+            "skill_id": "921d6884-ef1b-4ba4-9065-931bac74cda9",
+            "name": "github-actions"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 618
+      },
+      {
+        "branch": "estimation",
+        "query": "Parse Fountain screenplay scenes, separate dialogue and action, estimate formatted page count and adjusted running time against a 110-minute feature target. Identify acts outside the target.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "1b12e925-8f97-4d43-98d8-a0f830b0e609",
+            "name": "page-estimation"
+          },
+          {
+            "rank": 2,
+            "skill_id": "21c14dfc-27e5-4d93-aa24-f10f0befe406",
+            "name": "format-export"
+          },
+          {
+            "rank": 3,
+            "skill_id": "15185e12-eb96-4c65-91ae-9283c182f119",
+            "name": "action-description"
+          },
+          {
+            "rank": 4,
+            "skill_id": "aab2dc63-4aef-49a5-9199-edbe763af68d",
+            "name": "story-structure"
+          },
+          {
+            "rank": 5,
+            "skill_id": "8ed3267a-8cda-4c3b-a250-ddb3afc07d57",
+            "name": "glossary-reference"
+          },
+          {
+            "rank": 6,
+            "skill_id": "d9ce80d8-0528-4f8b-afa7-d0037ffdee96",
+            "name": "character-dialogue"
+          },
+          {
+            "rank": 7,
+            "skill_id": "38405443-f758-4d46-b415-59ddd42499c0",
+            "name": "plot-keypoints"
+          },
+          {
+            "rank": 8,
+            "skill_id": "6c9a264b-d6d4-4f0f-8c8e-1beb530e22ca",
+            "name": "story-analysis"
+          },
+          {
+            "rank": 9,
+            "skill_id": "fc1793e3-db85-477a-8104-2f1a461a4f42",
+            "name": "script-writer"
+          },
+          {
+            "rank": 10,
+            "skill_id": "9f12b694-71bd-4bd9-b26c-e1b5756ffa9d",
+            "name": "universal-tool"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 211
+      },
+      {
+        "branch": "workflow",
+        "query": "Create a GitHub Actions YAML workflow and Python entry point for a Fountain screenplay repository. Trigger on main pushes, report page count and runtime drift, and open a length-warning issue when the deviation exceeds 15 minutes.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "1b12e925-8f97-4d43-98d8-a0f830b0e609",
+            "name": "page-estimation"
+          },
+          {
+            "rank": 2,
+            "skill_id": "21c14dfc-27e5-4d93-aa24-f10f0befe406",
+            "name": "format-export"
+          },
+          {
+            "rank": 3,
+            "skill_id": "15185e12-eb96-4c65-91ae-9283c182f119",
+            "name": "action-description"
+          },
+          {
+            "rank": 4,
+            "skill_id": "921d6884-ef1b-4ba4-9065-931bac74cda9",
+            "name": "github-actions"
+          },
+          {
+            "rank": 5,
+            "skill_id": "aab2dc63-4aef-49a5-9199-edbe763af68d",
+            "name": "story-structure"
+          },
+          {
+            "rank": 6,
+            "skill_id": "8ed3267a-8cda-4c3b-a250-ddb3afc07d57",
+            "name": "glossary-reference"
+          },
+          {
+            "rank": 7,
+            "skill_id": "68fd1834-9b88-45b7-8f14-b5827691382f",
+            "name": "workflow-management"
+          },
+          {
+            "rank": 8,
+            "skill_id": "fc1793e3-db85-477a-8104-2f1a461a4f42",
+            "name": "script-writer"
+          },
+          {
+            "rank": 9,
+            "skill_id": "42bd29f9-9277-4724-82f7-ea78aede4bea",
+            "name": "github-skill"
+          },
+          {
+            "rank": 10,
+            "skill_id": "892a8d00-930c-4445-b4d4-8767bdd24cb0",
+            "name": "ci-cd-devops"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 223
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "1b12e925-8f97-4d43-98d8-a0f830b0e609",
+        "name": "page-estimation"
+      },
+      {
+        "rank": 2,
+        "skill_id": "15185e12-eb96-4c65-91ae-9283c182f119",
+        "name": "action-description"
+      },
+      {
+        "rank": 3,
+        "skill_id": "21c14dfc-27e5-4d93-aa24-f10f0befe406",
+        "name": "format-export"
+      },
+      {
+        "rank": 4,
+        "skill_id": "aab2dc63-4aef-49a5-9199-edbe763af68d",
+        "name": "story-structure"
+      },
+      {
+        "rank": 5,
+        "skill_id": "8ed3267a-8cda-4c3b-a250-ddb3afc07d57",
+        "name": "glossary-reference"
+      },
+      {
+        "rank": 6,
+        "skill_id": "921d6884-ef1b-4ba4-9065-931bac74cda9",
+        "name": "github-actions"
+      },
+      {
+        "rank": 7,
+        "skill_id": "68fd1834-9b88-45b7-8f14-b5827691382f",
+        "name": "workflow-management"
+      },
+      {
+        "rank": 8,
+        "skill_id": "fc1793e3-db85-477a-8104-2f1a461a4f42",
+        "name": "script-writer"
+      },
+      {
+        "rank": 9,
+        "skill_id": "f1e06ea8-4a70-4638-a88d-cf64c009db32",
+        "name": "GithubPages"
+      },
+      {
+        "rank": 10,
+        "skill_id": "892a8d00-930c-4445-b4d4-8767bdd24cb0",
+        "name": "ci-cd-devops"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "1f54f026-f775-43d7-ae2f-7b3afa776f5d",
+        "name": "developer"
+      },
+      {
+        "rank": 2,
+        "skill_id": "1b12e925-8f97-4d43-98d8-a0f830b0e609",
+        "name": "page-estimation"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.6131471927654584,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.5
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1052
+  }
+}

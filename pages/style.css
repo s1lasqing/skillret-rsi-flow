@@ -1,0 +1,19 @@
+:root {
+  color: #172b23;
+  background: #edf3ef;
+  font: 16px/1.6 system-ui, "Microsoft YaHei", sans-serif;
+}
+main { max-width: 1160px; margin: 0 auto; padding: 2rem clamp(1rem, 4vw, 3.5rem); }
+h1 { line-height: 1.2; }
+h2 { margin-top: 1.6rem; }
+h3 { margin: 0; }
+a { color: #17523c; }
+.table { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: #fbfdfb; }
+td, th { padding: 0.6rem 0.75rem; border: 1px solid #c9d8ce; text-align: left; }
+th { background: #dcebe0; }
+.table td:not(:first-child) { white-space: nowrap; }
+details { background: #fbfdfb; border: 1px solid #c9d8ce; padding: 0.65rem 0.9rem; }
+summary { cursor: pointer; font-weight: 650; }
+.rankings { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+img { display: block; max-width: 100%; }

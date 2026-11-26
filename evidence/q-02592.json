@@ -1,0 +1,402 @@
+{
+  "a": {
+    "queryId": "q-02592",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Our Rails monorepo \"HealthPulse\" has about 30 service objects, 15 controllers, and a bunch of POROs scattered across `app/services/`, `app/controllers/`, and `lib/`. Before our quarterly engineering review next Tuesday, I need you to extract the full class/module hierarchy and public method signatures from every Ruby file under those three directories, then produce an HTML report with: (1) a summary table of each directory showing file count, total classes, total public methods, and average methods-per-class, (2) a bar chart comparing code complexity across the three directories, (3) a \"API surface area\" section listing every public method grouped by class with its signature, and (4) a short written analysis flagging any god-classes with more than 12 public methods or any files where the class count seems unusual. Format the whole thing so I can just open it in a browser and share the link with my engineering manager.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "a8920616-d559-42c7-9264-fddc94f48824",
+            "name": "generating-sorbet"
+          },
+          {
+            "rank": 2,
+            "skill_id": "4dd3487f-40eb-405a-a632-a6b3bd446dcb",
+            "name": "engineering-report-generator"
+          },
+          {
+            "rank": 3,
+            "skill_id": "c2184df0-7806-4ca7-ba1b-c17d12cfea5b",
+            "name": "report-generator"
+          },
+          {
+            "rank": 4,
+            "skill_id": "a850259c-e43d-4899-bbac-7a2c8f747e49",
+            "name": "chart-generator"
+          },
+          {
+            "rank": 5,
+            "skill_id": "75de8211-9d71-4ea3-baad-e43909dcec4c",
+            "name": "ln-150-presentation-creator"
+          },
+          {
+            "rank": 6,
+            "skill_id": "8f60818d-a803-42e8-845c-0e7d05f81a20",
+            "name": "codebase-context-extractor"
+          },
+          {
+            "rank": 7,
+            "skill_id": "27ac0562-695a-4c43-b366-2d54133caf7c",
+            "name": "reporting"
+          },
+          {
+            "rank": 8,
+            "skill_id": "4f3048aa-39a0-43c6-b54f-1d874a0c6455",
+            "name": "code-smell-detection"
+          },
+          {
+            "rank": 9,
+            "skill_id": "8a64bf0d-7bd6-4bfc-aa8e-8aae0a9c56bd",
+            "name": "advanced-file-management"
+          },
+          {
+            "rank": 10,
+            "skill_id": "4fe76d6f-e599-49fa-bd37-5e52be6b68f8",
+            "name": "meta-library-dev"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 659
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "a8920616-d559-42c7-9264-fddc94f48824",
+        "name": "generating-sorbet"
+      },
+      {
+        "rank": 2,
+        "skill_id": "4dd3487f-40eb-405a-a632-a6b3bd446dcb",
+        "name": "engineering-report-generator"
+      },
+      {
+        "rank": 3,
+        "skill_id": "c2184df0-7806-4ca7-ba1b-c17d12cfea5b",
+        "name": "report-generator"
+      },
+      {
+        "rank": 4,
+        "skill_id": "a850259c-e43d-4899-bbac-7a2c8f747e49",
+        "name": "chart-generator"
+      },
+      {
+        "rank": 5,
+        "skill_id": "75de8211-9d71-4ea3-baad-e43909dcec4c",
+        "name": "ln-150-presentation-creator"
+      },
+      {
+        "rank": 6,
+        "skill_id": "8f60818d-a803-42e8-845c-0e7d05f81a20",
+        "name": "codebase-context-extractor"
+      },
+      {
+        "rank": 7,
+        "skill_id": "27ac0562-695a-4c43-b366-2d54133caf7c",
+        "name": "reporting"
+      },
+      {
+        "rank": 8,
+        "skill_id": "4f3048aa-39a0-43c6-b54f-1d874a0c6455",
+        "name": "code-smell-detection"
+      },
+      {
+        "rank": 9,
+        "skill_id": "8a64bf0d-7bd6-4bfc-aa8e-8aae0a9c56bd",
+        "name": "advanced-file-management"
+      },
+      {
+        "rank": 10,
+        "skill_id": "4fe76d6f-e599-49fa-bd37-5e52be6b68f8",
+        "name": "meta-library-dev"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "c2184df0-7806-4ca7-ba1b-c17d12cfea5b",
+        "name": "report-generator"
+      },
+      {
+        "rank": 2,
+        "skill_id": "8cebe03d-16d6-4e5e-9265-20d780a3413b",
+        "name": "extracting-code-structure"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.3065735963827292,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.16666666666666666
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 659
+  },
+  "b": {
+    "queryId": "q-02592",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Our Rails monorepo \"HealthPulse\" has about 30 service objects, 15 controllers, and a bunch of POROs scattered across `app/services/`, `app/controllers/`, and `lib/`. Before our quarterly engineering review next Tuesday, I need you to extract the full class/module hierarchy and public method signatures from every Ruby file under those three directories, then produce an HTML report with: (1) a summary table of each directory showing file count, total classes, total public methods, and average methods-per-class, (2) a bar chart comparing code complexity across the three directories, (3) a \"API surface area\" section listing every public method grouped by class with its signature, and (4) a short written analysis flagging any god-classes with more than 12 public methods or any files where the class count seems unusual. Format the whole thing so I can just open it in a browser and share the link with my engineering manager.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "a8920616-d559-42c7-9264-fddc94f48824",
+            "name": "generating-sorbet"
+          },
+          {
+            "rank": 2,
+            "skill_id": "4dd3487f-40eb-405a-a632-a6b3bd446dcb",
+            "name": "engineering-report-generator"
+          },
+          {
+            "rank": 3,
+            "skill_id": "c2184df0-7806-4ca7-ba1b-c17d12cfea5b",
+            "name": "report-generator"
+          },
+          {
+            "rank": 4,
+            "skill_id": "a850259c-e43d-4899-bbac-7a2c8f747e49",
+            "name": "chart-generator"
+          },
+          {
+            "rank": 5,
+            "skill_id": "75de8211-9d71-4ea3-baad-e43909dcec4c",
+            "name": "ln-150-presentation-creator"
+          },
+          {
+            "rank": 6,
+            "skill_id": "8f60818d-a803-42e8-845c-0e7d05f81a20",
+            "name": "codebase-context-extractor"
+          },
+          {
+            "rank": 7,
+            "skill_id": "27ac0562-695a-4c43-b366-2d54133caf7c",
+            "name": "reporting"
+          },
+          {
+            "rank": 8,
+            "skill_id": "4f3048aa-39a0-43c6-b54f-1d874a0c6455",
+            "name": "code-smell-detection"
+          },
+          {
+            "rank": 9,
+            "skill_id": "8a64bf0d-7bd6-4bfc-aa8e-8aae0a9c56bd",
+            "name": "advanced-file-management"
+          },
+          {
+            "rank": 10,
+            "skill_id": "4fe76d6f-e599-49fa-bd37-5e52be6b68f8",
+            "name": "meta-library-dev"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 656
+      },
+      {
+        "branch": "structure",
+        "query": "Analyze a Ruby on Rails codebase by walking app/services, app/controllers and lib. Extract the full class and module hierarchy, namespace and inheritance relationships, and public method signatures by parsing Ruby source files. Preserve filenames, method parameters, and counts per directory.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "8f60818d-a803-42e8-845c-0e7d05f81a20",
+            "name": "codebase-context-extractor"
+          },
+          {
+            "rank": 2,
+            "skill_id": "a8920616-d559-42c7-9264-fddc94f48824",
+            "name": "generating-sorbet"
+          },
+          {
+            "rank": 3,
+            "skill_id": "8bf60af0-bbd7-49cf-bace-ab5680b35850",
+            "name": "ruby-rails-application"
+          },
+          {
+            "rank": 4,
+            "skill_id": "b928c2e1-3baa-4f8e-b096-e8444b1ac478",
+            "name": "Rails Conventions"
+          },
+          {
+            "rank": 5,
+            "skill_id": "204624b9-6fe7-499e-83bb-ab220b941b3d",
+            "name": "ruby-stdlib"
+          },
+          {
+            "rank": 6,
+            "skill_id": "46cb89b4-a348-4b56-8b79-254b8e352f00",
+            "name": "csharp-project-expert"
+          },
+          {
+            "rank": 7,
+            "skill_id": "2ce4d7c1-fa46-4942-8b14-989b5db9f94e",
+            "name": "rails-backend-guidelines"
+          },
+          {
+            "rank": 8,
+            "skill_id": "8ca1e15b-9868-40a5-9fc3-eb3b07ea51cb",
+            "name": "use-sharpitect"
+          },
+          {
+            "rank": 9,
+            "skill_id": "4fe76d6f-e599-49fa-bd37-5e52be6b68f8",
+            "name": "meta-library-dev"
+          },
+          {
+            "rank": 10,
+            "skill_id": "d4459729-ac99-4c6e-a191-ddd68c47ff16",
+            "name": "bundler"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 250
+      },
+      {
+        "branch": "report",
+        "query": "Produce a standalone HTML engineering report from a Ruby code analysis. Include directory summary tables of file, class and method counts, a bar chart, grouped API signatures, and a short review highlighting unusually large classes.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "4dd3487f-40eb-405a-a632-a6b3bd446dcb",
+            "name": "engineering-report-generator"
+          },
+          {
+            "rank": 2,
+            "skill_id": "c2184df0-7806-4ca7-ba1b-c17d12cfea5b",
+            "name": "report-generator"
+          },
+          {
+            "rank": 3,
+            "skill_id": "a8920616-d559-42c7-9264-fddc94f48824",
+            "name": "generating-sorbet"
+          },
+          {
+            "rank": 4,
+            "skill_id": "6b9d8779-ab5d-4014-9f4a-7cef5707945f",
+            "name": "csv-data-visualizer"
+          },
+          {
+            "rank": 5,
+            "skill_id": "a850259c-e43d-4899-bbac-7a2c8f747e49",
+            "name": "chart-generator"
+          },
+          {
+            "rank": 6,
+            "skill_id": "204624b9-6fe7-499e-83bb-ab220b941b3d",
+            "name": "ruby-stdlib"
+          },
+          {
+            "rank": 7,
+            "skill_id": "27ac0562-695a-4c43-b366-2d54133caf7c",
+            "name": "reporting"
+          },
+          {
+            "rank": 8,
+            "skill_id": "4b1dcdca-bb45-4f8d-b9a3-3b3a02fa6b47",
+            "name": "simplifying-ruby-code"
+          },
+          {
+            "rank": 9,
+            "skill_id": "75de8211-9d71-4ea3-baad-e43909dcec4c",
+            "name": "ln-150-presentation-creator"
+          },
+          {
+            "rank": 10,
+            "skill_id": "e738a508-b0a5-435f-abc1-027677ee8ff7",
+            "name": "work-summary"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 224
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "a8920616-d559-42c7-9264-fddc94f48824",
+        "name": "generating-sorbet"
+      },
+      {
+        "rank": 2,
+        "skill_id": "4dd3487f-40eb-405a-a632-a6b3bd446dcb",
+        "name": "engineering-report-generator"
+      },
+      {
+        "rank": 3,
+        "skill_id": "c2184df0-7806-4ca7-ba1b-c17d12cfea5b",
+        "name": "report-generator"
+      },
+      {
+        "rank": 4,
+        "skill_id": "8f60818d-a803-42e8-845c-0e7d05f81a20",
+        "name": "codebase-context-extractor"
+      },
+      {
+        "rank": 5,
+        "skill_id": "8bf60af0-bbd7-49cf-bace-ab5680b35850",
+        "name": "ruby-rails-application"
+      },
+      {
+        "rank": 6,
+        "skill_id": "6b9d8779-ab5d-4014-9f4a-7cef5707945f",
+        "name": "csv-data-visualizer"
+      },
+      {
+        "rank": 7,
+        "skill_id": "a850259c-e43d-4899-bbac-7a2c8f747e49",
+        "name": "chart-generator"
+      },
+      {
+        "rank": 8,
+        "skill_id": "75de8211-9d71-4ea3-baad-e43909dcec4c",
+        "name": "ln-150-presentation-creator"
+      },
+      {
+        "rank": 9,
+        "skill_id": "27ac0562-695a-4c43-b366-2d54133caf7c",
+        "name": "reporting"
+      },
+      {
+        "rank": 10,
+        "skill_id": "4f3048aa-39a0-43c6-b54f-1d874a0c6455",
+        "name": "code-smell-detection"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "c2184df0-7806-4ca7-ba1b-c17d12cfea5b",
+        "name": "report-generator"
+      },
+      {
+        "rank": 2,
+        "skill_id": "8cebe03d-16d6-4e5e-9265-20d780a3413b",
+        "name": "extracting-code-structure"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.3065735963827292,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.16666666666666666
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1130
+  }
+}

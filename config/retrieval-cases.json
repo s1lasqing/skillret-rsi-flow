@@ -1,0 +1,192 @@
+[
+  {
+    "id": "q-02592",
+    "title": "Ruby 代码结构与工程报告",
+    "branches": [
+      {
+        "id": "structure",
+        "label": "代码结构提取",
+        "query": "Analyze a Ruby on Rails codebase by walking app/services, app/controllers and lib. Extract the full class and module hierarchy, namespace and inheritance relationships, and public method signatures by parsing Ruby source files. Preserve filenames, method parameters, and counts per directory."
+      },
+      {
+        "id": "report",
+        "label": "工程报告组织",
+        "query": "Produce a standalone HTML engineering report from a Ruby code analysis. Include directory summary tables of file, class and method counts, a bar chart, grouped API signatures, and a short review highlighting unusually large classes."
+      }
+    ]
+  },
+  {
+    "id": "q-00821",
+    "title": "TripCraft 引导流程重设计",
+    "branches": [
+      {
+        "id": "repository",
+        "label": "查找引导代码",
+        "query": "Locate existing React and TypeScript onboarding step components and A/B test configuration under src/onboarding, and usability tests and user research in docs/research. Return relevant files and the current flow."
+      },
+      {
+        "id": "prd",
+        "label": "编制引导 PRD",
+        "query": "Design an onboarding PRD for a travel app with 11 screens and 68% drop-off by screen 5. Apply Hick's Law, progressive disclosure, RICE, Kano, user stories and an after-implementation usability checklist."
+      }
+    ]
+  },
+  {
+    "id": "q-03697",
+    "title": "容器部署研究证据综述",
+    "branches": [
+      {
+        "id": "synthesis",
+        "label": "整理证据矩阵",
+        "query": "Synthesize 23 primary studies of CI/CD container deployment strategies in a Markdown evidence matrix with study ID, tools, strategies, outcomes, bias and findings. Summarize cross-study agreements and gaps."
+      },
+      {
+        "id": "pipeline",
+        "label": "接入验证工作流",
+        "query": "Extend GitHub Actions for pull requests that change docs/synthesis_matrix.md. Add dependent jobs for Python checks of required fields and duplicate IDs, Docker generation of sortable HTML, and upload a review artifact and summary."
+      }
+    ]
+  },
+  {
+    "id": "q-02870",
+    "title": "Fountain 剧本页数与 CI",
+    "branches": [
+      {
+        "id": "estimation",
+        "label": "估算页数时长",
+        "query": "Parse Fountain screenplay scenes, separate dialogue and action, estimate formatted page count and adjusted running time against a 110-minute feature target. Identify acts outside the target."
+      },
+      {
+        "id": "workflow",
+        "label": "编排自动检查",
+        "query": "Create a GitHub Actions YAML workflow and Python entry point for a Fountain screenplay repository. Trigger on main pushes, report page count and runtime drift, and open a length-warning issue when the deviation exceeds 15 minutes."
+      }
+    ]
+  },
+  {
+    "id": "q-01769",
+    "title": "沿海传感网络运维材料",
+    "branches": [
+      {
+        "id": "health",
+        "label": "网络健康报告",
+        "query": "Report health and performance for a 14-station coastal sensor network. Compare LoRaWAN loss, satellite latency and jitter, fiber utilization, and capacity for expansion to 22 stations."
+      },
+      {
+        "id": "documentation",
+        "label": "审查更新运维文档",
+        "query": "Audit runbooks and architecture documents against current network topology. Capture cellular-to-LoRaWAN migrations, new VLAN segmentation, and storm failover procedures in updated documentation."
+      },
+      {
+        "id": "lessons",
+        "label": "提炼可复用经验",
+        "query": "Record a reusable operational learning pattern from storm alerting. Explain the actual 40% loss paging threshold, the desired 15% threshold, threshold tuning and transferable best practices."
+      }
+    ]
+  },
+  {
+    "id": "q-01901",
+    "title": "开户向导规格与交互",
+    "branches": [
+      {
+        "id": "spec",
+        "label": "核验向导规格",
+        "query": "Validate specs/onboarding-flow.superspec.yaml for required structure, completeness, edge cases, consistent state transitions, and testable acceptance criteria for identity, funding and preferences."
+      },
+      {
+        "id": "interactions",
+        "label": "设计向导交互",
+        "query": "Specify multi-step onboarding transitions, inclusive focus and hover states, error and success feedback, skeleton loading during async identity verification, and final completion interaction."
+      },
+      {
+        "id": "commit",
+        "label": "语义提交整组变更",
+        "query": "Stage the storefront onboarding specification corrections and onboarding-interactions documentation together, then prepare one semantic commit message for the changeset."
+      }
+    ]
+  },
+  {
+    "id": "q-01364",
+    "title": "事故分级与响应式规格",
+    "branches": [
+      {
+        "id": "spec",
+        "label": "编制实施规格",
+        "query": "Plan spec-first implementation of a guided incident severity wizard with a review checkpoint, testable acceptance criteria, incremental implementation stages and atomic changes."
+      },
+      {
+        "id": "severity",
+        "label": "定义事故分级",
+        "query": "Define SEV1 through SEV5 using downtime, data loss, blast radius and business impact. Specify SLAs, escalation chains, communications and criteria to raise or lower severity."
+      },
+      {
+        "id": "responsive",
+        "label": "设计跨设备布局",
+        "query": "Design responsive wizard and incident cards for phones, tablets and war-room TVs. Use breakpoints, container queries, fluid type and accessible mobile touch targets."
+      }
+    ]
+  },
+  {
+    "id": "q-01921",
+    "title": "开发者门户三项需求",
+    "branches": [
+      {
+        "id": "interface",
+        "label": "设计开发者门户",
+        "query": "Design a production-grade dashboard UI with sidebar, top bar, environment cards, status badges and feature-flag search and filters. Include modern spacing, type hierarchy and dark mode."
+      },
+      {
+        "id": "prd",
+        "label": "编制环境功能 PRD",
+        "query": "Draft an ephemeral environments PRD for self-service provisioning, TTL teardown, cost tracking and namespace isolation. Include acceptance criteria, constraints and dependencies for TaskMaster."
+      },
+      {
+        "id": "workflow",
+        "label": "制定 Git 约定",
+        "query": "Define Git workflow guardrails with Husky conventional-commit checks, branch naming, a pull request template with screenshots and reviewer checklist, and a documented emergency hotfix procedure."
+      }
+    ]
+  },
+  {
+    "id": "q-00137",
+    "title": "终端式工具市场",
+    "branches": [
+      {
+        "id": "animation",
+        "label": "设计 ASCII 开场",
+        "query": "Create an animated CRT-style ASCII terminal splash banner that assembles a logo character by character before revealing the CLI tools marketplace."
+      },
+      {
+        "id": "routing",
+        "label": "规划 Next.js 内容呈现",
+        "query": "Plan transitions from an animated splash to streamed Next.js App Router server components. Use Suspense boundaries and compare intercepted and parallel routes for tool detail modals."
+      },
+      {
+        "id": "tools",
+        "label": "查找 MCP 服务工具",
+        "query": "Discover available MCP tools for Jira review tickets, Slack maintainer notifications, and Google Docs changelogs. Map the tools to the submission workflow."
+      }
+    ]
+  },
+  {
+    "id": "q-00463",
+    "title": "状态组件与环境交付",
+    "branches": [
+      {
+        "id": "component",
+        "label": "制作状态组件",
+        "query": "Define a React StatusBadge with Tailwind CSS v4 and CVA for appointment statuses, CSS variable color tokens, three size variants, and optional pulsing."
+      },
+      {
+        "id": "configuration",
+        "label": "分发环境配置",
+        "query": "Design Kubernetes configuration across local, staging, UAT and production. Use External Secrets Operator for AWS Secrets Manager, ConfigMaps for non-sensitive settings, and a rotation procedure."
+      },
+      {
+        "id": "validation",
+        "label": "策划系统验收",
+        "query": "Trace component rendering and configuration behavior to REQ-Portal-2024-v3. Plan system tests for variants and config injection, UAT for three stakeholder groups, and a defect traceability matrix."
+      }
+    ]
+  }
+]

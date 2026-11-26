@@ -1,0 +1,19 @@
+diff --git a/next.config.ts b/next.config.ts
+index 6d89d24..b2afafc 100644
+--- a/next.config.ts
++++ b/next.config.ts
+@@ -19,6 +19,14 @@ const nextConfig: NextConfig = {
+     }
+ 
+     return [
++      {
++        source: "/skillret-runtime/api/engine/flow",
++        destination: "http://127.0.0.1:33478/api/engine/flow",
++      },
++      {
++        source: "/skillret-runtime/cases",
++        destination: "http://127.0.0.1:18940/cases",
++      },
+       {
+         source: "/skillTesting-core/:path*",
+         destination: "http://127.0.0.1:33477/:path*",

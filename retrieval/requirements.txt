@@ -1,0 +1,6 @@
+bm25s==0.2.14
+huggingface-hub==0.36.2
+numpy==2.5.5
+safetensors==0.8.0
+torch==2.10.0
+transformers==4.57.6

@@ -1,0 +1,402 @@
+{
+  "a": {
+    "queryId": "q-00821",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We're redesigning the onboarding flow for \"TripCraft,\" our React/TypeScript travel planning app, and I need help with two things. First, search our codebase under `src/onboarding/` to find all the existing step components and any A/B test configurations — I want to understand the current flow before proposing changes. Then, using what you find, help me write a PRD for the new onboarding experience. The current flow has 11 screens before a user can create their first trip, and our analytics show a 68% drop-off by screen 5. I want to apply Hick's Law and the Progressive Disclosure pattern to reduce cognitive load, use the RICE framework to prioritize which screens to cut vs. consolidate vs. keep, and structure the PRD with proper user stories in \"As a [user], I want...\" format. Also search for any existing usability test results or user research files in `docs/research/` so we can ground the redesign in actual data rather than assumptions. I'd like the final PRD to include a Kano Model classification of each onboarding element (must-have vs. delighter) and a checklist we can use for the usability testing round after implementation.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "534ea0e9-2964-4fd7-95ea-43391b205f8a",
+            "name": "product-discovery"
+          },
+          {
+            "rank": 2,
+            "skill_id": "eca044f9-6d95-4441-874e-527e10d4a791",
+            "name": "product-frameworks-for-design-and-management"
+          },
+          {
+            "rank": 3,
+            "skill_id": "fe8af643-505b-4a5d-97fc-dee899b930ae",
+            "name": "prd-generator"
+          },
+          {
+            "rank": 4,
+            "skill_id": "4d1ec814-eaa0-403f-a2d6-ff3f32abd05f",
+            "name": "vibe-prd"
+          },
+          {
+            "rank": 5,
+            "skill_id": "029fac9d-7dbf-43a8-aad7-3a907dc664fb",
+            "name": "ring:pre-dev-prd-creation"
+          },
+          {
+            "rank": 6,
+            "skill_id": "3fb6b081-d77c-43fe-a5f8-8684e69442dc",
+            "name": "ring:pre-dev-research"
+          },
+          {
+            "rank": 7,
+            "skill_id": "932c336c-9378-49a2-9791-2c2feb15ccdc",
+            "name": "product-management"
+          },
+          {
+            "rank": 8,
+            "skill_id": "308da830-e5e4-4c55-ad4d-b59bfd09a26d",
+            "name": "resonance-product"
+          },
+          {
+            "rank": 9,
+            "skill_id": "174093f3-3389-4fae-bc25-7ecb0c16ab15",
+            "name": "pre-dev-prd-creation"
+          },
+          {
+            "rank": 10,
+            "skill_id": "3cf574e9-225f-4f8c-81ab-c1ec70345835",
+            "name": "software-ux-research"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 775
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "534ea0e9-2964-4fd7-95ea-43391b205f8a",
+        "name": "product-discovery"
+      },
+      {
+        "rank": 2,
+        "skill_id": "eca044f9-6d95-4441-874e-527e10d4a791",
+        "name": "product-frameworks-for-design-and-management"
+      },
+      {
+        "rank": 3,
+        "skill_id": "fe8af643-505b-4a5d-97fc-dee899b930ae",
+        "name": "prd-generator"
+      },
+      {
+        "rank": 4,
+        "skill_id": "4d1ec814-eaa0-403f-a2d6-ff3f32abd05f",
+        "name": "vibe-prd"
+      },
+      {
+        "rank": 5,
+        "skill_id": "029fac9d-7dbf-43a8-aad7-3a907dc664fb",
+        "name": "ring:pre-dev-prd-creation"
+      },
+      {
+        "rank": 6,
+        "skill_id": "3fb6b081-d77c-43fe-a5f8-8684e69442dc",
+        "name": "ring:pre-dev-research"
+      },
+      {
+        "rank": 7,
+        "skill_id": "932c336c-9378-49a2-9791-2c2feb15ccdc",
+        "name": "product-management"
+      },
+      {
+        "rank": 8,
+        "skill_id": "308da830-e5e4-4c55-ad4d-b59bfd09a26d",
+        "name": "resonance-product"
+      },
+      {
+        "rank": 9,
+        "skill_id": "174093f3-3389-4fae-bc25-7ecb0c16ab15",
+        "name": "pre-dev-prd-creation"
+      },
+      {
+        "rank": 10,
+        "skill_id": "3cf574e9-225f-4f8c-81ab-c1ec70345835",
+        "name": "software-ux-research"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "eca044f9-6d95-4441-874e-527e10d4a791",
+        "name": "product-frameworks-for-design-and-management"
+      },
+      {
+        "rank": 2,
+        "skill_id": "62f6b300-d5c6-43ca-87e7-ccac5c7f01b6",
+        "name": "code-search"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.38685280723454163,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.25
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 775
+  },
+  "b": {
+    "queryId": "q-00821",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We're redesigning the onboarding flow for \"TripCraft,\" our React/TypeScript travel planning app, and I need help with two things. First, search our codebase under `src/onboarding/` to find all the existing step components and any A/B test configurations — I want to understand the current flow before proposing changes. Then, using what you find, help me write a PRD for the new onboarding experience. The current flow has 11 screens before a user can create their first trip, and our analytics show a 68% drop-off by screen 5. I want to apply Hick's Law and the Progressive Disclosure pattern to reduce cognitive load, use the RICE framework to prioritize which screens to cut vs. consolidate vs. keep, and structure the PRD with proper user stories in \"As a [user], I want...\" format. Also search for any existing usability test results or user research files in `docs/research/` so we can ground the redesign in actual data rather than assumptions. I'd like the final PRD to include a Kano Model classification of each onboarding element (must-have vs. delighter) and a checklist we can use for the usability testing round after implementation.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "534ea0e9-2964-4fd7-95ea-43391b205f8a",
+            "name": "product-discovery"
+          },
+          {
+            "rank": 2,
+            "skill_id": "eca044f9-6d95-4441-874e-527e10d4a791",
+            "name": "product-frameworks-for-design-and-management"
+          },
+          {
+            "rank": 3,
+            "skill_id": "fe8af643-505b-4a5d-97fc-dee899b930ae",
+            "name": "prd-generator"
+          },
+          {
+            "rank": 4,
+            "skill_id": "4d1ec814-eaa0-403f-a2d6-ff3f32abd05f",
+            "name": "vibe-prd"
+          },
+          {
+            "rank": 5,
+            "skill_id": "029fac9d-7dbf-43a8-aad7-3a907dc664fb",
+            "name": "ring:pre-dev-prd-creation"
+          },
+          {
+            "rank": 6,
+            "skill_id": "3fb6b081-d77c-43fe-a5f8-8684e69442dc",
+            "name": "ring:pre-dev-research"
+          },
+          {
+            "rank": 7,
+            "skill_id": "932c336c-9378-49a2-9791-2c2feb15ccdc",
+            "name": "product-management"
+          },
+          {
+            "rank": 8,
+            "skill_id": "308da830-e5e4-4c55-ad4d-b59bfd09a26d",
+            "name": "resonance-product"
+          },
+          {
+            "rank": 9,
+            "skill_id": "174093f3-3389-4fae-bc25-7ecb0c16ab15",
+            "name": "pre-dev-prd-creation"
+          },
+          {
+            "rank": 10,
+            "skill_id": "3cf574e9-225f-4f8c-81ab-c1ec70345835",
+            "name": "software-ux-research"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 798
+      },
+      {
+        "branch": "repository",
+        "query": "Locate existing React and TypeScript onboarding step components and A/B test configuration under src/onboarding, and usability tests and user research in docs/research. Return relevant files and the current flow.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "3cf574e9-225f-4f8c-81ab-c1ec70345835",
+            "name": "software-ux-research"
+          },
+          {
+            "rank": 2,
+            "skill_id": "4531c5be-1183-4e8b-a11e-d461cf37d220",
+            "name": "usability-tester"
+          },
+          {
+            "rank": 3,
+            "skill_id": "15391635-270f-4f5a-ab7e-0a6e87ae142e",
+            "name": "Research Skill"
+          },
+          {
+            "rank": 4,
+            "skill_id": "f9f9590c-b28a-4cef-abaa-77ede792ce56",
+            "name": "codebase-navigation"
+          },
+          {
+            "rank": 5,
+            "skill_id": "f8038efd-401f-46d7-99d8-b3bb1f4a8144",
+            "name": "react-project"
+          },
+          {
+            "rank": 6,
+            "skill_id": "d5780c5b-0755-43cf-8de4-153f022ad439",
+            "name": "web-research-documenter"
+          },
+          {
+            "rank": 7,
+            "skill_id": "ff340df0-fd58-4bde-a45f-75b2944e05f4",
+            "name": "codex-search"
+          },
+          {
+            "rank": 8,
+            "skill_id": "20a9f161-3a8d-42ba-a444-564376e97ccd",
+            "name": "ctx:researcher"
+          },
+          {
+            "rank": 9,
+            "skill_id": "16b81c60-a447-496f-9230-fae4dfc6e5a5",
+            "name": "research-web"
+          },
+          {
+            "rank": 10,
+            "skill_id": "24e8cb4a-0fd4-4916-923e-a1b5b7cc234d",
+            "name": "research-web"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 219
+      },
+      {
+        "branch": "prd",
+        "query": "Design an onboarding PRD for a travel app with 11 screens and 68% drop-off by screen 5. Apply Hick's Law, progressive disclosure, RICE, Kano, user stories and an after-implementation usability checklist.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "eca044f9-6d95-4441-874e-527e10d4a791",
+            "name": "product-frameworks-for-design-and-management"
+          },
+          {
+            "rank": 2,
+            "skill_id": "fe8af643-505b-4a5d-97fc-dee899b930ae",
+            "name": "prd-generator"
+          },
+          {
+            "rank": 3,
+            "skill_id": "6b472026-f236-4efa-88c5-0bbab10c5340",
+            "name": "recovery-app-onboarding"
+          },
+          {
+            "rank": 4,
+            "skill_id": "029fac9d-7dbf-43a8-aad7-3a907dc664fb",
+            "name": "ring:pre-dev-prd-creation"
+          },
+          {
+            "rank": 5,
+            "skill_id": "534ea0e9-2964-4fd7-95ea-43391b205f8a",
+            "name": "product-discovery"
+          },
+          {
+            "rank": 6,
+            "skill_id": "f17517e5-2552-4d00-9fa6-7c0416cf278f",
+            "name": "prd-maker"
+          },
+          {
+            "rank": 7,
+            "skill_id": "308da830-e5e4-4c55-ad4d-b59bfd09a26d",
+            "name": "resonance-product"
+          },
+          {
+            "rank": 8,
+            "skill_id": "324b0338-a477-45f6-a954-9f1bf06a11e0",
+            "name": "ralph-tui-prd"
+          },
+          {
+            "rank": 9,
+            "skill_id": "b4924433-501f-49cb-a06d-0d6179722f84",
+            "name": "prd-facilitator"
+          },
+          {
+            "rank": 10,
+            "skill_id": "4d1ec814-eaa0-403f-a2d6-ff3f32abd05f",
+            "name": "vibe-prd"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 255
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "534ea0e9-2964-4fd7-95ea-43391b205f8a",
+        "name": "product-discovery"
+      },
+      {
+        "rank": 2,
+        "skill_id": "eca044f9-6d95-4441-874e-527e10d4a791",
+        "name": "product-frameworks-for-design-and-management"
+      },
+      {
+        "rank": 3,
+        "skill_id": "fe8af643-505b-4a5d-97fc-dee899b930ae",
+        "name": "prd-generator"
+      },
+      {
+        "rank": 4,
+        "skill_id": "3cf574e9-225f-4f8c-81ab-c1ec70345835",
+        "name": "software-ux-research"
+      },
+      {
+        "rank": 5,
+        "skill_id": "4531c5be-1183-4e8b-a11e-d461cf37d220",
+        "name": "usability-tester"
+      },
+      {
+        "rank": 6,
+        "skill_id": "6b472026-f236-4efa-88c5-0bbab10c5340",
+        "name": "recovery-app-onboarding"
+      },
+      {
+        "rank": 7,
+        "skill_id": "029fac9d-7dbf-43a8-aad7-3a907dc664fb",
+        "name": "ring:pre-dev-prd-creation"
+      },
+      {
+        "rank": 8,
+        "skill_id": "4d1ec814-eaa0-403f-a2d6-ff3f32abd05f",
+        "name": "vibe-prd"
+      },
+      {
+        "rank": 9,
+        "skill_id": "3fb6b081-d77c-43fe-a5f8-8684e69442dc",
+        "name": "ring:pre-dev-research"
+      },
+      {
+        "rank": 10,
+        "skill_id": "932c336c-9378-49a2-9791-2c2feb15ccdc",
+        "name": "product-management"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "eca044f9-6d95-4441-874e-527e10d4a791",
+        "name": "product-frameworks-for-design-and-management"
+      },
+      {
+        "rank": 2,
+        "skill_id": "62f6b300-d5c6-43ca-87e7-ccac5c7f01b6",
+        "name": "code-search"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.38685280723454163,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.25
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1272
+  }
+}

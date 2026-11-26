@@ -1,0 +1,65 @@
+.workspace {
+  min-height: 100vh;
+  background: #edf2f0;
+  color: #182921;
+  padding: clamp(20px, 5vw, 70px);
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+.header h1 { margin: 8px 0; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 680; letter-spacing: -.045em; }
+.workspace p { color: #4b5d51; }
+.context { font: 600 .85rem ui-monospace, monospace; }
+.workspace button {
+  cursor: pointer;
+  background: #214e39;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 7px;
+  font-weight: 650;
+}
+.workspace button:disabled { cursor: wait; opacity: .6; }
+.workspace button:focus-visible { outline: 2px solid #1f6246; outline-offset: 3px; }
+.workflow { margin: 28px 0 14px; }
+.workflow > p { margin: 0 0 8px; font-size: .9rem; }
+.flowCanvas {
+  height: 400px;
+  overflow: hidden;
+  border: 1px solid #c7d5ce;
+  border-radius: 8px;
+}
+.flowCanvas > div { min-height: 0; }
+.flowCanvas h4 { cursor: grab; }
+.flowCanvas h4:active { cursor: grabbing; }
+.error { color: #8d2525 !important; margin: 14px 0; }
+.evidence {
+  border: 1px solid #c7d5ce;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fafcfb;
+  padding: 20px;
+}
+.evidence h3 { font-size: 1rem; font-weight: 680; }
+.evidence ul { margin: 8px 0 24px; padding: 0; list-style: none; }
+.evidence li { display: flex; flex-wrap: wrap; gap: 4px 10px; justify-content: space-between; margin: 8px 0; }
+.evidence li span { color: #4b5d51; }
+.evidence table { width: 100%; border-collapse: collapse; margin: 9px 0 20px; }
+.evidence th, .evidence td { padding: 7px 8px 7px 0; border-bottom: 1px solid #dbe4df; text-align: left; }
+.evidence tbody th { font-weight: 500; }
+.evidence p { font-size: .9rem; }
+@media (max-width: 760px) {
+  .flowCanvas { height: 440px; }
+}
+
+
+.runControls { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.runControls select {
+  padding: 10px 12px;
+  border: 1px solid #c7d5ce;
+  border-radius: 7px;
+  background: #fafcfb;
+}

@@ -1,0 +1,402 @@
+{
+  "a": {
+    "queryId": "q-03697",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Our research group is finishing a systematic review on the effectiveness of container orchestration strategies for reducing deployment failures across CI/CD pipelines. We have data extracted from 23 primary studies (2018–2024) covering variables like rollback frequency, mean time to recovery, deployment cadence, toolchain (ArgoCD, Flux, Spinnaker, etc.), and environment type (Kubernetes, Docker Swarm, ECS). I need two things done in our `~/repos/sr-container-deploy` repo: (1) Build me a comprehensive evidence synthesis matrix as a structured Markdown file at `docs/synthesis_matrix.md` that organizes all 23 studies by rows, with columns for study ID, year, sample size, orchestration tool, deployment strategy (blue-green, canary, rolling), outcome metrics, effect direction, risk of bias rating, and key findings — including a summary section at the bottom that identifies cross-study patterns, areas of convergence/divergence, and gaps in the evidence. (2) Then update our `.github/workflows/review-pipeline.yml` GitHub Actions workflow so that whenever `docs/synthesis_matrix.md` is modified on a PR, it triggers a job that runs a Python validation script (`scripts/validate_matrix.py` which checks for missing fields and duplicate study IDs), builds a Docker container from our `Dockerfile.review-tools` that generates an HTML version of the matrix with sortable columns, and uploads both the HTML artifact and a summary comment back to the PR. The current workflow only runs linting — I need the new synthesis validation and artifact generation stages added as dependent jobs.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "2155d061-1f2f-4beb-b38c-4de2204c39f1",
+            "name": "synthesis-matrix"
+          },
+          {
+            "rank": 2,
+            "skill_id": "2a805873-4591-42ac-baa3-f10fbdc7b0cc",
+            "name": "devops-automator"
+          },
+          {
+            "rank": 3,
+            "skill_id": "2983c439-27cd-49da-b8d3-b60a39e49136",
+            "name": "github-actions-ci"
+          },
+          {
+            "rank": 4,
+            "skill_id": "1b44dd18-ca4b-44c6-909f-8338bbf9088c",
+            "name": "devops-engineer"
+          },
+          {
+            "rank": 5,
+            "skill_id": "f0ffd9eb-9af5-448c-a8b4-186afec2d0e6",
+            "name": "github-actions-container-build"
+          },
+          {
+            "rank": 6,
+            "skill_id": "e7d355a5-f887-4a7c-a0fe-77aa0062364b",
+            "name": "ci-cd"
+          },
+          {
+            "rank": 7,
+            "skill_id": "bb66ba90-3d66-4222-933f-5333e46bac31",
+            "name": "ci-cd-workflows"
+          },
+          {
+            "rank": 8,
+            "skill_id": "921d6884-ef1b-4ba4-9065-931bac74cda9",
+            "name": "github-actions"
+          },
+          {
+            "rank": 9,
+            "skill_id": "a0353ce4-4364-40d7-8c3f-0ea009722c9b",
+            "name": "gh-workflow"
+          },
+          {
+            "rank": 10,
+            "skill_id": "f7717320-61d9-4fb6-8e5f-08a426a805a3",
+            "name": "kubernetes-architect"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 987
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "2155d061-1f2f-4beb-b38c-4de2204c39f1",
+        "name": "synthesis-matrix"
+      },
+      {
+        "rank": 2,
+        "skill_id": "2a805873-4591-42ac-baa3-f10fbdc7b0cc",
+        "name": "devops-automator"
+      },
+      {
+        "rank": 3,
+        "skill_id": "2983c439-27cd-49da-b8d3-b60a39e49136",
+        "name": "github-actions-ci"
+      },
+      {
+        "rank": 4,
+        "skill_id": "1b44dd18-ca4b-44c6-909f-8338bbf9088c",
+        "name": "devops-engineer"
+      },
+      {
+        "rank": 5,
+        "skill_id": "f0ffd9eb-9af5-448c-a8b4-186afec2d0e6",
+        "name": "github-actions-container-build"
+      },
+      {
+        "rank": 6,
+        "skill_id": "e7d355a5-f887-4a7c-a0fe-77aa0062364b",
+        "name": "ci-cd"
+      },
+      {
+        "rank": 7,
+        "skill_id": "bb66ba90-3d66-4222-933f-5333e46bac31",
+        "name": "ci-cd-workflows"
+      },
+      {
+        "rank": 8,
+        "skill_id": "921d6884-ef1b-4ba4-9065-931bac74cda9",
+        "name": "github-actions"
+      },
+      {
+        "rank": 9,
+        "skill_id": "a0353ce4-4364-40d7-8c3f-0ea009722c9b",
+        "name": "gh-workflow"
+      },
+      {
+        "rank": 10,
+        "skill_id": "f7717320-61d9-4fb6-8e5f-08a426a805a3",
+        "name": "kubernetes-architect"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "e2122ecd-56b4-4e6f-b02c-824928cc4202",
+        "name": "devops"
+      },
+      {
+        "rank": 2,
+        "skill_id": "2155d061-1f2f-4beb-b38c-4de2204c39f1",
+        "name": "synthesis-matrix"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.6131471927654584,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.5
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 987
+  },
+  "b": {
+    "queryId": "q-03697",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Our research group is finishing a systematic review on the effectiveness of container orchestration strategies for reducing deployment failures across CI/CD pipelines. We have data extracted from 23 primary studies (2018–2024) covering variables like rollback frequency, mean time to recovery, deployment cadence, toolchain (ArgoCD, Flux, Spinnaker, etc.), and environment type (Kubernetes, Docker Swarm, ECS). I need two things done in our `~/repos/sr-container-deploy` repo: (1) Build me a comprehensive evidence synthesis matrix as a structured Markdown file at `docs/synthesis_matrix.md` that organizes all 23 studies by rows, with columns for study ID, year, sample size, orchestration tool, deployment strategy (blue-green, canary, rolling), outcome metrics, effect direction, risk of bias rating, and key findings — including a summary section at the bottom that identifies cross-study patterns, areas of convergence/divergence, and gaps in the evidence. (2) Then update our `.github/workflows/review-pipeline.yml` GitHub Actions workflow so that whenever `docs/synthesis_matrix.md` is modified on a PR, it triggers a job that runs a Python validation script (`scripts/validate_matrix.py` which checks for missing fields and duplicate study IDs), builds a Docker container from our `Dockerfile.review-tools` that generates an HTML version of the matrix with sortable columns, and uploads both the HTML artifact and a summary comment back to the PR. The current workflow only runs linting — I need the new synthesis validation and artifact generation stages added as dependent jobs.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "2155d061-1f2f-4beb-b38c-4de2204c39f1",
+            "name": "synthesis-matrix"
+          },
+          {
+            "rank": 2,
+            "skill_id": "2a805873-4591-42ac-baa3-f10fbdc7b0cc",
+            "name": "devops-automator"
+          },
+          {
+            "rank": 3,
+            "skill_id": "2983c439-27cd-49da-b8d3-b60a39e49136",
+            "name": "github-actions-ci"
+          },
+          {
+            "rank": 4,
+            "skill_id": "1b44dd18-ca4b-44c6-909f-8338bbf9088c",
+            "name": "devops-engineer"
+          },
+          {
+            "rank": 5,
+            "skill_id": "f0ffd9eb-9af5-448c-a8b4-186afec2d0e6",
+            "name": "github-actions-container-build"
+          },
+          {
+            "rank": 6,
+            "skill_id": "e7d355a5-f887-4a7c-a0fe-77aa0062364b",
+            "name": "ci-cd"
+          },
+          {
+            "rank": 7,
+            "skill_id": "bb66ba90-3d66-4222-933f-5333e46bac31",
+            "name": "ci-cd-workflows"
+          },
+          {
+            "rank": 8,
+            "skill_id": "921d6884-ef1b-4ba4-9065-931bac74cda9",
+            "name": "github-actions"
+          },
+          {
+            "rank": 9,
+            "skill_id": "a0353ce4-4364-40d7-8c3f-0ea009722c9b",
+            "name": "gh-workflow"
+          },
+          {
+            "rank": 10,
+            "skill_id": "f7717320-61d9-4fb6-8e5f-08a426a805a3",
+            "name": "kubernetes-architect"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 995
+      },
+      {
+        "branch": "synthesis",
+        "query": "Synthesize 23 primary studies of CI/CD container deployment strategies in a Markdown evidence matrix with study ID, tools, strategies, outcomes, bias and findings. Summarize cross-study agreements and gaps.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "2155d061-1f2f-4beb-b38c-4de2204c39f1",
+            "name": "synthesis-matrix"
+          },
+          {
+            "rank": 2,
+            "skill_id": "552f8250-9a41-4c9c-b4f9-580ef3334331",
+            "name": "discover-research"
+          },
+          {
+            "rank": 3,
+            "skill_id": "a7a759bb-8d52-4012-aa06-4d92019e5f0c",
+            "name": "obsidian-research-synthesis"
+          },
+          {
+            "rank": 4,
+            "skill_id": "04e0631e-7f0f-4775-8920-f99a29e2c3b2",
+            "name": "deep-research-synthesizer"
+          },
+          {
+            "rank": 5,
+            "skill_id": "7591bd14-0275-44ea-b901-5738512acd90",
+            "name": "agent-knowledge-synthesizer"
+          },
+          {
+            "rank": 6,
+            "skill_id": "2983c439-27cd-49da-b8d3-b60a39e49136",
+            "name": "github-actions-ci"
+          },
+          {
+            "rank": 7,
+            "skill_id": "4d3403df-4ea2-42de-b742-8ce3e1e4fa7f",
+            "name": "websearch-deep"
+          },
+          {
+            "rank": 8,
+            "skill_id": "6b53a51a-6fc9-434a-85d1-42ceaf636a3b",
+            "name": "multi-agent-researcher"
+          },
+          {
+            "rank": 9,
+            "skill_id": "d3e42b07-2260-436f-a015-9ff818f6a879",
+            "name": "literature-gap-finder"
+          },
+          {
+            "rank": 10,
+            "skill_id": "38734978-bdde-427b-ad37-2606f30f17de",
+            "name": "research-assistant"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 242
+      },
+      {
+        "branch": "pipeline",
+        "query": "Extend GitHub Actions for pull requests that change docs/synthesis_matrix.md. Add dependent jobs for Python checks of required fields and duplicate IDs, Docker generation of sortable HTML, and upload a review artifact and summary.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "921d6884-ef1b-4ba4-9065-931bac74cda9",
+            "name": "github-actions"
+          },
+          {
+            "rank": 2,
+            "skill_id": "2983c439-27cd-49da-b8d3-b60a39e49136",
+            "name": "github-actions-ci"
+          },
+          {
+            "rank": 3,
+            "skill_id": "617c4612-d78e-40b3-8000-754eb00c2666",
+            "name": "python-github-actions"
+          },
+          {
+            "rank": 4,
+            "skill_id": "88daa99d-a098-4853-8312-f5d52cc549c0",
+            "name": "github-actions"
+          },
+          {
+            "rank": 5,
+            "skill_id": "1d1b1471-b9de-4db1-b755-f98eebd1c920",
+            "name": "ci-cd-reviewer"
+          },
+          {
+            "rank": 6,
+            "skill_id": "2155d061-1f2f-4beb-b38c-4de2204c39f1",
+            "name": "synthesis-matrix"
+          },
+          {
+            "rank": 7,
+            "skill_id": "f0ffd9eb-9af5-448c-a8b4-186afec2d0e6",
+            "name": "github-actions-container-build"
+          },
+          {
+            "rank": 8,
+            "skill_id": "a0353ce4-4364-40d7-8c3f-0ea009722c9b",
+            "name": "gh-workflow"
+          },
+          {
+            "rank": 9,
+            "skill_id": "121dd3b8-a7af-4433-a86c-868d78bcdf0b",
+            "name": "matrix-optimizer"
+          },
+          {
+            "rank": 10,
+            "skill_id": "26504fdf-e9da-40e5-b60a-d143ac4dabb8",
+            "name": "mkdocs-github-pages-deployment"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 223
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "2155d061-1f2f-4beb-b38c-4de2204c39f1",
+        "name": "synthesis-matrix"
+      },
+      {
+        "rank": 2,
+        "skill_id": "2a805873-4591-42ac-baa3-f10fbdc7b0cc",
+        "name": "devops-automator"
+      },
+      {
+        "rank": 3,
+        "skill_id": "2983c439-27cd-49da-b8d3-b60a39e49136",
+        "name": "github-actions-ci"
+      },
+      {
+        "rank": 4,
+        "skill_id": "552f8250-9a41-4c9c-b4f9-580ef3334331",
+        "name": "discover-research"
+      },
+      {
+        "rank": 5,
+        "skill_id": "a7a759bb-8d52-4012-aa06-4d92019e5f0c",
+        "name": "obsidian-research-synthesis"
+      },
+      {
+        "rank": 6,
+        "skill_id": "921d6884-ef1b-4ba4-9065-931bac74cda9",
+        "name": "github-actions"
+      },
+      {
+        "rank": 7,
+        "skill_id": "617c4612-d78e-40b3-8000-754eb00c2666",
+        "name": "python-github-actions"
+      },
+      {
+        "rank": 8,
+        "skill_id": "1b44dd18-ca4b-44c6-909f-8338bbf9088c",
+        "name": "devops-engineer"
+      },
+      {
+        "rank": 9,
+        "skill_id": "f0ffd9eb-9af5-448c-a8b4-186afec2d0e6",
+        "name": "github-actions-container-build"
+      },
+      {
+        "rank": 10,
+        "skill_id": "e7d355a5-f887-4a7c-a0fe-77aa0062364b",
+        "name": "ci-cd"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "e2122ecd-56b4-4e6f-b02c-824928cc4202",
+        "name": "devops"
+      },
+      {
+        "rank": 2,
+        "skill_id": "2155d061-1f2f-4beb-b38c-4de2204c39f1",
+        "name": "synthesis-matrix"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.6131471927654584,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.5
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1460
+  }
+}

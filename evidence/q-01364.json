@@ -1,0 +1,470 @@
+{
+  "a": {
+    "queryId": "q-01364",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Our platform \"FieldRelay\" is a React + Node.js incident management dashboard used by on-call SRE teams at logistics companies — they pull it up on phones, tablets, and war-room TVs during outages. We need to add a new \"Severity Classification\" feature: when an incident is created, the user picks from SEV1 through SEV5 using a guided wizard that walks them through impact questions (customer-facing downtime, data loss risk, blast radius, revenue impact per minute, etc.) and auto-suggests a severity level with required response SLAs, escalation chains, and communication templates for each level. The wizard and the resulting incident cards need to work flawlessly across devices — right now our layout completely breaks below 768px, the touch targets on the severity selector are way too small on mobile, and the real-time incident ticker on the war-room TV view doesn't scale to ultra-wide displays. I want you to plan this out spec-first: draft a detailed implementation spec covering the severity classification logic (all five levels with clear definitions, response time requirements, escalation rules, and when to upgrade/downgrade), the responsive redesign using a proper breakpoint system with container queries for the incident cards, fluid typography so the war-room view is readable from across the room, and accessible touch targets for the mobile on-call experience. Then walk me through it for review before we start building anything — I want to approve the spec, review each implementation phase, and make sure we get clean atomic commits at each stage.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "bb49de4d-ee77-46bd-999f-c3d13e87b88f",
+            "name": "Incident Severity Levels"
+          },
+          {
+            "rank": 2,
+            "skill_id": "caca78bc-5efe-446a-ace7-45c37fa742ab",
+            "name": "incident-triage"
+          },
+          {
+            "rank": 3,
+            "skill_id": "17280965-6938-4afb-b8f1-117699340e1f",
+            "name": "incident-responder"
+          },
+          {
+            "rank": 4,
+            "skill_id": "7ad37ebe-74be-4609-9eae-4e503b9df53f",
+            "name": "Severity Levels"
+          },
+          {
+            "rank": 5,
+            "skill_id": "b24d03f2-0b8c-444d-94c9-60f296d83f3d",
+            "name": "incident-response-plan"
+          },
+          {
+            "rank": 6,
+            "skill_id": "bc8bc0ea-9124-4bf9-9a24-af9b8565de0a",
+            "name": "runbook-creation"
+          },
+          {
+            "rank": 7,
+            "skill_id": "e7f4ef7e-671b-4ebd-92fc-bae31e362366",
+            "name": "responsive-architect"
+          },
+          {
+            "rank": 8,
+            "skill_id": "5ca1c4b3-af2e-4d00-bab1-1fda94fa6c06",
+            "name": "Escalation and Ownership"
+          },
+          {
+            "rank": 9,
+            "skill_id": "738ceff9-f93c-406a-b26c-2b0880ae3622",
+            "name": "responsive-helper"
+          },
+          {
+            "rank": 10,
+            "skill_id": "ff9f4593-7ba3-4509-a1dd-24f32639423a",
+            "name": "alert-optimizer"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 913
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "bb49de4d-ee77-46bd-999f-c3d13e87b88f",
+        "name": "Incident Severity Levels"
+      },
+      {
+        "rank": 2,
+        "skill_id": "caca78bc-5efe-446a-ace7-45c37fa742ab",
+        "name": "incident-triage"
+      },
+      {
+        "rank": 3,
+        "skill_id": "17280965-6938-4afb-b8f1-117699340e1f",
+        "name": "incident-responder"
+      },
+      {
+        "rank": 4,
+        "skill_id": "7ad37ebe-74be-4609-9eae-4e503b9df53f",
+        "name": "Severity Levels"
+      },
+      {
+        "rank": 5,
+        "skill_id": "b24d03f2-0b8c-444d-94c9-60f296d83f3d",
+        "name": "incident-response-plan"
+      },
+      {
+        "rank": 6,
+        "skill_id": "bc8bc0ea-9124-4bf9-9a24-af9b8565de0a",
+        "name": "runbook-creation"
+      },
+      {
+        "rank": 7,
+        "skill_id": "e7f4ef7e-671b-4ebd-92fc-bae31e362366",
+        "name": "responsive-architect"
+      },
+      {
+        "rank": 8,
+        "skill_id": "5ca1c4b3-af2e-4d00-bab1-1fda94fa6c06",
+        "name": "Escalation and Ownership"
+      },
+      {
+        "rank": 9,
+        "skill_id": "738ceff9-f93c-406a-b26c-2b0880ae3622",
+        "name": "responsive-helper"
+      },
+      {
+        "rank": 10,
+        "skill_id": "ff9f4593-7ba3-4509-a1dd-24f32639423a",
+        "name": "alert-optimizer"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "c8d89852-fb5c-40a4-80fb-b4e6dab5d3df",
+        "name": "specs-dev"
+      },
+      {
+        "rank": 2,
+        "skill_id": "e7f4ef7e-671b-4ebd-92fc-bae31e362366",
+        "name": "responsive-architect"
+      },
+      {
+        "rank": 3,
+        "skill_id": "7ad37ebe-74be-4609-9eae-4e503b9df53f",
+        "name": "Severity Levels"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.35853358850813305,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.17857142857142858
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 913
+  },
+  "b": {
+    "queryId": "q-01364",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Our platform \"FieldRelay\" is a React + Node.js incident management dashboard used by on-call SRE teams at logistics companies — they pull it up on phones, tablets, and war-room TVs during outages. We need to add a new \"Severity Classification\" feature: when an incident is created, the user picks from SEV1 through SEV5 using a guided wizard that walks them through impact questions (customer-facing downtime, data loss risk, blast radius, revenue impact per minute, etc.) and auto-suggests a severity level with required response SLAs, escalation chains, and communication templates for each level. The wizard and the resulting incident cards need to work flawlessly across devices — right now our layout completely breaks below 768px, the touch targets on the severity selector are way too small on mobile, and the real-time incident ticker on the war-room TV view doesn't scale to ultra-wide displays. I want you to plan this out spec-first: draft a detailed implementation spec covering the severity classification logic (all five levels with clear definitions, response time requirements, escalation rules, and when to upgrade/downgrade), the responsive redesign using a proper breakpoint system with container queries for the incident cards, fluid typography so the war-room view is readable from across the room, and accessible touch targets for the mobile on-call experience. Then walk me through it for review before we start building anything — I want to approve the spec, review each implementation phase, and make sure we get clean atomic commits at each stage.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "bb49de4d-ee77-46bd-999f-c3d13e87b88f",
+            "name": "Incident Severity Levels"
+          },
+          {
+            "rank": 2,
+            "skill_id": "caca78bc-5efe-446a-ace7-45c37fa742ab",
+            "name": "incident-triage"
+          },
+          {
+            "rank": 3,
+            "skill_id": "17280965-6938-4afb-b8f1-117699340e1f",
+            "name": "incident-responder"
+          },
+          {
+            "rank": 4,
+            "skill_id": "7ad37ebe-74be-4609-9eae-4e503b9df53f",
+            "name": "Severity Levels"
+          },
+          {
+            "rank": 5,
+            "skill_id": "b24d03f2-0b8c-444d-94c9-60f296d83f3d",
+            "name": "incident-response-plan"
+          },
+          {
+            "rank": 6,
+            "skill_id": "bc8bc0ea-9124-4bf9-9a24-af9b8565de0a",
+            "name": "runbook-creation"
+          },
+          {
+            "rank": 7,
+            "skill_id": "e7f4ef7e-671b-4ebd-92fc-bae31e362366",
+            "name": "responsive-architect"
+          },
+          {
+            "rank": 8,
+            "skill_id": "5ca1c4b3-af2e-4d00-bab1-1fda94fa6c06",
+            "name": "Escalation and Ownership"
+          },
+          {
+            "rank": 9,
+            "skill_id": "738ceff9-f93c-406a-b26c-2b0880ae3622",
+            "name": "responsive-helper"
+          },
+          {
+            "rank": 10,
+            "skill_id": "ff9f4593-7ba3-4509-a1dd-24f32639423a",
+            "name": "alert-optimizer"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 951
+      },
+      {
+        "branch": "spec",
+        "query": "Plan spec-first implementation of a guided incident severity wizard with a review checkpoint, testable acceptance criteria, incremental implementation stages and atomic changes.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "0be35a7a-952c-407d-aa0a-8fe33c8ed99a",
+            "name": "idse-developer-agent"
+          },
+          {
+            "rank": 2,
+            "skill_id": "c8d89852-fb5c-40a4-80fb-b4e6dab5d3df",
+            "name": "specs-dev"
+          },
+          {
+            "rank": 3,
+            "skill_id": "b24d03f2-0b8c-444d-94c9-60f296d83f3d",
+            "name": "incident-response-plan"
+          },
+          {
+            "rank": 4,
+            "skill_id": "8fd1f89b-1d32-43a0-bd90-a6e92809d149",
+            "name": "plan-implementation"
+          },
+          {
+            "rank": 5,
+            "skill_id": "bb49de4d-ee77-46bd-999f-c3d13e87b88f",
+            "name": "Incident Severity Levels"
+          },
+          {
+            "rank": 6,
+            "skill_id": "83b21db1-f266-4ee2-909e-52711cf1332f",
+            "name": "plan-reviewer"
+          },
+          {
+            "rank": 7,
+            "skill_id": "05296cc7-7768-4b8f-aa55-4369292a3ea6",
+            "name": "sdd-methodology"
+          },
+          {
+            "rank": 8,
+            "skill_id": "429369b6-95f9-48fb-9553-e28a3007ab0d",
+            "name": "obsidian-spec-to-implementation"
+          },
+          {
+            "rank": 9,
+            "skill_id": "161d16c3-6218-477d-b7db-2ebeefef36a4",
+            "name": "Write Plan Skill"
+          },
+          {
+            "rank": 10,
+            "skill_id": "7ad37ebe-74be-4609-9eae-4e503b9df53f",
+            "name": "Severity Levels"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 191
+      },
+      {
+        "branch": "severity",
+        "query": "Define SEV1 through SEV5 using downtime, data loss, blast radius and business impact. Specify SLAs, escalation chains, communications and criteria to raise or lower severity.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "caca78bc-5efe-446a-ace7-45c37fa742ab",
+            "name": "incident-triage"
+          },
+          {
+            "rank": 2,
+            "skill_id": "bb49de4d-ee77-46bd-999f-c3d13e87b88f",
+            "name": "Incident Severity Levels"
+          },
+          {
+            "rank": 3,
+            "skill_id": "17280965-6938-4afb-b8f1-117699340e1f",
+            "name": "incident-responder"
+          },
+          {
+            "rank": 4,
+            "skill_id": "e3884761-c46a-4269-a5ac-c0063eb8f2cf",
+            "name": "reliability-engineering"
+          },
+          {
+            "rank": 5,
+            "skill_id": "7ad37ebe-74be-4609-9eae-4e503b9df53f",
+            "name": "Severity Levels"
+          },
+          {
+            "rank": 6,
+            "skill_id": "021e2ed8-d21a-4241-8f37-85649bb82643",
+            "name": "launch-tiering"
+          },
+          {
+            "rank": 7,
+            "skill_id": "05f456d1-04d6-49e1-b581-af5456c221ba",
+            "name": "escalation-framework"
+          },
+          {
+            "rank": 8,
+            "skill_id": "428570d6-a76a-4d9d-a2fb-ec28d01a6d47",
+            "name": "business-analyst"
+          },
+          {
+            "rank": 9,
+            "skill_id": "b6057960-814f-4470-ab93-9634150c3b0d",
+            "name": "vulnerability-assessor"
+          },
+          {
+            "rank": 10,
+            "skill_id": "1ab014f5-8137-44b3-8fe2-1b1d6e71149f",
+            "name": "war-room-ops"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 214
+      },
+      {
+        "branch": "responsive",
+        "query": "Design responsive wizard and incident cards for phones, tablets and war-room TVs. Use breakpoints, container queries, fluid type and accessible mobile touch targets.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "e7f4ef7e-671b-4ebd-92fc-bae31e362366",
+            "name": "responsive-architect"
+          },
+          {
+            "rank": 2,
+            "skill_id": "738ceff9-f93c-406a-b26c-2b0880ae3622",
+            "name": "responsive-helper"
+          },
+          {
+            "rank": 3,
+            "skill_id": "273adf45-c0eb-48ae-9537-0f0f6a3ee7d7",
+            "name": "responsive-design"
+          },
+          {
+            "rank": 4,
+            "skill_id": "58c3d5d9-b1a6-4241-820d-67497f3d3769",
+            "name": "tailwindcss"
+          },
+          {
+            "rank": 5,
+            "skill_id": "87a93fcb-a5e1-4768-ab57-4eeb7a370202",
+            "name": "flutter-adaptive-ui"
+          },
+          {
+            "rank": 6,
+            "skill_id": "3502c974-b830-4eab-a213-ef0820bc5239",
+            "name": "ui-designer"
+          },
+          {
+            "rank": 7,
+            "skill_id": "6b88256a-fd3c-405b-9c0a-56144655bfe7",
+            "name": "tailwind-ui-patterns"
+          },
+          {
+            "rank": 8,
+            "skill_id": "b24d03f2-0b8c-444d-94c9-60f296d83f3d",
+            "name": "incident-response-plan"
+          },
+          {
+            "rank": 9,
+            "skill_id": "caca78bc-5efe-446a-ace7-45c37fa742ab",
+            "name": "incident-triage"
+          },
+          {
+            "rank": 10,
+            "skill_id": "144d2b9e-72b5-450f-85f8-e998b68aa680",
+            "name": "ui-designer"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 202
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "bb49de4d-ee77-46bd-999f-c3d13e87b88f",
+        "name": "Incident Severity Levels"
+      },
+      {
+        "rank": 2,
+        "skill_id": "caca78bc-5efe-446a-ace7-45c37fa742ab",
+        "name": "incident-triage"
+      },
+      {
+        "rank": 3,
+        "skill_id": "17280965-6938-4afb-b8f1-117699340e1f",
+        "name": "incident-responder"
+      },
+      {
+        "rank": 4,
+        "skill_id": "0be35a7a-952c-407d-aa0a-8fe33c8ed99a",
+        "name": "idse-developer-agent"
+      },
+      {
+        "rank": 5,
+        "skill_id": "c8d89852-fb5c-40a4-80fb-b4e6dab5d3df",
+        "name": "specs-dev"
+      },
+      {
+        "rank": 6,
+        "skill_id": "e3884761-c46a-4269-a5ac-c0063eb8f2cf",
+        "name": "reliability-engineering"
+      },
+      {
+        "rank": 7,
+        "skill_id": "7ad37ebe-74be-4609-9eae-4e503b9df53f",
+        "name": "Severity Levels"
+      },
+      {
+        "rank": 8,
+        "skill_id": "e7f4ef7e-671b-4ebd-92fc-bae31e362366",
+        "name": "responsive-architect"
+      },
+      {
+        "rank": 9,
+        "skill_id": "738ceff9-f93c-406a-b26c-2b0880ae3622",
+        "name": "responsive-helper"
+      },
+      {
+        "rank": 10,
+        "skill_id": "b24d03f2-0b8c-444d-94c9-60f296d83f3d",
+        "name": "incident-response-plan"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "c8d89852-fb5c-40a4-80fb-b4e6dab5d3df",
+        "name": "specs-dev"
+      },
+      {
+        "rank": 2,
+        "skill_id": "e7f4ef7e-671b-4ebd-92fc-bae31e362366",
+        "name": "responsive-architect"
+      },
+      {
+        "rank": 3,
+        "skill_id": "7ad37ebe-74be-4609-9eae-4e503b9df53f",
+        "name": "Severity Levels"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.4860089900278708,
+      "Recall@10": 1,
+      "Completeness@10": 1,
+      "Precision@10": 0.3,
+      "MAP@10": 0.28690476190476194
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1558
+  }
+}

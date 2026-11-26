@@ -1,0 +1,490 @@
+[
+  {
+    "id": "q-02592",
+    "title": "Ruby 代码结构与工程报告",
+    "a": {
+      "NDCG@10": 0.3065735963827292,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.16666666666666666
+    },
+    "b": {
+      "NDCG@10": 0.3065735963827292,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.16666666666666666
+    },
+    "stageCount": 3,
+    "expected": [
+      {
+        "id": "c2184df0-7806-4ca7-ba1b-c17d12cfea5b",
+        "name": "report-generator",
+        "a": 3,
+        "b": 3,
+        "stages": {
+          "structure": null,
+          "report": 2
+        }
+      },
+      {
+        "id": "8cebe03d-16d6-4e5e-9265-20d780a3413b",
+        "name": "extracting-code-structure",
+        "a": null,
+        "b": null,
+        "stages": {
+          "structure": null,
+          "report": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "q-00821",
+    "title": "TripCraft 引导流程重设计",
+    "a": {
+      "NDCG@10": 0.38685280723454163,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.25
+    },
+    "b": {
+      "NDCG@10": 0.38685280723454163,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.25
+    },
+    "stageCount": 3,
+    "expected": [
+      {
+        "id": "eca044f9-6d95-4441-874e-527e10d4a791",
+        "name": "product-frameworks-for-design-and-management",
+        "a": 2,
+        "b": 2,
+        "stages": {
+          "repository": null,
+          "prd": 1
+        }
+      },
+      {
+        "id": "62f6b300-d5c6-43ca-87e7-ccac5c7f01b6",
+        "name": "code-search",
+        "a": null,
+        "b": null,
+        "stages": {
+          "repository": null,
+          "prd": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "q-03697",
+    "title": "容器部署研究证据综述",
+    "a": {
+      "NDCG@10": 0.6131471927654584,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.5
+    },
+    "b": {
+      "NDCG@10": 0.6131471927654584,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.5
+    },
+    "stageCount": 3,
+    "expected": [
+      {
+        "id": "e2122ecd-56b4-4e6f-b02c-824928cc4202",
+        "name": "devops",
+        "a": null,
+        "b": null,
+        "stages": {
+          "synthesis": null,
+          "pipeline": null
+        }
+      },
+      {
+        "id": "2155d061-1f2f-4beb-b38c-4de2204c39f1",
+        "name": "synthesis-matrix",
+        "a": 1,
+        "b": 1,
+        "stages": {
+          "synthesis": 1,
+          "pipeline": 6
+        }
+      }
+    ]
+  },
+  {
+    "id": "q-02870",
+    "title": "Fountain 剧本页数与 CI",
+    "a": {
+      "NDCG@10": 0.6131471927654584,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.5
+    },
+    "b": {
+      "NDCG@10": 0.6131471927654584,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.5
+    },
+    "stageCount": 3,
+    "expected": [
+      {
+        "id": "1f54f026-f775-43d7-ae2f-7b3afa776f5d",
+        "name": "developer",
+        "a": null,
+        "b": null,
+        "stages": {
+          "estimation": null,
+          "workflow": null
+        }
+      },
+      {
+        "id": "1b12e925-8f97-4d43-98d8-a0f830b0e609",
+        "name": "page-estimation",
+        "a": 1,
+        "b": 1,
+        "stages": {
+          "estimation": 1,
+          "workflow": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "q-01769",
+    "title": "沿海传感网络运维材料",
+    "a": {
+      "NDCG@10": 0.2960819109658652,
+      "Recall@10": 0.3333333333333333,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.16666666666666666
+    },
+    "b": {
+      "NDCG@10": 0.2960819109658652,
+      "Recall@10": 0.3333333333333333,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.16666666666666666
+    },
+    "stageCount": 4,
+    "expected": [
+      {
+        "id": "f3d2c28a-6799-43e6-a57b-b10f03c75d5b",
+        "name": "infrastructure-reporting",
+        "a": 2,
+        "b": 2,
+        "stages": {
+          "health": 1,
+          "documentation": null,
+          "lessons": null
+        }
+      },
+      {
+        "id": "46deafc0-20d4-46af-ac87-dce941c4c9cc",
+        "name": "skill-learning-patterns",
+        "a": null,
+        "b": null,
+        "stages": {
+          "health": null,
+          "documentation": null,
+          "lessons": 5
+        }
+      },
+      {
+        "id": "49ea6091-0ec0-42c8-b18b-54a5b4d8aa61",
+        "name": "doc-management",
+        "a": null,
+        "b": null,
+        "stages": {
+          "health": null,
+          "documentation": null,
+          "lessons": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "q-01901",
+    "title": "开户向导规格与交互",
+    "a": {
+      "NDCG@10": 0.6257049680303419,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.42857142857142855
+    },
+    "b": {
+      "NDCG@10": 0.6105456988825855,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.40740740740740744
+    },
+    "stageCount": 4,
+    "expected": [
+      {
+        "id": "3e4dd76f-9598-457c-8a74-f52e6ae29033",
+        "name": "spec-validation",
+        "a": 1,
+        "b": 1,
+        "stages": {
+          "spec": 1,
+          "interactions": null,
+          "commit": null
+        }
+      },
+      {
+        "id": "761fae6a-dc51-4e11-97d6-d6fd98e6d51c",
+        "name": "semantic-commit-autostage",
+        "a": null,
+        "b": 9,
+        "stages": {
+          "spec": null,
+          "interactions": null,
+          "commit": 2
+        }
+      },
+      {
+        "id": "05c64ebd-0d80-451b-ae2f-4a7d44ed9751",
+        "name": "interaction-design",
+        "a": 7,
+        "b": null,
+        "stages": {
+          "spec": null,
+          "interactions": null,
+          "commit": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "q-01364",
+    "title": "事故分级与响应式规格",
+    "a": {
+      "NDCG@10": 0.35853358850813305,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.17857142857142858
+    },
+    "b": {
+      "NDCG@10": 0.4860089900278708,
+      "Recall@10": 1,
+      "Completeness@10": 1,
+      "Precision@10": 0.3,
+      "MAP@10": 0.28690476190476194
+    },
+    "stageCount": 4,
+    "expected": [
+      {
+        "id": "c8d89852-fb5c-40a4-80fb-b4e6dab5d3df",
+        "name": "specs-dev",
+        "a": null,
+        "b": 5,
+        "stages": {
+          "spec": 2,
+          "severity": null,
+          "responsive": null
+        }
+      },
+      {
+        "id": "e7f4ef7e-671b-4ebd-92fc-bae31e362366",
+        "name": "responsive-architect",
+        "a": 7,
+        "b": 8,
+        "stages": {
+          "spec": null,
+          "severity": null,
+          "responsive": 1
+        }
+      },
+      {
+        "id": "7ad37ebe-74be-4609-9eae-4e503b9df53f",
+        "name": "Severity Levels",
+        "a": 4,
+        "b": 7,
+        "stages": {
+          "spec": 10,
+          "severity": 5,
+          "responsive": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "q-01921",
+    "title": "开发者门户三项需求",
+    "a": {
+      "NDCG@10": 0.2960819109658652,
+      "Recall@10": 0.3333333333333333,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.16666666666666666
+    },
+    "b": {
+      "NDCG@10": 0.4441228664487979,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.25
+    },
+    "stageCount": 4,
+    "expected": [
+      {
+        "id": "f2e9bf64-bbd4-4de5-9743-b7af5d2dabdc",
+        "name": "ui-design",
+        "a": null,
+        "b": null,
+        "stages": {
+          "interface": null,
+          "prd": null,
+          "workflow": null
+        }
+      },
+      {
+        "id": "a2d5b605-e8b1-4d6d-80f4-2548308bf266",
+        "name": "PRD Generator for TaskMaster",
+        "a": 2,
+        "b": 2,
+        "stages": {
+          "interface": null,
+          "prd": 1,
+          "workflow": null
+        }
+      },
+      {
+        "id": "95824864-270b-4ba5-9d5a-e12c5ac59764",
+        "name": "git-hygiene-enforcer",
+        "a": null,
+        "b": 8,
+        "stages": {
+          "interface": null,
+          "prd": null,
+          "workflow": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "q-00137",
+    "title": "终端式工具市场",
+    "a": {
+      "NDCG@10": 0.6508205185601091,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.4666666666666666
+    },
+    "b": {
+      "NDCG@10": 0.7529716549381368,
+      "Recall@10": 1,
+      "Completeness@10": 1,
+      "Precision@10": 0.3,
+      "MAP@10": 0.5166666666666667
+    },
+    "stageCount": 4,
+    "expected": [
+      {
+        "id": "0ef36004-d2c0-4ccf-9f55-4a02da43d41e",
+        "name": "nextjs-canary-docs",
+        "a": 5,
+        "b": 10,
+        "stages": {
+          "animation": null,
+          "routing": 7,
+          "tools": null
+        }
+      },
+      {
+        "id": "6f5ce86d-5df5-4bab-9a1a-77e703f572ca",
+        "name": "tool-discovery",
+        "a": null,
+        "b": 8,
+        "stages": {
+          "animation": null,
+          "routing": null,
+          "tools": 1
+        }
+      },
+      {
+        "id": "0c74f387-d151-4252-ba1c-539c3cf2aaf8",
+        "name": "animation-skill",
+        "a": 1,
+        "b": 1,
+        "stages": {
+          "animation": 1,
+          "routing": 8,
+          "tools": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "q-00463",
+    "title": "状态组件与环境交付",
+    "a": {
+      "NDCG@10": 0.7653606369886217,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.6666666666666666
+    },
+    "b": {
+      "NDCG@10": 0.7653606369886217,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.6666666666666666
+    },
+    "stageCount": 4,
+    "expected": [
+      {
+        "id": "2ec3293e-263b-48e3-b825-6948188bdb8f",
+        "name": "styling-with-tailwind-cva",
+        "a": 1,
+        "b": 1,
+        "stages": {
+          "component": 1,
+          "configuration": null,
+          "validation": null
+        }
+      },
+      {
+        "id": "c897ba07-a0b5-4a78-8e23-e2bc0819a732",
+        "name": "Config Distribution",
+        "a": null,
+        "b": null,
+        "stages": {
+          "component": null,
+          "configuration": null,
+          "validation": null
+        }
+      },
+      {
+        "id": "1a0378a6-863b-47b5-a30b-6d627758aa6c",
+        "name": "disciplined-validation",
+        "a": 2,
+        "b": 2,
+        "stages": {
+          "component": null,
+          "configuration": null,
+          "validation": null
+        }
+      }
+    ]
+  }
+]

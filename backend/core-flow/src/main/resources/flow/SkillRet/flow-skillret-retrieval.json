@@ -1,0 +1,226 @@
+{
+  "id": "@com.horsecoder.common.whuTalent.skillTesting.core/FLOW_SKILLRET_RETRIEVAL",
+  "name": "FLOW_SKILLRET_RETRIEVAL",
+  "type": "flow",
+  "title": "SkillRet 技能检索对照",
+  "params": [
+    {
+      "name": "queryId",
+      "title": "queryId",
+      "type": "String",
+      "notnull": true
+    },
+    {
+      "name": "variant",
+      "title": "variant",
+      "type": "String",
+      "notnull": true
+    }
+  ],
+  "results": [
+    {
+      "name": "result",
+      "title": "result",
+      "type": "String",
+      "notnull": true
+    }
+  ],
+  "nodes": [
+    {
+      "id": "SEARCH_WHOLE",
+      "type": "event",
+      "title": "整题融合检索",
+      "reference": "SKILLRET_SEARCH_WHOLE",
+      "params": [
+        {
+          "name": "queryId",
+          "title": "queryId",
+          "type": "String",
+          "notnull": true
+        },
+        {
+          "name": "variant",
+          "title": "variant",
+          "type": "String",
+          "notnull": true
+        }
+      ],
+      "results": [
+        {
+          "name": "wholeJson",
+          "title": "wholeJson",
+          "type": "String",
+          "notnull": true
+        },
+        {
+          "name": "mode",
+          "title": "mode",
+          "type": "Integer",
+          "notnull": true
+        },
+        {
+          "name": "branchCount",
+          "title": "branchCount",
+          "type": "Integer",
+          "notnull": true
+        }
+      ]
+    },
+    {
+      "id": "SEARCH_FIRST",
+      "type": "event",
+      "title": "第一需求补查",
+      "reference": "SKILLRET_SEARCH_BRANCH_ONE",
+      "params": [
+        {
+          "name": "queryId",
+          "title": "queryId",
+          "type": "String",
+          "notnull": true
+        }
+      ],
+      "results": [
+        {
+          "name": "firstJson",
+          "title": "firstJson",
+          "type": "String",
+          "notnull": true
+        }
+      ]
+    },
+    {
+      "id": "SEARCH_SECOND",
+      "type": "event",
+      "title": "第二需求补查",
+      "reference": "SKILLRET_SEARCH_BRANCH_TWO",
+      "params": [
+        {
+          "name": "queryId",
+          "title": "queryId",
+          "type": "String",
+          "notnull": true
+        }
+      ],
+      "results": [
+        {
+          "name": "secondJson",
+          "title": "secondJson",
+          "type": "String",
+          "notnull": true
+        }
+      ]
+    },
+    {
+      "id": "SEARCH_THIRD",
+      "type": "event",
+      "title": "第三需求补查",
+      "reference": "SKILLRET_SEARCH_BRANCH_THREE",
+      "params": [
+        {
+          "name": "queryId",
+          "title": "queryId",
+          "type": "String",
+          "notnull": true
+        }
+      ],
+      "results": [
+        {
+          "name": "thirdJson",
+          "title": "thirdJson",
+          "type": "String",
+          "notnull": true
+        }
+      ]
+    },
+    {
+      "id": "SEARCH_COMPARE",
+      "type": "event",
+      "title": "合并排名及评测",
+      "reference": "SKILLRET_SEARCH_COMPARE",
+      "params": [
+        {
+          "name": "queryId",
+          "title": "queryId",
+          "type": "String",
+          "notnull": true
+        },
+        {
+          "name": "variant",
+          "title": "variant",
+          "type": "String",
+          "notnull": true
+        },
+        {
+          "name": "wholeJson",
+          "title": "wholeJson",
+          "type": "String",
+          "notnull": true
+        },
+        {
+          "name": "firstJson",
+          "title": "firstJson",
+          "type": "String",
+          "notnull": false
+        },
+        {
+          "name": "secondJson",
+          "title": "secondJson",
+          "type": "String",
+          "notnull": false
+        },
+        {
+          "name": "thirdJson",
+          "title": "thirdJson",
+          "type": "String",
+          "notnull": false
+        }
+      ],
+      "results": [
+        {
+          "name": "result",
+          "title": "result",
+          "type": "String",
+          "notnull": true
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "source": "start",
+      "target": "SEARCH_WHOLE"
+    },
+    {
+      "source": "SEARCH_WHOLE",
+      "target": "SEARCH_COMPARE",
+      "condition": "mode==0"
+    },
+    {
+      "source": "SEARCH_WHOLE",
+      "target": "SEARCH_FIRST",
+      "condition": "mode==1"
+    },
+    {
+      "source": "SEARCH_FIRST",
+      "target": "SEARCH_SECOND"
+    },
+    {
+      "source": "SEARCH_SECOND",
+      "target": "SEARCH_COMPARE",
+      "condition": "branchCount==2"
+    },
+    {
+      "source": "SEARCH_SECOND",
+      "target": "SEARCH_THIRD",
+      "condition": "branchCount==3"
+    },
+    {
+      "source": "SEARCH_THIRD",
+      "target": "SEARCH_COMPARE"
+    },
+    {
+      "source": "SEARCH_COMPARE",
+      "target": "end"
+    }
+  ]
+}

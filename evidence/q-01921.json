@@ -1,0 +1,470 @@
+{
+  "a": {
+    "queryId": "q-01921",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We're launching a new internal developer portal called \"DevNexus\" for our platform engineering team — it's a Next.js 14 app with a dashboard where engineers can spin up ephemeral environments, view deployment statuses, and manage feature flags. I need three things done together: First, design and build the main dashboard page with a polished, production-grade UI — it should have a sidebar nav, a top bar with user avatar and notifications bell, a grid of environment cards showing status (running/stopped/deploying) with color-coded badges, and a feature flags toggle panel with search and filtering, all following modern design patterns with proper spacing, typography hierarchy, and dark mode support. Second, generate a full PRD for the \"Ephemeral Environments\" feature covering the self-service provisioning flow, TTL-based auto-teardown, cost tracking per team, and Kubernetes namespace isolation — make sure it's structured for task breakdown with acceptance criteria, tech constraints, and dependency mapping, and then hand it off to TaskMaster for execution planning. Third, set up our git workflow guardrails for this repo: conventional commit enforcement via Husky pre-commit hooks (feat/fix/chore/docs/refactor scopes), branch naming conventions following `type/PORTAL-{ticket}-short-description`, a PR template that includes sections for screenshots of UI changes, a \"Breaking Changes\" checkbox, and required reviewer checklist items, plus document the emergency bypass procedure for hotfixes.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "8084a105-877d-4e91-8751-0a1278d72af0",
+            "name": "bmad-prd"
+          },
+          {
+            "rank": 2,
+            "skill_id": "a2d5b605-e8b1-4d6d-80f4-2548308bf266",
+            "name": "PRD Generator for TaskMaster"
+          },
+          {
+            "rank": 3,
+            "skill_id": "f17517e5-2552-4d00-9fa6-7c0416cf278f",
+            "name": "prd-maker"
+          },
+          {
+            "rank": 4,
+            "skill_id": "324b0338-a477-45f6-a954-9f1bf06a11e0",
+            "name": "ralph-tui-prd"
+          },
+          {
+            "rank": 5,
+            "skill_id": "af457164-6067-467b-8e2c-cb8455032fa0",
+            "name": "create-prd"
+          },
+          {
+            "rank": 6,
+            "skill_id": "fede71f4-2f86-43e6-a03b-9775be5a2953",
+            "name": "task-master"
+          },
+          {
+            "rank": 7,
+            "skill_id": "fe8af643-505b-4a5d-97fc-dee899b930ae",
+            "name": "prd-generator"
+          },
+          {
+            "rank": 8,
+            "skill_id": "c4aec837-2bb0-4c88-8a00-bb1a590fb3d5",
+            "name": "prd-management"
+          },
+          {
+            "rank": 9,
+            "skill_id": "73fa3b49-3656-4343-a420-238a3ae6861e",
+            "name": "docs-ai-prd"
+          },
+          {
+            "rank": 10,
+            "skill_id": "ebb9d5e1-1a74-4a30-85a3-0b46aae2fe09",
+            "name": "git-pr-creation"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 883
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "8084a105-877d-4e91-8751-0a1278d72af0",
+        "name": "bmad-prd"
+      },
+      {
+        "rank": 2,
+        "skill_id": "a2d5b605-e8b1-4d6d-80f4-2548308bf266",
+        "name": "PRD Generator for TaskMaster"
+      },
+      {
+        "rank": 3,
+        "skill_id": "f17517e5-2552-4d00-9fa6-7c0416cf278f",
+        "name": "prd-maker"
+      },
+      {
+        "rank": 4,
+        "skill_id": "324b0338-a477-45f6-a954-9f1bf06a11e0",
+        "name": "ralph-tui-prd"
+      },
+      {
+        "rank": 5,
+        "skill_id": "af457164-6067-467b-8e2c-cb8455032fa0",
+        "name": "create-prd"
+      },
+      {
+        "rank": 6,
+        "skill_id": "fede71f4-2f86-43e6-a03b-9775be5a2953",
+        "name": "task-master"
+      },
+      {
+        "rank": 7,
+        "skill_id": "fe8af643-505b-4a5d-97fc-dee899b930ae",
+        "name": "prd-generator"
+      },
+      {
+        "rank": 8,
+        "skill_id": "c4aec837-2bb0-4c88-8a00-bb1a590fb3d5",
+        "name": "prd-management"
+      },
+      {
+        "rank": 9,
+        "skill_id": "73fa3b49-3656-4343-a420-238a3ae6861e",
+        "name": "docs-ai-prd"
+      },
+      {
+        "rank": 10,
+        "skill_id": "ebb9d5e1-1a74-4a30-85a3-0b46aae2fe09",
+        "name": "git-pr-creation"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "f2e9bf64-bbd4-4de5-9743-b7af5d2dabdc",
+        "name": "ui-design"
+      },
+      {
+        "rank": 2,
+        "skill_id": "a2d5b605-e8b1-4d6d-80f4-2548308bf266",
+        "name": "PRD Generator for TaskMaster"
+      },
+      {
+        "rank": 3,
+        "skill_id": "95824864-270b-4ba5-9d5a-e12c5ac59764",
+        "name": "git-hygiene-enforcer"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.2960819109658652,
+      "Recall@10": 0.3333333333333333,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.16666666666666666
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 883
+  },
+  "b": {
+    "queryId": "q-01921",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We're launching a new internal developer portal called \"DevNexus\" for our platform engineering team — it's a Next.js 14 app with a dashboard where engineers can spin up ephemeral environments, view deployment statuses, and manage feature flags. I need three things done together: First, design and build the main dashboard page with a polished, production-grade UI — it should have a sidebar nav, a top bar with user avatar and notifications bell, a grid of environment cards showing status (running/stopped/deploying) with color-coded badges, and a feature flags toggle panel with search and filtering, all following modern design patterns with proper spacing, typography hierarchy, and dark mode support. Second, generate a full PRD for the \"Ephemeral Environments\" feature covering the self-service provisioning flow, TTL-based auto-teardown, cost tracking per team, and Kubernetes namespace isolation — make sure it's structured for task breakdown with acceptance criteria, tech constraints, and dependency mapping, and then hand it off to TaskMaster for execution planning. Third, set up our git workflow guardrails for this repo: conventional commit enforcement via Husky pre-commit hooks (feat/fix/chore/docs/refactor scopes), branch naming conventions following `type/PORTAL-{ticket}-short-description`, a PR template that includes sections for screenshots of UI changes, a \"Breaking Changes\" checkbox, and required reviewer checklist items, plus document the emergency bypass procedure for hotfixes.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "8084a105-877d-4e91-8751-0a1278d72af0",
+            "name": "bmad-prd"
+          },
+          {
+            "rank": 2,
+            "skill_id": "a2d5b605-e8b1-4d6d-80f4-2548308bf266",
+            "name": "PRD Generator for TaskMaster"
+          },
+          {
+            "rank": 3,
+            "skill_id": "f17517e5-2552-4d00-9fa6-7c0416cf278f",
+            "name": "prd-maker"
+          },
+          {
+            "rank": 4,
+            "skill_id": "324b0338-a477-45f6-a954-9f1bf06a11e0",
+            "name": "ralph-tui-prd"
+          },
+          {
+            "rank": 5,
+            "skill_id": "af457164-6067-467b-8e2c-cb8455032fa0",
+            "name": "create-prd"
+          },
+          {
+            "rank": 6,
+            "skill_id": "fede71f4-2f86-43e6-a03b-9775be5a2953",
+            "name": "task-master"
+          },
+          {
+            "rank": 7,
+            "skill_id": "fe8af643-505b-4a5d-97fc-dee899b930ae",
+            "name": "prd-generator"
+          },
+          {
+            "rank": 8,
+            "skill_id": "c4aec837-2bb0-4c88-8a00-bb1a590fb3d5",
+            "name": "prd-management"
+          },
+          {
+            "rank": 9,
+            "skill_id": "73fa3b49-3656-4343-a420-238a3ae6861e",
+            "name": "docs-ai-prd"
+          },
+          {
+            "rank": 10,
+            "skill_id": "ebb9d5e1-1a74-4a30-85a3-0b46aae2fe09",
+            "name": "git-pr-creation"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 888
+      },
+      {
+        "branch": "interface",
+        "query": "Design a production-grade dashboard UI with sidebar, top bar, environment cards, status badges and feature-flag search and filters. Include modern spacing, type hierarchy and dark mode.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "50b402bf-e3ad-4770-9421-f497a8ae70a5",
+            "name": "design-principles"
+          },
+          {
+            "rank": 2,
+            "skill_id": "2226530c-51b8-4005-94b8-0f1c077b53d7",
+            "name": "ui-design-system"
+          },
+          {
+            "rank": 3,
+            "skill_id": "06d38c6f-aeca-4e9c-9583-32e37694a659",
+            "name": "ui-ux-design"
+          },
+          {
+            "rank": 4,
+            "skill_id": "5ce2b915-84ef-4d84-89ca-4b539e21b466",
+            "name": "claude-frontforge"
+          },
+          {
+            "rank": 5,
+            "skill_id": "99fad1fb-9dab-45bc-845f-9f5947a78f29",
+            "name": "frontend-design"
+          },
+          {
+            "rank": 6,
+            "skill_id": "18064a3f-24af-457c-adfe-3b98ed1831a2",
+            "name": "modern-ui-designer"
+          },
+          {
+            "rank": 7,
+            "skill_id": "ec03edae-ab10-4459-8049-5ffac64faf8e",
+            "name": "Design System Compliance"
+          },
+          {
+            "rank": 8,
+            "skill_id": "dfae2d82-aaa2-4bb3-ad73-a721ad41180c",
+            "name": "frontend-design"
+          },
+          {
+            "rank": 9,
+            "skill_id": "c5d594c1-4c76-45a0-aa5c-087117af6301",
+            "name": "UI Design"
+          },
+          {
+            "rank": 10,
+            "skill_id": "28337240-d4b4-4934-909b-26fa3f7813b3",
+            "name": "axiom-hig"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 202
+      },
+      {
+        "branch": "prd",
+        "query": "Draft an ephemeral environments PRD for self-service provisioning, TTL teardown, cost tracking and namespace isolation. Include acceptance criteria, constraints and dependencies for TaskMaster.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "a2d5b605-e8b1-4d6d-80f4-2548308bf266",
+            "name": "PRD Generator for TaskMaster"
+          },
+          {
+            "rank": 2,
+            "skill_id": "fede71f4-2f86-43e6-a03b-9775be5a2953",
+            "name": "task-master"
+          },
+          {
+            "rank": 3,
+            "skill_id": "f17517e5-2552-4d00-9fa6-7c0416cf278f",
+            "name": "prd-maker"
+          },
+          {
+            "rank": 4,
+            "skill_id": "8084a105-877d-4e91-8751-0a1278d72af0",
+            "name": "bmad-prd"
+          },
+          {
+            "rank": 5,
+            "skill_id": "fe8af643-505b-4a5d-97fc-dee899b930ae",
+            "name": "prd-generator"
+          },
+          {
+            "rank": 6,
+            "skill_id": "324b0338-a477-45f6-a954-9f1bf06a11e0",
+            "name": "ralph-tui-prd"
+          },
+          {
+            "rank": 7,
+            "skill_id": "73fa3b49-3656-4343-a420-238a3ae6861e",
+            "name": "docs-ai-prd"
+          },
+          {
+            "rank": 8,
+            "skill_id": "c4aec837-2bb0-4c88-8a00-bb1a590fb3d5",
+            "name": "prd-management"
+          },
+          {
+            "rank": 9,
+            "skill_id": "6cb9ebb1-702a-4b82-b18d-92b6cc510bcb",
+            "name": "preview-environments-builder"
+          },
+          {
+            "rank": 10,
+            "skill_id": "7835c12f-d09e-4fc1-a416-a0cf420f6250",
+            "name": "ralph"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 205
+      },
+      {
+        "branch": "workflow",
+        "query": "Define Git workflow guardrails with Husky conventional-commit checks, branch naming, a pull request template with screenshots and reviewer checklist, and a documented emergency hotfix procedure.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "95824864-270b-4ba5-9d5a-e12c5ac59764",
+            "name": "git-hygiene-enforcer"
+          },
+          {
+            "rank": 2,
+            "skill_id": "f52dd3e4-0dd3-4b00-b44d-e78ea75b92a4",
+            "name": "git-management"
+          },
+          {
+            "rank": 3,
+            "skill_id": "bd4de35a-669e-43a9-9e64-6dc36b13a26c",
+            "name": "managing-branches"
+          },
+          {
+            "rank": 4,
+            "skill_id": "d93b92dc-ba94-4083-a5bf-31ef3c171e7b",
+            "name": "git-conventions"
+          },
+          {
+            "rank": 5,
+            "skill_id": "e301bc25-2557-480d-b712-46ac3f03129f",
+            "name": "git-storytelling-branch-strategy"
+          },
+          {
+            "rank": 6,
+            "skill_id": "f8a8af5d-1766-4c8a-bd07-a75fc96dfb34",
+            "name": "git-workflow-manager"
+          },
+          {
+            "rank": 7,
+            "skill_id": "dd2ab05a-c126-40aa-8d87-824ba912315b",
+            "name": "git-workflow"
+          },
+          {
+            "rank": 8,
+            "skill_id": "c4cb9d36-a3c6-47f9-87c7-e615b82463c5",
+            "name": "scm"
+          },
+          {
+            "rank": 9,
+            "skill_id": "ba1013aa-c45e-4428-ad91-3df01f6fdba3",
+            "name": "Git Workflow"
+          },
+          {
+            "rank": 10,
+            "skill_id": "c6402e70-9c5f-4cf0-a49c-0f080d0c2e25",
+            "name": "git-helper"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 201
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "8084a105-877d-4e91-8751-0a1278d72af0",
+        "name": "bmad-prd"
+      },
+      {
+        "rank": 2,
+        "skill_id": "a2d5b605-e8b1-4d6d-80f4-2548308bf266",
+        "name": "PRD Generator for TaskMaster"
+      },
+      {
+        "rank": 3,
+        "skill_id": "f17517e5-2552-4d00-9fa6-7c0416cf278f",
+        "name": "prd-maker"
+      },
+      {
+        "rank": 4,
+        "skill_id": "50b402bf-e3ad-4770-9421-f497a8ae70a5",
+        "name": "design-principles"
+      },
+      {
+        "rank": 5,
+        "skill_id": "2226530c-51b8-4005-94b8-0f1c077b53d7",
+        "name": "ui-design-system"
+      },
+      {
+        "rank": 6,
+        "skill_id": "fede71f4-2f86-43e6-a03b-9775be5a2953",
+        "name": "task-master"
+      },
+      {
+        "rank": 7,
+        "skill_id": "fe8af643-505b-4a5d-97fc-dee899b930ae",
+        "name": "prd-generator"
+      },
+      {
+        "rank": 8,
+        "skill_id": "95824864-270b-4ba5-9d5a-e12c5ac59764",
+        "name": "git-hygiene-enforcer"
+      },
+      {
+        "rank": 9,
+        "skill_id": "f52dd3e4-0dd3-4b00-b44d-e78ea75b92a4",
+        "name": "git-management"
+      },
+      {
+        "rank": 10,
+        "skill_id": "324b0338-a477-45f6-a954-9f1bf06a11e0",
+        "name": "ralph-tui-prd"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "f2e9bf64-bbd4-4de5-9743-b7af5d2dabdc",
+        "name": "ui-design"
+      },
+      {
+        "rank": 2,
+        "skill_id": "a2d5b605-e8b1-4d6d-80f4-2548308bf266",
+        "name": "PRD Generator for TaskMaster"
+      },
+      {
+        "rank": 3,
+        "skill_id": "95824864-270b-4ba5-9d5a-e12c5ac59764",
+        "name": "git-hygiene-enforcer"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.4441228664487979,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.25
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1496
+  }
+}

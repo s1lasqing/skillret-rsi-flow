@@ -1,0 +1,20 @@
+server:
+  address: 127.0.0.1
+  port: 33478
+spring:
+  profiles:
+    active: local
+  datasource:
+    url: jdbc:h2:mem:rsi_skillret
+    driver-class-name: org.h2.Driver
+    username: sa
+    initialization-mode: never
+    druid:
+      initial-size: 0
+      min-idle: 0
+      test-while-idle: false
+  redis:
+    host: 127.0.0.1
+eureka:
+  client:
+    enabled: false
