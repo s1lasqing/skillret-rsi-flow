@@ -1,0 +1,145 @@
+[
+  {
+    "id": "q-03910",
+    "title": "提交前密钥扫描插件与提示文案",
+    "branches": [
+      {
+        "id": "plugin",
+        "label": "组织插件与扫描入口",
+        "query": "Package a Claude Code plugin for staged-file secret scanning with a pre-commit hook, a manually invoked directory scan command, a plugin.json manifest, and a versioned marketplace catalog entry."
+      },
+      {
+        "id": "messages",
+        "label": "设计可访问的 CLI 提示",
+        "query": "Write concise and accessible command-line copy for a pre-commit secret scanner: detection warning, proceed confirmation, clean scan success, tool failure with next steps, and help on scan patterns. Keep messages in copy/strings.json and explain each wording choice."
+      }
+    ]
+  },
+  {
+    "id": "q-00498",
+    "title": "跨平台日记应用审查与导航建模",
+    "branches": [
+      {
+        "id": "review",
+        "label": "审查日记录入界面",
+        "query": "Review SwiftUI and Jetpack Compose journal entry screens for accessibility labels, VoiceOver and TalkBack, cross-platform layout consistency, and view-model tests. Record critical issues as actionable tickets."
+      },
+      {
+        "id": "guidelines",
+        "label": "组织模块级开发规范",
+        "query": "Create nested AGENTS.md coding guidelines for a SwiftUI, Kotlin Multiplatform, and Node.js monorepo. Detect module tooling, capture architecture preferences, and define module-specific checks including Spotless and missing linters."
+      },
+      {
+        "id": "navigation",
+        "label": "设计反思空间导航",
+        "query": "Model transitions between journaling modalities as a navigation graph constrained by emotional distances and triangle inequality. Expose a new modality only when a qualifying journal event changes which spaces are reachable."
+      }
+    ]
+  },
+  {
+    "id": "q-00095",
+    "title": "Vue 重连缺陷与 TypeScript 类型加固",
+    "branches": [
+      {
+        "id": "reconnect",
+        "label": "定位并修复重连缺陷",
+        "query": "Extract reproduction steps for a Vue useWebSocket reconnect race during rapid tab switching. Refactor the socket to shallowRef, clean it up with onScopeDispose, wrap reconnection in withLoadingState, and cover the edge case with Vitest."
+      },
+      {
+        "id": "typing",
+        "label": "加固组合函数与 Pinia 类型",
+        "query": "Enforce noUncheckedIndexedAccess across a Vue composable and Pinia notification store. Guard indexed message queues, use type-fest SetRequired, ReadonlyDeep and Simplify, and configure ESLint rules for unsafe member access and unnecessary conditions."
+      }
+    ]
+  },
+  {
+    "id": "q-00360",
+    "title": "动态路线 PRD 与发布流水线",
+    "branches": [
+      {
+        "id": "requirements",
+        "label": "编制可验收的产品需求",
+        "query": "Write or update a PRD for dynamic logistics route recalculation with live traffic ingestion, an OSRM engine, a driver app, and a dispatcher dashboard. Define milestone acceptance criteria, validate the PRD, and break it into estimated tasks."
+      },
+      {
+        "id": "pipeline",
+        "label": "组织持续集成和渐进发布",
+        "query": "Design GitHub Actions for a Rust, React and Flutter monorepo with unit and integration test gates, Trivy PR scans, semantic Docker tags in ECR, blue-green EKS staging deployments, and canary production releases with error-rate rollback."
+      }
+    ]
+  },
+  {
+    "id": "q-00199",
+    "title": "跨服务追踪与事故分析提示词",
+    "branches": [
+      {
+        "id": "tracing",
+        "label": "传播追踪上下文",
+        "query": "Design distributed tracing across Go chi, Express and Kafka services. Propagate correlation IDs and parent-child spans over HTTP and message headers, with middleware and Kafka context injection and extraction."
+      },
+      {
+        "id": "analysis",
+        "label": "约束事故分析提示词",
+        "query": "Audit and rewrite an incident analysis system prompt that reasons from trace and span evidence only. Use timing and correlation hierarchies, handle partial traces, and produce structured incident hypotheses ranked by confidence."
+      }
+    ]
+  },
+  {
+    "id": "q-02596",
+    "title": "多团队国际化与翻译同步",
+    "branches": [
+      {
+        "id": "namespaces",
+        "label": "设计多语言命名空间",
+        "query": "Redesign React and Node.js localization around team-owned i18next namespaces. Provide a file layout and shared frontend/backend loading strategy with ICU plural and gender messages, Arabic RTL support, and one optimized deployment bundle per locale."
+      },
+      {
+        "id": "checks",
+        "label": "校验翻译并接入同步",
+        "query": "Add CI validation to block duplicate or colliding translation keys across team namespaces. Synchronize approved strings from the Lokalise translation management system to the corresponding files and namespaces."
+      }
+    ]
+  },
+  {
+    "id": "q-01929",
+    "title": "Unity 计时重构与发行素材",
+    "branches": [
+      {
+        "id": "timer",
+        "label": "重构 Unity 游戏计时",
+        "query": "Extract CountdownTimer from Unity GameSessionManager and publish an OnTimerExpired event to replace polling. Preserve SOLID principles in the puzzle game's timer component."
+      },
+      {
+        "id": "creatives",
+        "label": "合成多版宣传图片",
+        "query": "Composite three game screenshots into promotional creatives with overlaid copy, the studio logo, a Steam wishlist CTA, and a square variant for social channels."
+      },
+      {
+        "id": "social",
+        "label": "撰写跨平台发布文案",
+        "query": "Draft a LinkedIn post on the game's technical architecture, a five-post X launch thread and an Instagram caption. Match the tone of each channel and link the copy to the promotional visuals and Steam wishlist."
+      }
+    ]
+  },
+  {
+    "id": "q-00306",
+    "title": "Go 服务骨架、安全审查与入门指南",
+    "branches": [
+      {
+        "id": "scaffold",
+        "label": "搭建 Go 服务骨架",
+        "query": "Scaffold a Go service with module and package layout, Docker, CI, lint, structured logging, graceful shutdown, health checks, environment and YAML config, and middleware for authentication, tracing and metrics."
+      },
+      {
+        "id": "review",
+        "label": "审查存储层隔离与输入约束",
+        "query": "Audit Go data access across PostgreSQL, Redis and an S3-compatible store for unsafe caller-provided inputs. Focus on parameterized data access, object key validation and explicit tenant isolation."
+      },
+      {
+        "id": "onboarding",
+        "label": "组织工程入门指南",
+        "query": "Write a practical onboarding guide for developers joining a Go service with Wire and connect-go. Cover repository layout, cloning, local setup, tests and staging deployment."
+      }
+    ]
+  }
+]

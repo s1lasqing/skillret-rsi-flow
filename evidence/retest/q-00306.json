@@ -1,0 +1,470 @@
+{
+  "a": {
+    "queryId": "q-00306",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We're spinning up a new Go microservice called \"VaultStream\" that aggregates and serves financial transaction logs from multiple upstream data stores. I need help with three things:\n1. **Project scaffolding and repo setup**: I need to get the basic project structure in place — Go module init, directory layout (cmd/, internal/, pkg/, etc.), Makefile, Dockerfile, CI config, linting setup, the usual boilerplate. Can you help me set up the cross-cutting concerns too? Things like structured logging (zerolog or zap), graceful shutdown, health check endpoints, config management (env vars + YAML), and middleware for auth/tracing/metrics. Basically the foundational skeleton so the team can start building features on top of a solid base.\n\n2. **Security review of the data aggregation layer**: Since VaultStream pulls from multiple upstream stores (Postgres, Redis, and an S3-compatible object store), I'm worried about path traversal and similar injection issues in how we construct queries and object key lookups. Some of the request parameters (like `account_id`, `date_range`, and `log_prefix`) come directly from API callers and get interpolated into database queries and S3 key paths. Can you audit the planned data access patterns and flag anywhere an attacker could read arbitrary data they shouldn't have access to — like accessing another tenant's transaction logs by manipulating those parameters?\n\n3. **Getting the team onboarded**: We have three engineers joining this project who are experienced backend devs but new to our specific stack (Go with Wire for DI, connect-go for gRPC, and our internal deployment platform). Can you help me put together a getting-started guide that walks them through cloning the repo, understanding the project structure, running it locally, running tests, and deploying to our staging environment? I want it to be practical — not just docs for docs' sake, but something that actually gets them productive in their first day or two.\n\nHappy to share more details on any of these — let me know where you'd like to start.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "b6086b2f-5060-4f85-bee8-63847a8a2e1c",
+            "name": "golang-observability-opentelemetry"
+          },
+          {
+            "rank": 2,
+            "skill_id": "dfe7ef2f-a651-4026-a82b-7bea796276b3",
+            "name": "security-scan-go-vuln"
+          },
+          {
+            "rank": 3,
+            "skill_id": "e6e6458f-51eb-45a9-9143-9408643abb75",
+            "name": "golang-web"
+          },
+          {
+            "rank": 4,
+            "skill_id": "c80f1eb8-0977-4192-9edc-4162eeabbba5",
+            "name": "Go Ecosystem"
+          },
+          {
+            "rank": 5,
+            "skill_id": "96007245-c436-4e06-8a99-f7b94d4bb978",
+            "name": "connect-go-reference"
+          },
+          {
+            "rank": 6,
+            "skill_id": "dcf2dbd2-9335-4cbe-b3b2-994018fbfe4e",
+            "name": "go-cli-builder"
+          },
+          {
+            "rank": 7,
+            "skill_id": "3021ea72-bf8f-47cc-8d3e-bb94d04e7098",
+            "name": "golang"
+          },
+          {
+            "rank": 8,
+            "skill_id": "afd9ec78-c6f8-4b72-ad05-a9535f691ce9",
+            "name": "go-coding-standards"
+          },
+          {
+            "rank": 9,
+            "skill_id": "b5ed8fbf-efe9-4f9a-8838-b03e00861c78",
+            "name": "go-service-hexagonal"
+          },
+          {
+            "rank": 10,
+            "skill_id": "b554d17f-2554-43d1-be15-c8097cb2614b",
+            "name": "blackhat-go"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 1191
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "b6086b2f-5060-4f85-bee8-63847a8a2e1c",
+        "name": "golang-observability-opentelemetry"
+      },
+      {
+        "rank": 2,
+        "skill_id": "dfe7ef2f-a651-4026-a82b-7bea796276b3",
+        "name": "security-scan-go-vuln"
+      },
+      {
+        "rank": 3,
+        "skill_id": "e6e6458f-51eb-45a9-9143-9408643abb75",
+        "name": "golang-web"
+      },
+      {
+        "rank": 4,
+        "skill_id": "c80f1eb8-0977-4192-9edc-4162eeabbba5",
+        "name": "Go Ecosystem"
+      },
+      {
+        "rank": 5,
+        "skill_id": "96007245-c436-4e06-8a99-f7b94d4bb978",
+        "name": "connect-go-reference"
+      },
+      {
+        "rank": 6,
+        "skill_id": "dcf2dbd2-9335-4cbe-b3b2-994018fbfe4e",
+        "name": "go-cli-builder"
+      },
+      {
+        "rank": 7,
+        "skill_id": "3021ea72-bf8f-47cc-8d3e-bb94d04e7098",
+        "name": "golang"
+      },
+      {
+        "rank": 8,
+        "skill_id": "afd9ec78-c6f8-4b72-ad05-a9535f691ce9",
+        "name": "go-coding-standards"
+      },
+      {
+        "rank": 9,
+        "skill_id": "b5ed8fbf-efe9-4f9a-8838-b03e00861c78",
+        "name": "go-service-hexagonal"
+      },
+      {
+        "rank": 10,
+        "skill_id": "b554d17f-2554-43d1-be15-c8097cb2614b",
+        "name": "blackhat-go"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "2f335eb7-bc1d-44e3-851b-351aea472c0f",
+        "name": "ln-770-crosscutting-setup"
+      },
+      {
+        "rank": 2,
+        "skill_id": "f3634629-fd54-4742-88c9-26df6e3fb269",
+        "name": "detecting-arbitrary-read"
+      },
+      {
+        "rank": 3,
+        "skill_id": "e7455ec6-94e5-412a-a1e9-e737822de3b6",
+        "name": "onboarding-helper"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0,
+      "Recall@10": 0,
+      "Completeness@10": 0,
+      "Precision@10": 0,
+      "MAP@10": 0
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1191
+  },
+  "b": {
+    "queryId": "q-00306",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We're spinning up a new Go microservice called \"VaultStream\" that aggregates and serves financial transaction logs from multiple upstream data stores. I need help with three things:\n1. **Project scaffolding and repo setup**: I need to get the basic project structure in place — Go module init, directory layout (cmd/, internal/, pkg/, etc.), Makefile, Dockerfile, CI config, linting setup, the usual boilerplate. Can you help me set up the cross-cutting concerns too? Things like structured logging (zerolog or zap), graceful shutdown, health check endpoints, config management (env vars + YAML), and middleware for auth/tracing/metrics. Basically the foundational skeleton so the team can start building features on top of a solid base.\n\n2. **Security review of the data aggregation layer**: Since VaultStream pulls from multiple upstream stores (Postgres, Redis, and an S3-compatible object store), I'm worried about path traversal and similar injection issues in how we construct queries and object key lookups. Some of the request parameters (like `account_id`, `date_range`, and `log_prefix`) come directly from API callers and get interpolated into database queries and S3 key paths. Can you audit the planned data access patterns and flag anywhere an attacker could read arbitrary data they shouldn't have access to — like accessing another tenant's transaction logs by manipulating those parameters?\n\n3. **Getting the team onboarded**: We have three engineers joining this project who are experienced backend devs but new to our specific stack (Go with Wire for DI, connect-go for gRPC, and our internal deployment platform). Can you help me put together a getting-started guide that walks them through cloning the repo, understanding the project structure, running it locally, running tests, and deploying to our staging environment? I want it to be practical — not just docs for docs' sake, but something that actually gets them productive in their first day or two.\n\nHappy to share more details on any of these — let me know where you'd like to start.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "b6086b2f-5060-4f85-bee8-63847a8a2e1c",
+            "name": "golang-observability-opentelemetry"
+          },
+          {
+            "rank": 2,
+            "skill_id": "dfe7ef2f-a651-4026-a82b-7bea796276b3",
+            "name": "security-scan-go-vuln"
+          },
+          {
+            "rank": 3,
+            "skill_id": "e6e6458f-51eb-45a9-9143-9408643abb75",
+            "name": "golang-web"
+          },
+          {
+            "rank": 4,
+            "skill_id": "c80f1eb8-0977-4192-9edc-4162eeabbba5",
+            "name": "Go Ecosystem"
+          },
+          {
+            "rank": 5,
+            "skill_id": "96007245-c436-4e06-8a99-f7b94d4bb978",
+            "name": "connect-go-reference"
+          },
+          {
+            "rank": 6,
+            "skill_id": "dcf2dbd2-9335-4cbe-b3b2-994018fbfe4e",
+            "name": "go-cli-builder"
+          },
+          {
+            "rank": 7,
+            "skill_id": "3021ea72-bf8f-47cc-8d3e-bb94d04e7098",
+            "name": "golang"
+          },
+          {
+            "rank": 8,
+            "skill_id": "afd9ec78-c6f8-4b72-ad05-a9535f691ce9",
+            "name": "go-coding-standards"
+          },
+          {
+            "rank": 9,
+            "skill_id": "b5ed8fbf-efe9-4f9a-8838-b03e00861c78",
+            "name": "go-service-hexagonal"
+          },
+          {
+            "rank": 10,
+            "skill_id": "b554d17f-2554-43d1-be15-c8097cb2614b",
+            "name": "blackhat-go"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 1242
+      },
+      {
+        "branch": "scaffold",
+        "query": "Scaffold a Go service with module and package layout, Docker, CI, lint, structured logging, graceful shutdown, health checks, environment and YAML config, and middleware for authentication, tracing and metrics.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "b6086b2f-5060-4f85-bee8-63847a8a2e1c",
+            "name": "golang-observability-opentelemetry"
+          },
+          {
+            "rank": 2,
+            "skill_id": "e6e6458f-51eb-45a9-9143-9408643abb75",
+            "name": "golang-web"
+          },
+          {
+            "rank": 3,
+            "skill_id": "afd9ec78-c6f8-4b72-ad05-a9535f691ce9",
+            "name": "go-coding-standards"
+          },
+          {
+            "rank": 4,
+            "skill_id": "f55a349b-03a0-44c6-b7c6-b2ebe1ed4bc3",
+            "name": "rest-api-patterns"
+          },
+          {
+            "rank": 5,
+            "skill_id": "b5ed8fbf-efe9-4f9a-8838-b03e00861c78",
+            "name": "go-service-hexagonal"
+          },
+          {
+            "rank": 6,
+            "skill_id": "3021ea72-bf8f-47cc-8d3e-bb94d04e7098",
+            "name": "golang"
+          },
+          {
+            "rank": 7,
+            "skill_id": "c80f1eb8-0977-4192-9edc-4162eeabbba5",
+            "name": "Go Ecosystem"
+          },
+          {
+            "rank": 8,
+            "skill_id": "6411bd8d-49f2-4408-9251-cac771c657c0",
+            "name": "monitoring-observability"
+          },
+          {
+            "rank": 9,
+            "skill_id": "0baa70a4-e284-48b1-9bf5-db8821d96e65",
+            "name": "wish-ssh-code-review"
+          },
+          {
+            "rank": 10,
+            "skill_id": "9a6ed9d7-a711-40b8-9b84-d9155299d425",
+            "name": "go-grpc"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 230
+      },
+      {
+        "branch": "review",
+        "query": "Audit Go data access across PostgreSQL, Redis and an S3-compatible store for unsafe caller-provided inputs. Focus on parameterized data access, object key validation and explicit tenant isolation.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "97a3b4f1-11af-427b-917d-4cdee8b1724b",
+            "name": "multi-tenant-safety-checker"
+          },
+          {
+            "rank": 2,
+            "skill_id": "5e9637d9-31a9-4c95-8816-94da924a51e5",
+            "name": "multi-tenant"
+          },
+          {
+            "rank": 3,
+            "skill_id": "4561e10a-b5e4-42ce-9d47-cf8bba46f7a5",
+            "name": "security-audit"
+          },
+          {
+            "rank": 4,
+            "skill_id": "b554d17f-2554-43d1-be15-c8097cb2614b",
+            "name": "blackhat-go"
+          },
+          {
+            "rank": 5,
+            "skill_id": "b9e1849d-a0fc-4020-9045-4d644389572d",
+            "name": "security-lens"
+          },
+          {
+            "rank": 6,
+            "skill_id": "1b3b011d-9dc0-48cc-a046-25759d0bcf49",
+            "name": "security-assessor"
+          },
+          {
+            "rank": 7,
+            "skill_id": "aaaede50-f5f5-4cb0-89c4-7e0f2dc190cc",
+            "name": "redis-inspect"
+          },
+          {
+            "rank": 8,
+            "skill_id": "bcdb639d-1b34-4486-a37f-d7a1434e8823",
+            "name": "ms365-tenant-manager"
+          },
+          {
+            "rank": 9,
+            "skill_id": "24729c35-516a-4415-be32-c66373a61322",
+            "name": "tenant-provisioning"
+          },
+          {
+            "rank": 10,
+            "skill_id": "7f0366d9-55bd-4620-a09b-0a352261c6a6",
+            "name": "compliance-checker"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 211
+      },
+      {
+        "branch": "onboarding",
+        "query": "Write a practical onboarding guide for developers joining a Go service with Wire and connect-go. Cover repository layout, cloning, local setup, tests and staging deployment.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "e7455ec6-94e5-412a-a1e9-e737822de3b6",
+            "name": "onboarding-helper"
+          },
+          {
+            "rank": 2,
+            "skill_id": "96007245-c436-4e06-8a99-f7b94d4bb978",
+            "name": "connect-go-reference"
+          },
+          {
+            "rank": 3,
+            "skill_id": "e6e6458f-51eb-45a9-9143-9408643abb75",
+            "name": "golang-web"
+          },
+          {
+            "rank": 4,
+            "skill_id": "6b472026-f236-4efa-88c5-0bbab10c5340",
+            "name": "recovery-app-onboarding"
+          },
+          {
+            "rank": 5,
+            "skill_id": "399326d5-c7b2-4b75-b2e5-e34d0718d0fc",
+            "name": "gapless-crypto-clickhouse-onboarding"
+          },
+          {
+            "rank": 6,
+            "skill_id": "74fa294a-d6c9-44af-8d20-43f8588fffd4",
+            "name": "user-guide-creation"
+          },
+          {
+            "rank": 7,
+            "skill_id": "3021ea72-bf8f-47cc-8d3e-bb94d04e7098",
+            "name": "golang"
+          },
+          {
+            "rank": 8,
+            "skill_id": "b13e15a5-07b0-4800-b9e2-4e87109fdbbf",
+            "name": "env-setup-assistant"
+          },
+          {
+            "rank": 9,
+            "skill_id": "c80f1eb8-0977-4192-9edc-4162eeabbba5",
+            "name": "Go Ecosystem"
+          },
+          {
+            "rank": 10,
+            "skill_id": "a8e786b2-861f-49c9-8cae-613b81c22ccf",
+            "name": "investigating-git-repo"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 192
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "b6086b2f-5060-4f85-bee8-63847a8a2e1c",
+        "name": "golang-observability-opentelemetry"
+      },
+      {
+        "rank": 2,
+        "skill_id": "dfe7ef2f-a651-4026-a82b-7bea796276b3",
+        "name": "security-scan-go-vuln"
+      },
+      {
+        "rank": 3,
+        "skill_id": "e6e6458f-51eb-45a9-9143-9408643abb75",
+        "name": "golang-web"
+      },
+      {
+        "rank": 4,
+        "skill_id": "afd9ec78-c6f8-4b72-ad05-a9535f691ce9",
+        "name": "go-coding-standards"
+      },
+      {
+        "rank": 5,
+        "skill_id": "f55a349b-03a0-44c6-b7c6-b2ebe1ed4bc3",
+        "name": "rest-api-patterns"
+      },
+      {
+        "rank": 6,
+        "skill_id": "97a3b4f1-11af-427b-917d-4cdee8b1724b",
+        "name": "multi-tenant-safety-checker"
+      },
+      {
+        "rank": 7,
+        "skill_id": "5e9637d9-31a9-4c95-8816-94da924a51e5",
+        "name": "multi-tenant"
+      },
+      {
+        "rank": 8,
+        "skill_id": "e7455ec6-94e5-412a-a1e9-e737822de3b6",
+        "name": "onboarding-helper"
+      },
+      {
+        "rank": 9,
+        "skill_id": "96007245-c436-4e06-8a99-f7b94d4bb978",
+        "name": "connect-go-reference"
+      },
+      {
+        "rank": 10,
+        "skill_id": "c80f1eb8-0977-4192-9edc-4162eeabbba5",
+        "name": "Go Ecosystem"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "2f335eb7-bc1d-44e3-851b-351aea472c0f",
+        "name": "ln-770-crosscutting-setup"
+      },
+      {
+        "rank": 2,
+        "skill_id": "f3634629-fd54-4742-88c9-26df6e3fb269",
+        "name": "detecting-arbitrary-read"
+      },
+      {
+        "rank": 3,
+        "skill_id": "e7455ec6-94e5-412a-a1e9-e737822de3b6",
+        "name": "onboarding-helper"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.1480409554829326,
+      "Recall@10": 0.3333333333333333,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.041666666666666664
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1875
+  }
+}

@@ -18,6 +18,14 @@ DIAGNOSES = {
     "q-01921": "git-hygiene-enforcer 在工作流分支排第 1，最终排第 8。ui-design 仍未进入任一候选前十。",
     "q-00137": "tool-discovery 在工具分支排第 1，最终排第 8。nextjs-canary-docs 后移到第 10，标注技能仍全部找齐。",
     "q-00463": "样式与验证技能保持第 1、2。Config Distribution 未进入整题和各分支的候选前十。",
+    "q-03910": "ux-writing 在提示文案分支排第 2，最终排第 7。原先命中的 plugin-creator 保持第 3。",
+    "q-00498": "review-view 在界面审查分支排第 1，最终排第 4。原先命中的另外两项均保留。",
+    "q-00095": "strict-typescript 在类型约束分支排第 6，超出该分支的合并名额。issue-parser 从第 8 后移至第 10，召回持平，NDCG 下降。",
+    "q-00360": "ci-cd 在发布流水线分支排第 1，最终排第 6。原先命中的 PRD 工具保持第 2。",
+    "q-00199": "追踪技能保持第 1。nexus-prompt-engineer 未进入任何检索节点的候选前十。",
+    "q-02596": "本地化技能保持第 1。anti-conflict 未进入任何检索节点的候选前十。",
+    "q-01929": "宣传素材和社媒文案的标注技能各在对应分支排第 1，最终分别排第 6、8。unity-csharp-editing 未进入候选前十。",
+    "q-00306": "onboarding-helper 从入门指南分支第 1 进入最终第 8。服务基础和数据访问审查的两项标注技能均未进入候选前十。",
 }
 
 
@@ -53,7 +61,7 @@ def ranks(skills):
     return "<ol>" + "".join(f"<li>{esc(skill['name'])}</li>" for skill in skills) + "</ol>"
 
 
-def case_page(case, pair):
+def case_page(case, pair, evidence_dir, overview_page, overview_label):
     case_id = case["id"]
     title = f"{case_id} {case['title']}"
     a, b = pair["a"], pair["b"]
@@ -74,7 +82,7 @@ def case_page(case, pair):
         for key in KEYS
     ])
     write_page(f"{case_id}.html", title, f"""
-<nav><a href="index.html">十题总览</a> · <a href="../evidence/{case_id}.json">原始运行记录</a></nav>
+<nav><a href="{overview_page}">{overview_label}</a> · <a href="../{evidence_dir}/{case_id}.json">原始运行记录</a></nav>
 <h1>{esc(title)}</h1>
 <p>{esc(DIAGNOSES[case_id])}</p>
 <h2>A/B 指标</h2>
@@ -87,37 +95,49 @@ def case_page(case, pair):
 <div class="rankings"><div><h3>A Top 10</h3>{ranks(a['skills'])}</div>
 <div><h3>B Top 10</h3>{ranks(b['skills'])}</div></div>
 <h2>RSI 实测截图</h2>
-<a href="../evidence/{case_id}.png"><img src="../evidence/{case_id}.png" alt="{case_id} 的画布与 A/B 实测结果"></a>
+<a href="../{evidence_dir}/{case_id}.png"><img src="../{evidence_dir}/{case_id}.png" alt="{case_id} 的画布与 A/B 实测结果"></a>
 """)
 
 
-def main():
-    cases = read_json("config/retrieval-cases.json")
-    summary = read_json("evidence/summary.json")
-    assert len(cases) == 10 and [c["id"] for c in cases] == [s["id"] for s in summary]
+def build_group(config, evidence_dir, count, overview_page, overview_label, other_page, other_label):
+    cases = read_json(config)
+    summary = read_json(f"{evidence_dir}/summary.json")
+    assert len(cases) == count and [c["id"] for c in cases] == [s["id"] for s in summary]
     overview = []
     for case, row in zip(cases, summary):
         case_id = case["id"]
-        pair = read_json(f"evidence/{case_id}.json")
+        pair = read_json(f"{evidence_dir}/{case_id}.json")
         a, b = pair["a"], pair["b"]
         assert a["queryId"] == b["queryId"] == case_id
         assert a["skills"] == b["stages"][0]["skills"]
         assert a["metrics"] == row["a"] and b["metrics"] == row["b"]
         assert a["stages"][0]["query"] == b["stages"][0]["query"]
         assert [node["query"] for node in b["stages"][1:]] == [node["query"] for node in case["branches"]]
-        assert (ROOT / "evidence" / f"{case_id}.png").is_file()
+        assert (ROOT / evidence_dir / f"{case_id}.png").is_file()
         overview.append([f'<a href="{case_id}.html">{case_id} {esc(case["title"])}</a>',
                          *(f"{percent(row['a'][key])} → {percent(row['b'][key])}" for key in KEYS)])
-        case_page(case, pair)
-    overview.append(["十题均值", *(f"{percent(mean(x['a'][key] for x in summary))} → "
+        case_page(case, pair, evidence_dir, overview_page, overview_label)
+    overview.append(["本组均值", *(f"{percent(mean(x['a'][key] for x in summary))} → "
                                   f"{percent(mean(x['b'][key] for x in summary))}" for key in KEYS)])
-    write_page("index.html", "SkillRet 十题检索对照", f"""
-<h1>SkillRet 十题检索对照</h1>
+    recall_up = sum(row["b"]["Recall@10"] > row["a"]["Recall@10"] for row in summary)
+    repaired = sum(row["a"]["Completeness@10"] == 0 and row["b"]["Completeness@10"] == 1
+                   for row in summary)
+    title = f"SkillRet {overview_label}"
+    write_page(overview_page, title, f"""
+<nav><a href="{other_page}">{other_label}</a></nav>
+<h1>{title}</h1>
 <p>A 用整题融合检索。B 保留整题检索并按人工拆出的需求补查。表内每格为 A → B。</p>
 {table(("题目", "Recall@10", "Precision@10", "Completeness@10", "NDCG@10", "AP@10"), overview)}
-<p>末行是十题算术均值，AP@10 的均值为 MAP@10。3 题召回提升，其中 2 题找齐标注技能。</p>
-<p><a href="../evidence/summary.json">逐题指标记录</a> · <a href="../README.md">复现说明</a></p>
+<p>末行是 {count} 题算术均值，AP@10 的均值为 MAP@10。{recall_up} 题召回提升，{repaired} 题从漏召回变为找齐标注技能。</p>
+<p><a href="../{evidence_dir}/summary.json">逐题指标记录</a> · <a href="../README.md">复现说明</a></p>
 """)
+
+
+def main():
+    build_group("config/retrieval-cases.json", "evidence", 10, "index.html", "十题检索对照",
+                "retest.html", "八题复试")
+    build_group("config/retest-cases.json", "evidence/retest", 8, "retest.html", "八题复试",
+                "index.html", "十题检索对照")
 
 
 if __name__ == "__main__":

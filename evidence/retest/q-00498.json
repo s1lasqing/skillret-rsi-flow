@@ -1,0 +1,470 @@
+{
+  "a": {
+    "queryId": "q-00498",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We have a monorepo called \"Meridian\" for a cross-platform health journaling app (iOS via SwiftUI, Android via Jetpack Compose, shared Kotlin Multiplatform modules, and a Node.js BFF layer). I need three things done: (1) Review our main journal entry composition views on both platforms — check accessibility labels, VoiceOver/TalkBack support, layout consistency between iOS and Android, test coverage of the view models, and auto-create tickets for any critical issues you find. (2) Generate nested AGENTS.md coding guidelines for each module in the monorepo — detect the languages and tooling per module, ask me about our architecture preferences, and set up Spotless for our Kotlin/JVM modules plus any missing linters for the Swift and Node layers. (3) We're also designing a \"Reflection Spaces\" feature where users navigate between different journaling modalities (gratitude, dream log, mood tracking, free-write) and we want the navigation graph to enforce that you can only transition between spaces whose \"emotional distance\" satisfies triangle inequality constraints — essentially treating each modality as a node in a mathematical possibility space where valid paths correspond to truth procedures over the user's journaling history events. We want the transition logic to use Badiou-inspired event ontology so that a new modality only \"appears\" as reachable when a genuine journaling event breaks the current situation. Can you architect that navigation model, review the existing views, and get the AGENTS.md guidelines scaffolded all in one pass?",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "944b6db2-4f6a-4984-afbe-c31645e2a923",
+            "name": "coding-guidelines-gen"
+          },
+          {
+            "rank": 2,
+            "skill_id": "3cfe4436-d883-4bb4-8084-f26e958ae21d",
+            "name": "world-hopping"
+          },
+          {
+            "rank": 3,
+            "skill_id": "52173b40-fdc5-4f54-b4c8-183ec7d49dfa",
+            "name": "monorepo-patterns"
+          },
+          {
+            "rank": 4,
+            "skill_id": "3ace47ae-5f24-4636-ad44-729636df4879",
+            "name": "agents-md-assistant"
+          },
+          {
+            "rank": 5,
+            "skill_id": "90015a60-e873-44dc-8ae5-391e4912b8aa",
+            "name": "android-development"
+          },
+          {
+            "rank": 6,
+            "skill_id": "91ee1a71-58b4-4c41-b3f6-d6ecd1bfef3b",
+            "name": "knowledge-base-templates"
+          },
+          {
+            "rank": 7,
+            "skill_id": "218faacf-4304-418d-a371-d7c883ce3129",
+            "name": "agents-md"
+          },
+          {
+            "rank": 8,
+            "skill_id": "930e39fe-4809-429c-9ecb-0415d1487aa8",
+            "name": "update-agents-md"
+          },
+          {
+            "rank": 9,
+            "skill_id": "635e7d77-4252-4e52-8007-25d7b158f461",
+            "name": "ai-agent-orchestrator"
+          },
+          {
+            "rank": 10,
+            "skill_id": "7c540559-1c91-4a1f-ba2d-b3cb7d4c06e6",
+            "name": "journey-mapping"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 930
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "944b6db2-4f6a-4984-afbe-c31645e2a923",
+        "name": "coding-guidelines-gen"
+      },
+      {
+        "rank": 2,
+        "skill_id": "3cfe4436-d883-4bb4-8084-f26e958ae21d",
+        "name": "world-hopping"
+      },
+      {
+        "rank": 3,
+        "skill_id": "52173b40-fdc5-4f54-b4c8-183ec7d49dfa",
+        "name": "monorepo-patterns"
+      },
+      {
+        "rank": 4,
+        "skill_id": "3ace47ae-5f24-4636-ad44-729636df4879",
+        "name": "agents-md-assistant"
+      },
+      {
+        "rank": 5,
+        "skill_id": "90015a60-e873-44dc-8ae5-391e4912b8aa",
+        "name": "android-development"
+      },
+      {
+        "rank": 6,
+        "skill_id": "91ee1a71-58b4-4c41-b3f6-d6ecd1bfef3b",
+        "name": "knowledge-base-templates"
+      },
+      {
+        "rank": 7,
+        "skill_id": "218faacf-4304-418d-a371-d7c883ce3129",
+        "name": "agents-md"
+      },
+      {
+        "rank": 8,
+        "skill_id": "930e39fe-4809-429c-9ecb-0415d1487aa8",
+        "name": "update-agents-md"
+      },
+      {
+        "rank": 9,
+        "skill_id": "635e7d77-4252-4e52-8007-25d7b158f461",
+        "name": "ai-agent-orchestrator"
+      },
+      {
+        "rank": 10,
+        "skill_id": "7c540559-1c91-4a1f-ba2d-b3cb7d4c06e6",
+        "name": "journey-mapping"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "c7dfd42c-3528-4641-bf13-3e9dcccb6f83",
+        "name": "review-view"
+      },
+      {
+        "rank": 2,
+        "skill_id": "3cfe4436-d883-4bb4-8084-f26e958ae21d",
+        "name": "world-hopping"
+      },
+      {
+        "rank": 3,
+        "skill_id": "944b6db2-4f6a-4984-afbe-c31645e2a923",
+        "name": "coding-guidelines-gen"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.7653606369886217,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.6666666666666666
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 930
+  },
+  "b": {
+    "queryId": "q-00498",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We have a monorepo called \"Meridian\" for a cross-platform health journaling app (iOS via SwiftUI, Android via Jetpack Compose, shared Kotlin Multiplatform modules, and a Node.js BFF layer). I need three things done: (1) Review our main journal entry composition views on both platforms — check accessibility labels, VoiceOver/TalkBack support, layout consistency between iOS and Android, test coverage of the view models, and auto-create tickets for any critical issues you find. (2) Generate nested AGENTS.md coding guidelines for each module in the monorepo — detect the languages and tooling per module, ask me about our architecture preferences, and set up Spotless for our Kotlin/JVM modules plus any missing linters for the Swift and Node layers. (3) We're also designing a \"Reflection Spaces\" feature where users navigate between different journaling modalities (gratitude, dream log, mood tracking, free-write) and we want the navigation graph to enforce that you can only transition between spaces whose \"emotional distance\" satisfies triangle inequality constraints — essentially treating each modality as a node in a mathematical possibility space where valid paths correspond to truth procedures over the user's journaling history events. We want the transition logic to use Badiou-inspired event ontology so that a new modality only \"appears\" as reachable when a genuine journaling event breaks the current situation. Can you architect that navigation model, review the existing views, and get the AGENTS.md guidelines scaffolded all in one pass?",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "944b6db2-4f6a-4984-afbe-c31645e2a923",
+            "name": "coding-guidelines-gen"
+          },
+          {
+            "rank": 2,
+            "skill_id": "3cfe4436-d883-4bb4-8084-f26e958ae21d",
+            "name": "world-hopping"
+          },
+          {
+            "rank": 3,
+            "skill_id": "52173b40-fdc5-4f54-b4c8-183ec7d49dfa",
+            "name": "monorepo-patterns"
+          },
+          {
+            "rank": 4,
+            "skill_id": "3ace47ae-5f24-4636-ad44-729636df4879",
+            "name": "agents-md-assistant"
+          },
+          {
+            "rank": 5,
+            "skill_id": "90015a60-e873-44dc-8ae5-391e4912b8aa",
+            "name": "android-development"
+          },
+          {
+            "rank": 6,
+            "skill_id": "91ee1a71-58b4-4c41-b3f6-d6ecd1bfef3b",
+            "name": "knowledge-base-templates"
+          },
+          {
+            "rank": 7,
+            "skill_id": "218faacf-4304-418d-a371-d7c883ce3129",
+            "name": "agents-md"
+          },
+          {
+            "rank": 8,
+            "skill_id": "930e39fe-4809-429c-9ecb-0415d1487aa8",
+            "name": "update-agents-md"
+          },
+          {
+            "rank": 9,
+            "skill_id": "635e7d77-4252-4e52-8007-25d7b158f461",
+            "name": "ai-agent-orchestrator"
+          },
+          {
+            "rank": 10,
+            "skill_id": "7c540559-1c91-4a1f-ba2d-b3cb7d4c06e6",
+            "name": "journey-mapping"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 902
+      },
+      {
+        "branch": "review",
+        "query": "Review SwiftUI and Jetpack Compose journal entry screens for accessibility labels, VoiceOver and TalkBack, cross-platform layout consistency, and view-model tests. Record critical issues as actionable tickets.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "c7dfd42c-3528-4641-bf13-3e9dcccb6f83",
+            "name": "review-view"
+          },
+          {
+            "rank": 2,
+            "skill_id": "374ecf81-452f-4004-bdfd-1e5b3f8ab7e3",
+            "name": "android-accessibility"
+          },
+          {
+            "rank": 3,
+            "skill_id": "47c75e09-6414-4515-8bb1-80cc7fdfceda",
+            "name": "ios-swift-expert"
+          },
+          {
+            "rank": 4,
+            "skill_id": "d0675e9d-eb60-463e-a088-44c6a9635056",
+            "name": "ios-developer"
+          },
+          {
+            "rank": 5,
+            "skill_id": "d6ccc5e5-dc3e-4165-a779-bb81dd08941c",
+            "name": "axiom-ios-accessibility"
+          },
+          {
+            "rank": 6,
+            "skill_id": "d33d51d5-ad4b-41ee-a419-bbb81f3aeccc",
+            "name": "ios-development"
+          },
+          {
+            "rank": 7,
+            "skill_id": "3c0f8bbf-d82b-4501-afe7-4af1c9f2e7c8",
+            "name": "ios-development"
+          },
+          {
+            "rank": 8,
+            "skill_id": "b32e0ae1-1541-485f-b4a5-7dc5c95f2b5a",
+            "name": "accessibility-testing"
+          },
+          {
+            "rank": 9,
+            "skill_id": "19aada61-2154-4f58-a4b9-6ea75d05d220",
+            "name": "axiom-swiftui-architecture"
+          },
+          {
+            "rank": 10,
+            "skill_id": "9824337d-2140-4c54-a5f7-45c459940866",
+            "name": "jira-issues"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 206
+      },
+      {
+        "branch": "guidelines",
+        "query": "Create nested AGENTS.md coding guidelines for a SwiftUI, Kotlin Multiplatform, and Node.js monorepo. Detect module tooling, capture architecture preferences, and define module-specific checks including Spotless and missing linters.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "944b6db2-4f6a-4984-afbe-c31645e2a923",
+            "name": "coding-guidelines-gen"
+          },
+          {
+            "rank": 2,
+            "skill_id": "3ace47ae-5f24-4636-ad44-729636df4879",
+            "name": "agents-md-assistant"
+          },
+          {
+            "rank": 3,
+            "skill_id": "b8a9b0dd-193d-4601-bbd7-0d5136d298ed",
+            "name": "agents-md-generator"
+          },
+          {
+            "rank": 4,
+            "skill_id": "218faacf-4304-418d-a371-d7c883ce3129",
+            "name": "agents-md"
+          },
+          {
+            "rank": 5,
+            "skill_id": "47c75e09-6414-4515-8bb1-80cc7fdfceda",
+            "name": "ios-swift-expert"
+          },
+          {
+            "rank": 6,
+            "skill_id": "ce2ff076-1970-4f13-924b-64af77ce7641",
+            "name": "vibe-agents"
+          },
+          {
+            "rank": 7,
+            "skill_id": "f86d7893-d2fd-445b-a79a-f7026e85e31f",
+            "name": "Analyzing AgentScope Library"
+          },
+          {
+            "rank": 8,
+            "skill_id": "9fe5c477-c9ee-4ecd-a6e4-e2ffe5079baf",
+            "name": "agent-memory"
+          },
+          {
+            "rank": 9,
+            "skill_id": "f7e880f7-e7d9-4d63-a315-7277d320c6ee",
+            "name": "suggesting-tooling"
+          },
+          {
+            "rank": 10,
+            "skill_id": "c76485af-88b3-4362-83e2-9e677dbfb2a6",
+            "name": "agent-creation"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 216
+      },
+      {
+        "branch": "navigation",
+        "query": "Model transitions between journaling modalities as a navigation graph constrained by emotional distances and triangle inequality. Expose a new modality only when a qualifying journal event changes which spaces are reachable.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "3cfe4436-d883-4bb4-8084-f26e958ae21d",
+            "name": "world-hopping"
+          },
+          {
+            "rank": 2,
+            "skill_id": "d01ba9d0-3365-4406-9b7f-3c58faeb6c87",
+            "name": "glossary-modal-editor"
+          },
+          {
+            "rank": 3,
+            "skill_id": "f28c118d-e9b1-4298-8980-3ce8791f2576",
+            "name": "universal-emotion"
+          },
+          {
+            "rank": 4,
+            "skill_id": "0b7287b2-639a-487e-88ae-f6282199e2e5",
+            "name": "portals-building-guide"
+          },
+          {
+            "rank": 5,
+            "skill_id": "35ca5c4d-72cd-4a3b-a209-e9903ba37963",
+            "name": "modal-knowledge"
+          },
+          {
+            "rank": 6,
+            "skill_id": "b9b45fc3-ef73-46a1-8706-4bc9fa463376",
+            "name": "checkpointing-an-iteration"
+          },
+          {
+            "rank": 7,
+            "skill_id": "a4fc5bfa-4d83-43f0-83cf-05bc644624f9",
+            "name": "graph-algorithms"
+          },
+          {
+            "rank": 8,
+            "skill_id": "49c186ef-cfad-4f7f-a5ce-22849566a400",
+            "name": "process-journals"
+          },
+          {
+            "rank": 9,
+            "skill_id": "cfccdf3f-4d3f-4389-b682-494d3707aa74",
+            "name": "starting-an-iteration"
+          },
+          {
+            "rank": 10,
+            "skill_id": "070c4644-f385-42ff-8878-5fae151b9b5a",
+            "name": "emotion-engine"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 204
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "944b6db2-4f6a-4984-afbe-c31645e2a923",
+        "name": "coding-guidelines-gen"
+      },
+      {
+        "rank": 2,
+        "skill_id": "3cfe4436-d883-4bb4-8084-f26e958ae21d",
+        "name": "world-hopping"
+      },
+      {
+        "rank": 3,
+        "skill_id": "52173b40-fdc5-4f54-b4c8-183ec7d49dfa",
+        "name": "monorepo-patterns"
+      },
+      {
+        "rank": 4,
+        "skill_id": "c7dfd42c-3528-4641-bf13-3e9dcccb6f83",
+        "name": "review-view"
+      },
+      {
+        "rank": 5,
+        "skill_id": "374ecf81-452f-4004-bdfd-1e5b3f8ab7e3",
+        "name": "android-accessibility"
+      },
+      {
+        "rank": 6,
+        "skill_id": "3ace47ae-5f24-4636-ad44-729636df4879",
+        "name": "agents-md-assistant"
+      },
+      {
+        "rank": 7,
+        "skill_id": "b8a9b0dd-193d-4601-bbd7-0d5136d298ed",
+        "name": "agents-md-generator"
+      },
+      {
+        "rank": 8,
+        "skill_id": "d01ba9d0-3365-4406-9b7f-3c58faeb6c87",
+        "name": "glossary-modal-editor"
+      },
+      {
+        "rank": 9,
+        "skill_id": "f28c118d-e9b1-4298-8980-3ce8791f2576",
+        "name": "universal-emotion"
+      },
+      {
+        "rank": 10,
+        "skill_id": "90015a60-e873-44dc-8ae5-391e4912b8aa",
+        "name": "android-development"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "c7dfd42c-3528-4641-bf13-3e9dcccb6f83",
+        "name": "review-view"
+      },
+      {
+        "rank": 2,
+        "skill_id": "3cfe4436-d883-4bb4-8084-f26e958ae21d",
+        "name": "world-hopping"
+      },
+      {
+        "rank": 3,
+        "skill_id": "944b6db2-4f6a-4984-afbe-c31645e2a923",
+        "name": "coding-guidelines-gen"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.9674679834891693,
+      "Recall@10": 1,
+      "Completeness@10": 1,
+      "Precision@10": 0.3,
+      "MAP@10": 0.9166666666666666
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1528
+  }
+}

@@ -1,0 +1,402 @@
+{
+  "a": {
+    "queryId": "q-00199",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We're building an internal observability layer for our \"MercuryPay\" payment processing platform, which is a distributed system with ~40 microservices written in Go and TypeScript. I need help with two connected things. First, I need you to design and implement a robust distributed tracing system with correlation IDs that propagate through HTTP headers and Kafka message metadata across all our services — each incoming API request should generate a unique trace ID that gets passed through every downstream call, with parent/child span tracking so we can visualize the full request lifecycle from our API gateway through auth, fraud detection, ledger, and notification services. We need middleware for both our Go (chi router) and TypeScript (Express) services, plus a Kafka interceptor that injects/extracts trace context from message headers. Second — and this is the part I'm struggling with — I need you to craft a detailed, high-precision system prompt for our internal GPT-4-based incident analysis assistant that will consume these trace logs and correlation data to help on-call engineers diagnose failures. The current prompt we wrote is way too vague (\"you are a helpful assistant that looks at traces\") and the model keeps hallucinating root causes or ignoring span timing data. I need you to walk me through building a prompt that constrains the model to only reason from actual trace/span evidence, correctly interprets our correlation ID hierarchy, handles partial trace data gracefully, and outputs structured incident hypotheses ranked by confidence. Use your /audit mode on our existing prompt first, then help us rebuild it from scratch with proper grounding instructions.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "0ba2482e-0036-4052-b1ac-8abd24d8322b",
+            "name": "correlation-tracing"
+          },
+          {
+            "rank": 2,
+            "skill_id": "aa4c4b02-fba7-4c29-b816-fd0d51a16ca4",
+            "name": "distributed-tracing"
+          },
+          {
+            "rank": 3,
+            "skill_id": "b6086b2f-5060-4f85-bee8-63847a8a2e1c",
+            "name": "golang-observability-opentelemetry"
+          },
+          {
+            "rank": 4,
+            "skill_id": "1832225d-2e42-414b-9e8c-92ef18a4ab14",
+            "name": "distributed-tracing-specialist"
+          },
+          {
+            "rank": 5,
+            "skill_id": "0ed9d019-5772-4afc-93cc-9c66e49fd211",
+            "name": "distributed-tracing"
+          },
+          {
+            "rank": 6,
+            "skill_id": "c38b0f68-636d-4ca1-a5ba-6fb9ebfb073f",
+            "name": "request-tracing"
+          },
+          {
+            "rank": 7,
+            "skill_id": "aab77b7c-2bca-4405-b31d-cc8e5083c34e",
+            "name": "otel-observability"
+          },
+          {
+            "rank": 8,
+            "skill_id": "3021ea72-bf8f-47cc-8d3e-bb94d04e7098",
+            "name": "golang"
+          },
+          {
+            "rank": 9,
+            "skill_id": "6411bd8d-49f2-4408-9251-cac771c657c0",
+            "name": "monitoring-observability"
+          },
+          {
+            "rank": 10,
+            "skill_id": "a1aac3ef-5551-4e05-852f-0b2b76449f70",
+            "name": "jaeger-tracing-specialist"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 974
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "0ba2482e-0036-4052-b1ac-8abd24d8322b",
+        "name": "correlation-tracing"
+      },
+      {
+        "rank": 2,
+        "skill_id": "aa4c4b02-fba7-4c29-b816-fd0d51a16ca4",
+        "name": "distributed-tracing"
+      },
+      {
+        "rank": 3,
+        "skill_id": "b6086b2f-5060-4f85-bee8-63847a8a2e1c",
+        "name": "golang-observability-opentelemetry"
+      },
+      {
+        "rank": 4,
+        "skill_id": "1832225d-2e42-414b-9e8c-92ef18a4ab14",
+        "name": "distributed-tracing-specialist"
+      },
+      {
+        "rank": 5,
+        "skill_id": "0ed9d019-5772-4afc-93cc-9c66e49fd211",
+        "name": "distributed-tracing"
+      },
+      {
+        "rank": 6,
+        "skill_id": "c38b0f68-636d-4ca1-a5ba-6fb9ebfb073f",
+        "name": "request-tracing"
+      },
+      {
+        "rank": 7,
+        "skill_id": "aab77b7c-2bca-4405-b31d-cc8e5083c34e",
+        "name": "otel-observability"
+      },
+      {
+        "rank": 8,
+        "skill_id": "3021ea72-bf8f-47cc-8d3e-bb94d04e7098",
+        "name": "golang"
+      },
+      {
+        "rank": 9,
+        "skill_id": "6411bd8d-49f2-4408-9251-cac771c657c0",
+        "name": "monitoring-observability"
+      },
+      {
+        "rank": 10,
+        "skill_id": "a1aac3ef-5551-4e05-852f-0b2b76449f70",
+        "name": "jaeger-tracing-specialist"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "d82539f6-d8b7-488c-9c16-39bf1d495b47",
+        "name": "nexus-prompt-engineer"
+      },
+      {
+        "rank": 2,
+        "skill_id": "0ba2482e-0036-4052-b1ac-8abd24d8322b",
+        "name": "correlation-tracing"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.6131471927654584,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.5
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 974
+  },
+  "b": {
+    "queryId": "q-00199",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We're building an internal observability layer for our \"MercuryPay\" payment processing platform, which is a distributed system with ~40 microservices written in Go and TypeScript. I need help with two connected things. First, I need you to design and implement a robust distributed tracing system with correlation IDs that propagate through HTTP headers and Kafka message metadata across all our services — each incoming API request should generate a unique trace ID that gets passed through every downstream call, with parent/child span tracking so we can visualize the full request lifecycle from our API gateway through auth, fraud detection, ledger, and notification services. We need middleware for both our Go (chi router) and TypeScript (Express) services, plus a Kafka interceptor that injects/extracts trace context from message headers. Second — and this is the part I'm struggling with — I need you to craft a detailed, high-precision system prompt for our internal GPT-4-based incident analysis assistant that will consume these trace logs and correlation data to help on-call engineers diagnose failures. The current prompt we wrote is way too vague (\"you are a helpful assistant that looks at traces\") and the model keeps hallucinating root causes or ignoring span timing data. I need you to walk me through building a prompt that constrains the model to only reason from actual trace/span evidence, correctly interprets our correlation ID hierarchy, handles partial trace data gracefully, and outputs structured incident hypotheses ranked by confidence. Use your /audit mode on our existing prompt first, then help us rebuild it from scratch with proper grounding instructions.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "0ba2482e-0036-4052-b1ac-8abd24d8322b",
+            "name": "correlation-tracing"
+          },
+          {
+            "rank": 2,
+            "skill_id": "aa4c4b02-fba7-4c29-b816-fd0d51a16ca4",
+            "name": "distributed-tracing"
+          },
+          {
+            "rank": 3,
+            "skill_id": "b6086b2f-5060-4f85-bee8-63847a8a2e1c",
+            "name": "golang-observability-opentelemetry"
+          },
+          {
+            "rank": 4,
+            "skill_id": "1832225d-2e42-414b-9e8c-92ef18a4ab14",
+            "name": "distributed-tracing-specialist"
+          },
+          {
+            "rank": 5,
+            "skill_id": "0ed9d019-5772-4afc-93cc-9c66e49fd211",
+            "name": "distributed-tracing"
+          },
+          {
+            "rank": 6,
+            "skill_id": "c38b0f68-636d-4ca1-a5ba-6fb9ebfb073f",
+            "name": "request-tracing"
+          },
+          {
+            "rank": 7,
+            "skill_id": "aab77b7c-2bca-4405-b31d-cc8e5083c34e",
+            "name": "otel-observability"
+          },
+          {
+            "rank": 8,
+            "skill_id": "3021ea72-bf8f-47cc-8d3e-bb94d04e7098",
+            "name": "golang"
+          },
+          {
+            "rank": 9,
+            "skill_id": "6411bd8d-49f2-4408-9251-cac771c657c0",
+            "name": "monitoring-observability"
+          },
+          {
+            "rank": 10,
+            "skill_id": "a1aac3ef-5551-4e05-852f-0b2b76449f70",
+            "name": "jaeger-tracing-specialist"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 970
+      },
+      {
+        "branch": "tracing",
+        "query": "Design distributed tracing across Go chi, Express and Kafka services. Propagate correlation IDs and parent-child spans over HTTP and message headers, with middleware and Kafka context injection and extraction.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "0ba2482e-0036-4052-b1ac-8abd24d8322b",
+            "name": "correlation-tracing"
+          },
+          {
+            "rank": 2,
+            "skill_id": "b6086b2f-5060-4f85-bee8-63847a8a2e1c",
+            "name": "golang-observability-opentelemetry"
+          },
+          {
+            "rank": 3,
+            "skill_id": "aa4c4b02-fba7-4c29-b816-fd0d51a16ca4",
+            "name": "distributed-tracing"
+          },
+          {
+            "rank": 4,
+            "skill_id": "1832225d-2e42-414b-9e8c-92ef18a4ab14",
+            "name": "distributed-tracing-specialist"
+          },
+          {
+            "rank": 5,
+            "skill_id": "7e10aa86-1025-4d4c-bec6-75a175a78caa",
+            "name": "golang-http-frameworks"
+          },
+          {
+            "rank": 6,
+            "skill_id": "c38b0f68-636d-4ca1-a5ba-6fb9ebfb073f",
+            "name": "request-tracing"
+          },
+          {
+            "rank": 7,
+            "skill_id": "a1aac3ef-5551-4e05-852f-0b2b76449f70",
+            "name": "jaeger-tracing-specialist"
+          },
+          {
+            "rank": 8,
+            "skill_id": "3021ea72-bf8f-47cc-8d3e-bb94d04e7098",
+            "name": "golang"
+          },
+          {
+            "rank": 9,
+            "skill_id": "0ed9d019-5772-4afc-93cc-9c66e49fd211",
+            "name": "distributed-tracing"
+          },
+          {
+            "rank": 10,
+            "skill_id": "9a6ed9d7-a711-40b8-9b84-d9155299d425",
+            "name": "go-grpc"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 206
+      },
+      {
+        "branch": "analysis",
+        "query": "Audit and rewrite an incident analysis system prompt that reasons from trace and span evidence only. Use timing and correlation hierarchies, handle partial traces, and produce structured incident hypotheses ranked by confidence.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "fcf99fcd-3607-4676-a9ea-fa9290c35c6f",
+            "name": "rca-copilot-agent"
+          },
+          {
+            "rank": 2,
+            "skill_id": "0b0c29ed-0bcd-4500-a702-d4adca5789e3",
+            "name": "sequential-thinking"
+          },
+          {
+            "rank": 3,
+            "skill_id": "39373bac-43eb-40f5-a0b0-e8cce5e609f9",
+            "name": "incident-analysis"
+          },
+          {
+            "rank": 4,
+            "skill_id": "17280965-6938-4afb-b8f1-117699340e1f",
+            "name": "incident-responder"
+          },
+          {
+            "rank": 5,
+            "skill_id": "5e9043c6-fad0-4e5b-8c8a-8018382b71fa",
+            "name": "performance-correlation"
+          },
+          {
+            "rank": 6,
+            "skill_id": "9a98b56c-ad93-452f-84a7-9aefd383c355",
+            "name": "error-coordinator"
+          },
+          {
+            "rank": 7,
+            "skill_id": "b24d03f2-0b8c-444d-94c9-60f296d83f3d",
+            "name": "incident-response-plan"
+          },
+          {
+            "rank": 8,
+            "skill_id": "1f4947b8-86c6-4caf-ae8f-f151f23873e7",
+            "name": "apex:debug"
+          },
+          {
+            "rank": 9,
+            "skill_id": "537d2def-ed37-4761-8fb8-8c1c0925722e",
+            "name": "timeline-forensics"
+          },
+          {
+            "rank": 10,
+            "skill_id": "0ba2482e-0036-4052-b1ac-8abd24d8322b",
+            "name": "correlation-tracing"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 228
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "0ba2482e-0036-4052-b1ac-8abd24d8322b",
+        "name": "correlation-tracing"
+      },
+      {
+        "rank": 2,
+        "skill_id": "aa4c4b02-fba7-4c29-b816-fd0d51a16ca4",
+        "name": "distributed-tracing"
+      },
+      {
+        "rank": 3,
+        "skill_id": "b6086b2f-5060-4f85-bee8-63847a8a2e1c",
+        "name": "golang-observability-opentelemetry"
+      },
+      {
+        "rank": 4,
+        "skill_id": "1832225d-2e42-414b-9e8c-92ef18a4ab14",
+        "name": "distributed-tracing-specialist"
+      },
+      {
+        "rank": 5,
+        "skill_id": "7e10aa86-1025-4d4c-bec6-75a175a78caa",
+        "name": "golang-http-frameworks"
+      },
+      {
+        "rank": 6,
+        "skill_id": "fcf99fcd-3607-4676-a9ea-fa9290c35c6f",
+        "name": "rca-copilot-agent"
+      },
+      {
+        "rank": 7,
+        "skill_id": "0b0c29ed-0bcd-4500-a702-d4adca5789e3",
+        "name": "sequential-thinking"
+      },
+      {
+        "rank": 8,
+        "skill_id": "0ed9d019-5772-4afc-93cc-9c66e49fd211",
+        "name": "distributed-tracing"
+      },
+      {
+        "rank": 9,
+        "skill_id": "c38b0f68-636d-4ca1-a5ba-6fb9ebfb073f",
+        "name": "request-tracing"
+      },
+      {
+        "rank": 10,
+        "skill_id": "aab77b7c-2bca-4405-b31d-cc8e5083c34e",
+        "name": "otel-observability"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "d82539f6-d8b7-488c-9c16-39bf1d495b47",
+        "name": "nexus-prompt-engineer"
+      },
+      {
+        "rank": 2,
+        "skill_id": "0ba2482e-0036-4052-b1ac-8abd24d8322b",
+        "name": "correlation-tracing"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.6131471927654584,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.5
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1404
+  }
+}

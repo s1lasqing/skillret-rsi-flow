@@ -1,0 +1,13 @@
+local-assets/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+.idea/
+node_modules/
+.next/
+target/
+*.jar
+*.npz
+*.safetensors

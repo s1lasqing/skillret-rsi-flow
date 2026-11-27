@@ -1,0 +1,402 @@
+{
+  "a": {
+    "queryId": "q-02596",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Our React + Node.js app \"FieldNote\" is being developed by three squads in parallel — Squad A owns the dashboard module, Squad B owns the reporting module, and Squad C owns the settings module — and we keep getting merge nightmares because all three squads are touching shared translation files (`en.json`, `ar.json`, `fr.json`, `ja.json`). We use i18next with react-i18next on the frontend and i18next-http-middleware on the backend, ICU message format for plurals and gender, and we need full RTL support for Arabic. Can you redesign our i18n file structure and namespace strategy so that each squad can add/modify translations independently without conflicting with each other, set up a CI check that detects and blocks translation key collisions before merge, integrate a workflow for pulling approved strings from our Lokalise TMS into the correct namespace, and make sure the build still produces a single optimized bundle per locale at deploy time? Ideally show me the folder layout, the namespace loading config, the CI script, and the Lokalise pull/sync script.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "5a42e192-1402-465f-83c8-66aa1e3cbf76",
+            "name": "software-localisation"
+          },
+          {
+            "rank": 2,
+            "skill_id": "3047592c-8df6-4ddb-af33-76a35be7789a",
+            "name": "i18n-frontend-implementer"
+          },
+          {
+            "rank": 3,
+            "skill_id": "535a5aee-cbe0-4c97-9aeb-a5b12e2ab313",
+            "name": "i18n"
+          },
+          {
+            "rank": 4,
+            "skill_id": "58780126-cf66-4938-b252-a3a0caca902a",
+            "name": "i18n-localization"
+          },
+          {
+            "rank": 5,
+            "skill_id": "e108972a-7922-4244-843e-2837e7f25815",
+            "name": "i18n-translation"
+          },
+          {
+            "rank": 6,
+            "skill_id": "0fb269b0-af03-4c75-9dd6-71637a24c5a8",
+            "name": "i18n-patterns"
+          },
+          {
+            "rank": 7,
+            "skill_id": "04466f99-4563-4541-861c-8cbfc1d4644a",
+            "name": "app-localization"
+          },
+          {
+            "rank": 8,
+            "skill_id": "71707e64-f408-4fd4-a381-fe70ff7a26e9",
+            "name": "pr-merge"
+          },
+          {
+            "rank": 9,
+            "skill_id": "530147c9-c6f0-4e46-8b80-1f2eb658c6b9",
+            "name": "update_json_localization_file"
+          },
+          {
+            "rank": 10,
+            "skill_id": "4a67478a-9610-4050-a09f-f203a94fa7df",
+            "name": "swarm-workflow"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 699
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "5a42e192-1402-465f-83c8-66aa1e3cbf76",
+        "name": "software-localisation"
+      },
+      {
+        "rank": 2,
+        "skill_id": "3047592c-8df6-4ddb-af33-76a35be7789a",
+        "name": "i18n-frontend-implementer"
+      },
+      {
+        "rank": 3,
+        "skill_id": "535a5aee-cbe0-4c97-9aeb-a5b12e2ab313",
+        "name": "i18n"
+      },
+      {
+        "rank": 4,
+        "skill_id": "58780126-cf66-4938-b252-a3a0caca902a",
+        "name": "i18n-localization"
+      },
+      {
+        "rank": 5,
+        "skill_id": "e108972a-7922-4244-843e-2837e7f25815",
+        "name": "i18n-translation"
+      },
+      {
+        "rank": 6,
+        "skill_id": "0fb269b0-af03-4c75-9dd6-71637a24c5a8",
+        "name": "i18n-patterns"
+      },
+      {
+        "rank": 7,
+        "skill_id": "04466f99-4563-4541-861c-8cbfc1d4644a",
+        "name": "app-localization"
+      },
+      {
+        "rank": 8,
+        "skill_id": "71707e64-f408-4fd4-a381-fe70ff7a26e9",
+        "name": "pr-merge"
+      },
+      {
+        "rank": 9,
+        "skill_id": "530147c9-c6f0-4e46-8b80-1f2eb658c6b9",
+        "name": "update_json_localization_file"
+      },
+      {
+        "rank": 10,
+        "skill_id": "4a67478a-9610-4050-a09f-f203a94fa7df",
+        "name": "swarm-workflow"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "7f282173-6e82-45c7-b54c-00403799a922",
+        "name": "anti-conflict"
+      },
+      {
+        "rank": 2,
+        "skill_id": "5a42e192-1402-465f-83c8-66aa1e3cbf76",
+        "name": "software-localisation"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.6131471927654584,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.5
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 699
+  },
+  "b": {
+    "queryId": "q-02596",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Our React + Node.js app \"FieldNote\" is being developed by three squads in parallel — Squad A owns the dashboard module, Squad B owns the reporting module, and Squad C owns the settings module — and we keep getting merge nightmares because all three squads are touching shared translation files (`en.json`, `ar.json`, `fr.json`, `ja.json`). We use i18next with react-i18next on the frontend and i18next-http-middleware on the backend, ICU message format for plurals and gender, and we need full RTL support for Arabic. Can you redesign our i18n file structure and namespace strategy so that each squad can add/modify translations independently without conflicting with each other, set up a CI check that detects and blocks translation key collisions before merge, integrate a workflow for pulling approved strings from our Lokalise TMS into the correct namespace, and make sure the build still produces a single optimized bundle per locale at deploy time? Ideally show me the folder layout, the namespace loading config, the CI script, and the Lokalise pull/sync script.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "5a42e192-1402-465f-83c8-66aa1e3cbf76",
+            "name": "software-localisation"
+          },
+          {
+            "rank": 2,
+            "skill_id": "3047592c-8df6-4ddb-af33-76a35be7789a",
+            "name": "i18n-frontend-implementer"
+          },
+          {
+            "rank": 3,
+            "skill_id": "535a5aee-cbe0-4c97-9aeb-a5b12e2ab313",
+            "name": "i18n"
+          },
+          {
+            "rank": 4,
+            "skill_id": "58780126-cf66-4938-b252-a3a0caca902a",
+            "name": "i18n-localization"
+          },
+          {
+            "rank": 5,
+            "skill_id": "e108972a-7922-4244-843e-2837e7f25815",
+            "name": "i18n-translation"
+          },
+          {
+            "rank": 6,
+            "skill_id": "0fb269b0-af03-4c75-9dd6-71637a24c5a8",
+            "name": "i18n-patterns"
+          },
+          {
+            "rank": 7,
+            "skill_id": "04466f99-4563-4541-861c-8cbfc1d4644a",
+            "name": "app-localization"
+          },
+          {
+            "rank": 8,
+            "skill_id": "71707e64-f408-4fd4-a381-fe70ff7a26e9",
+            "name": "pr-merge"
+          },
+          {
+            "rank": 9,
+            "skill_id": "530147c9-c6f0-4e46-8b80-1f2eb658c6b9",
+            "name": "update_json_localization_file"
+          },
+          {
+            "rank": 10,
+            "skill_id": "4a67478a-9610-4050-a09f-f203a94fa7df",
+            "name": "swarm-workflow"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 715
+      },
+      {
+        "branch": "namespaces",
+        "query": "Redesign React and Node.js localization around team-owned i18next namespaces. Provide a file layout and shared frontend/backend loading strategy with ICU plural and gender messages, Arabic RTL support, and one optimized deployment bundle per locale.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "5a42e192-1402-465f-83c8-66aa1e3cbf76",
+            "name": "software-localisation"
+          },
+          {
+            "rank": 2,
+            "skill_id": "3047592c-8df6-4ddb-af33-76a35be7789a",
+            "name": "i18n-frontend-implementer"
+          },
+          {
+            "rank": 3,
+            "skill_id": "58780126-cf66-4938-b252-a3a0caca902a",
+            "name": "i18n-localization"
+          },
+          {
+            "rank": 4,
+            "skill_id": "e810dbc0-06c4-47ea-95ab-42a6dd3b670c",
+            "name": "frontend-specialist"
+          },
+          {
+            "rank": 5,
+            "skill_id": "7a41838b-2017-4c57-bba1-12dc361cd588",
+            "name": "bundle-analysis"
+          },
+          {
+            "rank": 6,
+            "skill_id": "535a5aee-cbe0-4c97-9aeb-a5b12e2ab313",
+            "name": "i18n"
+          },
+          {
+            "rank": 7,
+            "skill_id": "a0b41f37-d150-426f-9985-8eacaf922f06",
+            "name": "discover-frontend"
+          },
+          {
+            "rank": 8,
+            "skill_id": "12aebc63-9cff-4da4-bba8-18fc5b2be75f",
+            "name": "vercel-react-best-practices"
+          },
+          {
+            "rank": 9,
+            "skill_id": "c474a980-812f-4e38-ae13-72f820968649",
+            "name": "senior-frontend"
+          },
+          {
+            "rank": 10,
+            "skill_id": "da4f7236-3035-4764-bbfa-069b80bc5b85",
+            "name": "fullstack-developer"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 234
+      },
+      {
+        "branch": "checks",
+        "query": "Add CI validation to block duplicate or colliding translation keys across team namespaces. Synchronize approved strings from the Lokalise translation management system to the corresponding files and namespaces.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "535a5aee-cbe0-4c97-9aeb-a5b12e2ab313",
+            "name": "i18n"
+          },
+          {
+            "rank": 2,
+            "skill_id": "04466f99-4563-4541-861c-8cbfc1d4644a",
+            "name": "app-localization"
+          },
+          {
+            "rank": 3,
+            "skill_id": "0499c3ab-52ae-4168-a6a7-5e8e368e0090",
+            "name": "detect_non_localizable"
+          },
+          {
+            "rank": 4,
+            "skill_id": "0fb269b0-af03-4c75-9dd6-71637a24c5a8",
+            "name": "i18n-patterns"
+          },
+          {
+            "rank": 5,
+            "skill_id": "e108972a-7922-4244-843e-2837e7f25815",
+            "name": "i18n-translation"
+          },
+          {
+            "rank": 6,
+            "skill_id": "926ea38a-9584-4129-855a-2f7efc3a46c6",
+            "name": "Locale Extractor"
+          },
+          {
+            "rank": 7,
+            "skill_id": "3047592c-8df6-4ddb-af33-76a35be7789a",
+            "name": "i18n-frontend-implementer"
+          },
+          {
+            "rank": 8,
+            "skill_id": "6bf6fd9d-e6e4-4f87-90d8-3c86e27d8e4a",
+            "name": "autonomous-ci"
+          },
+          {
+            "rank": 9,
+            "skill_id": "530147c9-c6f0-4e46-8b80-1f2eb658c6b9",
+            "name": "update_json_localization_file"
+          },
+          {
+            "rank": 10,
+            "skill_id": "58780126-cf66-4938-b252-a3a0caca902a",
+            "name": "i18n-localization"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 205
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "5a42e192-1402-465f-83c8-66aa1e3cbf76",
+        "name": "software-localisation"
+      },
+      {
+        "rank": 2,
+        "skill_id": "3047592c-8df6-4ddb-af33-76a35be7789a",
+        "name": "i18n-frontend-implementer"
+      },
+      {
+        "rank": 3,
+        "skill_id": "535a5aee-cbe0-4c97-9aeb-a5b12e2ab313",
+        "name": "i18n"
+      },
+      {
+        "rank": 4,
+        "skill_id": "58780126-cf66-4938-b252-a3a0caca902a",
+        "name": "i18n-localization"
+      },
+      {
+        "rank": 5,
+        "skill_id": "e810dbc0-06c4-47ea-95ab-42a6dd3b670c",
+        "name": "frontend-specialist"
+      },
+      {
+        "rank": 6,
+        "skill_id": "04466f99-4563-4541-861c-8cbfc1d4644a",
+        "name": "app-localization"
+      },
+      {
+        "rank": 7,
+        "skill_id": "0499c3ab-52ae-4168-a6a7-5e8e368e0090",
+        "name": "detect_non_localizable"
+      },
+      {
+        "rank": 8,
+        "skill_id": "e108972a-7922-4244-843e-2837e7f25815",
+        "name": "i18n-translation"
+      },
+      {
+        "rank": 9,
+        "skill_id": "0fb269b0-af03-4c75-9dd6-71637a24c5a8",
+        "name": "i18n-patterns"
+      },
+      {
+        "rank": 10,
+        "skill_id": "71707e64-f408-4fd4-a381-fe70ff7a26e9",
+        "name": "pr-merge"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "7f282173-6e82-45c7-b54c-00403799a922",
+        "name": "anti-conflict"
+      },
+      {
+        "rank": 2,
+        "skill_id": "5a42e192-1402-465f-83c8-66aa1e3cbf76",
+        "name": "software-localisation"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.6131471927654584,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.5
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1154
+  }
+}

@@ -1,0 +1,402 @@
+{
+  "a": {
+    "queryId": "q-03910",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Create a Claude Code plugin at `~/plugins/git-guardian` that provides a `pre-commit` hook to scan staged files for secrets and credentials before they're committed. The plugin should have the full directory structure with `plugin.json` manifest, a `hooks/` folder for the pre-commit scanning logic, and a `commands/` folder with a `scan` command that lets users manually trigger a scan on any directory. I also need you to bump the version to 1.0.0 for our initial marketplace release and add the entry to our team's `marketplace.json` at `~/plugins/marketplace.json`. One important thing — when the hook detects a secret, the CLI output messages need to be really well-crafted: the warning notification when a secret is found, the confirmation prompt asking whether to proceed anyway, the success message when a commit passes clean, the error message when the scan itself fails, and the help text explaining what patterns are being checked. These messages will be the main way developers interact with this tool dozens of times a day, so they need to be concise, clear, non-alarming but firm, and should follow accessibility best practices (no jargon, no ambiguous double-negatives in confirmation prompts, actionable next steps in every error state). Draft all the UI strings in a separate `copy/strings.json` file with a short rationale comment for each message explaining the UX writing choice.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "d0bac767-7792-4d25-93b8-7953912a0dca",
+            "name": "developing-claude-plugins"
+          },
+          {
+            "rank": 2,
+            "skill_id": "d4f475bb-dc25-4d2f-90d4-269d48f15640",
+            "name": "Claude Code Plugin Builder"
+          },
+          {
+            "rank": 3,
+            "skill_id": "728b584e-58d2-4b8f-8940-eb119f65e46b",
+            "name": "plugin-creator"
+          },
+          {
+            "rank": 4,
+            "skill_id": "9bbcac34-8485-4944-a308-fa5dda1cf022",
+            "name": "Creating and Managing Plugin Marketplaces"
+          },
+          {
+            "rank": 5,
+            "skill_id": "0f2e2be1-6537-41c7-9d28-eec475f6a487",
+            "name": "plugin-creator"
+          },
+          {
+            "rank": 6,
+            "skill_id": "040eb099-a60e-44ae-a17a-4401328efd73",
+            "name": "plugin-setup-creator"
+          },
+          {
+            "rank": 7,
+            "skill_id": "ea151299-6900-4608-b3cb-9111d6aef81e",
+            "name": "plugin-setup"
+          },
+          {
+            "rank": 8,
+            "skill_id": "258c053b-ce58-4f52-9bd2-ec009cdbdec6",
+            "name": "marketplace-release"
+          },
+          {
+            "rank": 9,
+            "skill_id": "a801fdba-b1c7-44ec-b193-cb9a4a745110",
+            "name": "plugin-authoring"
+          },
+          {
+            "rank": 10,
+            "skill_id": "c9fb04fb-8f85-4e83-992a-1eced287acdb",
+            "name": "plugin-scaffolder"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 862
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "d0bac767-7792-4d25-93b8-7953912a0dca",
+        "name": "developing-claude-plugins"
+      },
+      {
+        "rank": 2,
+        "skill_id": "d4f475bb-dc25-4d2f-90d4-269d48f15640",
+        "name": "Claude Code Plugin Builder"
+      },
+      {
+        "rank": 3,
+        "skill_id": "728b584e-58d2-4b8f-8940-eb119f65e46b",
+        "name": "plugin-creator"
+      },
+      {
+        "rank": 4,
+        "skill_id": "9bbcac34-8485-4944-a308-fa5dda1cf022",
+        "name": "Creating and Managing Plugin Marketplaces"
+      },
+      {
+        "rank": 5,
+        "skill_id": "0f2e2be1-6537-41c7-9d28-eec475f6a487",
+        "name": "plugin-creator"
+      },
+      {
+        "rank": 6,
+        "skill_id": "040eb099-a60e-44ae-a17a-4401328efd73",
+        "name": "plugin-setup-creator"
+      },
+      {
+        "rank": 7,
+        "skill_id": "ea151299-6900-4608-b3cb-9111d6aef81e",
+        "name": "plugin-setup"
+      },
+      {
+        "rank": 8,
+        "skill_id": "258c053b-ce58-4f52-9bd2-ec009cdbdec6",
+        "name": "marketplace-release"
+      },
+      {
+        "rank": 9,
+        "skill_id": "a801fdba-b1c7-44ec-b193-cb9a4a745110",
+        "name": "plugin-authoring"
+      },
+      {
+        "rank": 10,
+        "skill_id": "c9fb04fb-8f85-4e83-992a-1eced287acdb",
+        "name": "plugin-scaffolder"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "728b584e-58d2-4b8f-8940-eb119f65e46b",
+        "name": "plugin-creator"
+      },
+      {
+        "rank": 2,
+        "skill_id": "0bcd0648-7ebc-4002-9051-a8d67a215914",
+        "name": "ux-writing"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.3065735963827292,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.16666666666666666
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 862
+  },
+  "b": {
+    "queryId": "q-03910",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Create a Claude Code plugin at `~/plugins/git-guardian` that provides a `pre-commit` hook to scan staged files for secrets and credentials before they're committed. The plugin should have the full directory structure with `plugin.json` manifest, a `hooks/` folder for the pre-commit scanning logic, and a `commands/` folder with a `scan` command that lets users manually trigger a scan on any directory. I also need you to bump the version to 1.0.0 for our initial marketplace release and add the entry to our team's `marketplace.json` at `~/plugins/marketplace.json`. One important thing — when the hook detects a secret, the CLI output messages need to be really well-crafted: the warning notification when a secret is found, the confirmation prompt asking whether to proceed anyway, the success message when a commit passes clean, the error message when the scan itself fails, and the help text explaining what patterns are being checked. These messages will be the main way developers interact with this tool dozens of times a day, so they need to be concise, clear, non-alarming but firm, and should follow accessibility best practices (no jargon, no ambiguous double-negatives in confirmation prompts, actionable next steps in every error state). Draft all the UI strings in a separate `copy/strings.json` file with a short rationale comment for each message explaining the UX writing choice.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "d0bac767-7792-4d25-93b8-7953912a0dca",
+            "name": "developing-claude-plugins"
+          },
+          {
+            "rank": 2,
+            "skill_id": "d4f475bb-dc25-4d2f-90d4-269d48f15640",
+            "name": "Claude Code Plugin Builder"
+          },
+          {
+            "rank": 3,
+            "skill_id": "728b584e-58d2-4b8f-8940-eb119f65e46b",
+            "name": "plugin-creator"
+          },
+          {
+            "rank": 4,
+            "skill_id": "9bbcac34-8485-4944-a308-fa5dda1cf022",
+            "name": "Creating and Managing Plugin Marketplaces"
+          },
+          {
+            "rank": 5,
+            "skill_id": "0f2e2be1-6537-41c7-9d28-eec475f6a487",
+            "name": "plugin-creator"
+          },
+          {
+            "rank": 6,
+            "skill_id": "040eb099-a60e-44ae-a17a-4401328efd73",
+            "name": "plugin-setup-creator"
+          },
+          {
+            "rank": 7,
+            "skill_id": "ea151299-6900-4608-b3cb-9111d6aef81e",
+            "name": "plugin-setup"
+          },
+          {
+            "rank": 8,
+            "skill_id": "258c053b-ce58-4f52-9bd2-ec009cdbdec6",
+            "name": "marketplace-release"
+          },
+          {
+            "rank": 9,
+            "skill_id": "a801fdba-b1c7-44ec-b193-cb9a4a745110",
+            "name": "plugin-authoring"
+          },
+          {
+            "rank": 10,
+            "skill_id": "c9fb04fb-8f85-4e83-992a-1eced287acdb",
+            "name": "plugin-scaffolder"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 833
+      },
+      {
+        "branch": "plugin",
+        "query": "Package a Claude Code plugin for staged-file secret scanning with a pre-commit hook, a manually invoked directory scan command, a plugin.json manifest, and a versioned marketplace catalog entry.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "d4f475bb-dc25-4d2f-90d4-269d48f15640",
+            "name": "Claude Code Plugin Builder"
+          },
+          {
+            "rank": 2,
+            "skill_id": "9bbcac34-8485-4944-a308-fa5dda1cf022",
+            "name": "Creating and Managing Plugin Marketplaces"
+          },
+          {
+            "rank": 3,
+            "skill_id": "728b584e-58d2-4b8f-8940-eb119f65e46b",
+            "name": "plugin-creator"
+          },
+          {
+            "rank": 4,
+            "skill_id": "040eb099-a60e-44ae-a17a-4401328efd73",
+            "name": "plugin-setup-creator"
+          },
+          {
+            "rank": 5,
+            "skill_id": "64786262-5cd5-498b-8b1d-fcfde7fa418a",
+            "name": "marketplace-update"
+          },
+          {
+            "rank": 6,
+            "skill_id": "d0bac767-7792-4d25-93b8-7953912a0dca",
+            "name": "developing-claude-plugins"
+          },
+          {
+            "rank": 7,
+            "skill_id": "0f2e2be1-6537-41c7-9d28-eec475f6a487",
+            "name": "plugin-creator"
+          },
+          {
+            "rank": 8,
+            "skill_id": "ea151299-6900-4608-b3cb-9111d6aef81e",
+            "name": "plugin-setup"
+          },
+          {
+            "rank": 9,
+            "skill_id": "c9fb04fb-8f85-4e83-992a-1eced287acdb",
+            "name": "plugin-scaffolder"
+          },
+          {
+            "rank": 10,
+            "skill_id": "a801fdba-b1c7-44ec-b193-cb9a4a745110",
+            "name": "plugin-authoring"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 201
+      },
+      {
+        "branch": "messages",
+        "query": "Write concise and accessible command-line copy for a pre-commit secret scanner: detection warning, proceed confirmation, clean scan success, tool failure with next steps, and help on scan patterns. Keep messages in copy/strings.json and explain each wording choice.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "dcddb996-e69e-401b-9d97-0786720c460c",
+            "name": "product-copy-assistant"
+          },
+          {
+            "rank": 2,
+            "skill_id": "0bcd0648-7ebc-4002-9051-a8d67a215914",
+            "name": "ux-writing"
+          },
+          {
+            "rank": 3,
+            "skill_id": "258c3194-d7cd-49c1-b012-c0d5ec8493c9",
+            "name": "cli-ux-tester"
+          },
+          {
+            "rank": 4,
+            "skill_id": "64ca6364-c13c-4c31-856b-15a67629f430",
+            "name": "logophile"
+          },
+          {
+            "rank": 5,
+            "skill_id": "73239d8a-7507-4d54-9c87-3275b290c09c",
+            "name": "Prompt Brevity Review"
+          },
+          {
+            "rank": 6,
+            "skill_id": "f44c96a4-c6a5-4ddf-a630-c52dc9552803",
+            "name": "cli-ux-designer"
+          },
+          {
+            "rank": 7,
+            "skill_id": "2f4b2621-b79f-4fd6-b87a-f48583898276",
+            "name": "copy-editing"
+          },
+          {
+            "rank": 8,
+            "skill_id": "74700a3d-0482-4a00-845b-0124dc302efb",
+            "name": "designing-clis"
+          },
+          {
+            "rank": 9,
+            "skill_id": "f5b08798-c8a3-4547-be3e-3f6a0dd01db9",
+            "name": "copywriter"
+          },
+          {
+            "rank": 10,
+            "skill_id": "0c6e7fa8-b05f-4c98-81af-65b991bc5af7",
+            "name": "housing-copywriter"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 238
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "d0bac767-7792-4d25-93b8-7953912a0dca",
+        "name": "developing-claude-plugins"
+      },
+      {
+        "rank": 2,
+        "skill_id": "d4f475bb-dc25-4d2f-90d4-269d48f15640",
+        "name": "Claude Code Plugin Builder"
+      },
+      {
+        "rank": 3,
+        "skill_id": "728b584e-58d2-4b8f-8940-eb119f65e46b",
+        "name": "plugin-creator"
+      },
+      {
+        "rank": 4,
+        "skill_id": "9bbcac34-8485-4944-a308-fa5dda1cf022",
+        "name": "Creating and Managing Plugin Marketplaces"
+      },
+      {
+        "rank": 5,
+        "skill_id": "040eb099-a60e-44ae-a17a-4401328efd73",
+        "name": "plugin-setup-creator"
+      },
+      {
+        "rank": 6,
+        "skill_id": "dcddb996-e69e-401b-9d97-0786720c460c",
+        "name": "product-copy-assistant"
+      },
+      {
+        "rank": 7,
+        "skill_id": "0bcd0648-7ebc-4002-9051-a8d67a215914",
+        "name": "ux-writing"
+      },
+      {
+        "rank": 8,
+        "skill_id": "0f2e2be1-6537-41c7-9d28-eec475f6a487",
+        "name": "plugin-creator"
+      },
+      {
+        "rank": 9,
+        "skill_id": "ea151299-6900-4608-b3cb-9111d6aef81e",
+        "name": "plugin-setup"
+      },
+      {
+        "rank": 10,
+        "skill_id": "258c053b-ce58-4f52-9bd2-ec009cdbdec6",
+        "name": "marketplace-release"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "728b584e-58d2-4b8f-8940-eb119f65e46b",
+        "name": "plugin-creator"
+      },
+      {
+        "rank": 2,
+        "skill_id": "0bcd0648-7ebc-4002-9051-a8d67a215914",
+        "name": "ux-writing"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.5109559939712153,
+      "Recall@10": 1,
+      "Completeness@10": 1,
+      "Precision@10": 0.2,
+      "MAP@10": 0.30952380952380953
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1272
+  }
+}

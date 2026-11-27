@@ -1,0 +1,402 @@
+{
+  "a": {
+    "queryId": "q-00360",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Our platform \"FreightPulse\" is a logistics SaaS for last-mile delivery optimization. We're about to kick off a major new feature — dynamic route recalculation with real-time traffic ingestion — and I need two things done together. First, generate a full PRD for this feature that covers the real-time traffic data pipeline, the route optimization engine (using OSRM), driver mobile app integration, and a dispatcher dashboard. Make sure it's structured for automated task breakdown with clear milestones and acceptance criteria, and run all your validation checks against it. If there's already a PRD in our repo at `docs/prd/`, detect it and let me know whether we should update or replace. Second, I need you to set up our entire CI/CD pipeline from scratch — we're on GitHub Actions with a monorepo (Rust backend, React frontend, Flutter mobile). I need: a test gate that blocks merges unless unit + integration tests pass, Trivy container scanning on every PR, Docker image builds pushed to ECR with semantic version tags, and a deployment workflow that does blue-green deploys to our EKS staging cluster on merge to `develop` and canary deploys to production on release tags with automatic rollback if error rates exceed 2%. The PRD should include the CI/CD requirements as a dedicated section so tasks can be generated for pipeline work too. Once the PRD passes validation, hand it off for task breakdown and give me the full task list with datetime estimates.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "fe8af643-505b-4a5d-97fc-dee899b930ae",
+            "name": "prd-generator"
+          },
+          {
+            "rank": 2,
+            "skill_id": "a2d5b605-e8b1-4d6d-80f4-2548308bf266",
+            "name": "PRD Generator for TaskMaster"
+          },
+          {
+            "rank": 3,
+            "skill_id": "029fac9d-7dbf-43a8-aad7-3a907dc664fb",
+            "name": "ring:pre-dev-prd-creation"
+          },
+          {
+            "rank": 4,
+            "skill_id": "324b0338-a477-45f6-a954-9f1bf06a11e0",
+            "name": "ralph-tui-prd"
+          },
+          {
+            "rank": 5,
+            "skill_id": "8084a105-877d-4e91-8751-0a1278d72af0",
+            "name": "bmad-prd"
+          },
+          {
+            "rank": 6,
+            "skill_id": "af457164-6067-467b-8e2c-cb8455032fa0",
+            "name": "create-prd"
+          },
+          {
+            "rank": 7,
+            "skill_id": "174093f3-3389-4fae-bc25-7ecb0c16ab15",
+            "name": "pre-dev-prd-creation"
+          },
+          {
+            "rank": 8,
+            "skill_id": "c4aec837-2bb0-4c88-8a00-bb1a590fb3d5",
+            "name": "prd-management"
+          },
+          {
+            "rank": 9,
+            "skill_id": "4d1ec814-eaa0-403f-a2d6-ff3f32abd05f",
+            "name": "vibe-prd"
+          },
+          {
+            "rank": 10,
+            "skill_id": "b4924433-501f-49cb-a06d-0d6179722f84",
+            "name": "prd-facilitator"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 906
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "fe8af643-505b-4a5d-97fc-dee899b930ae",
+        "name": "prd-generator"
+      },
+      {
+        "rank": 2,
+        "skill_id": "a2d5b605-e8b1-4d6d-80f4-2548308bf266",
+        "name": "PRD Generator for TaskMaster"
+      },
+      {
+        "rank": 3,
+        "skill_id": "029fac9d-7dbf-43a8-aad7-3a907dc664fb",
+        "name": "ring:pre-dev-prd-creation"
+      },
+      {
+        "rank": 4,
+        "skill_id": "324b0338-a477-45f6-a954-9f1bf06a11e0",
+        "name": "ralph-tui-prd"
+      },
+      {
+        "rank": 5,
+        "skill_id": "8084a105-877d-4e91-8751-0a1278d72af0",
+        "name": "bmad-prd"
+      },
+      {
+        "rank": 6,
+        "skill_id": "af457164-6067-467b-8e2c-cb8455032fa0",
+        "name": "create-prd"
+      },
+      {
+        "rank": 7,
+        "skill_id": "174093f3-3389-4fae-bc25-7ecb0c16ab15",
+        "name": "pre-dev-prd-creation"
+      },
+      {
+        "rank": 8,
+        "skill_id": "c4aec837-2bb0-4c88-8a00-bb1a590fb3d5",
+        "name": "prd-management"
+      },
+      {
+        "rank": 9,
+        "skill_id": "4d1ec814-eaa0-403f-a2d6-ff3f32abd05f",
+        "name": "vibe-prd"
+      },
+      {
+        "rank": 10,
+        "skill_id": "b4924433-501f-49cb-a06d-0d6179722f84",
+        "name": "prd-facilitator"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "e7d355a5-f887-4a7c-a0fe-77aa0062364b",
+        "name": "ci-cd"
+      },
+      {
+        "rank": 2,
+        "skill_id": "a2d5b605-e8b1-4d6d-80f4-2548308bf266",
+        "name": "PRD Generator for TaskMaster"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.38685280723454163,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.25
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 906
+  },
+  "b": {
+    "queryId": "q-00360",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "Our platform \"FreightPulse\" is a logistics SaaS for last-mile delivery optimization. We're about to kick off a major new feature — dynamic route recalculation with real-time traffic ingestion — and I need two things done together. First, generate a full PRD for this feature that covers the real-time traffic data pipeline, the route optimization engine (using OSRM), driver mobile app integration, and a dispatcher dashboard. Make sure it's structured for automated task breakdown with clear milestones and acceptance criteria, and run all your validation checks against it. If there's already a PRD in our repo at `docs/prd/`, detect it and let me know whether we should update or replace. Second, I need you to set up our entire CI/CD pipeline from scratch — we're on GitHub Actions with a monorepo (Rust backend, React frontend, Flutter mobile). I need: a test gate that blocks merges unless unit + integration tests pass, Trivy container scanning on every PR, Docker image builds pushed to ECR with semantic version tags, and a deployment workflow that does blue-green deploys to our EKS staging cluster on merge to `develop` and canary deploys to production on release tags with automatic rollback if error rates exceed 2%. The PRD should include the CI/CD requirements as a dedicated section so tasks can be generated for pipeline work too. Once the PRD passes validation, hand it off for task breakdown and give me the full task list with datetime estimates.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "fe8af643-505b-4a5d-97fc-dee899b930ae",
+            "name": "prd-generator"
+          },
+          {
+            "rank": 2,
+            "skill_id": "a2d5b605-e8b1-4d6d-80f4-2548308bf266",
+            "name": "PRD Generator for TaskMaster"
+          },
+          {
+            "rank": 3,
+            "skill_id": "029fac9d-7dbf-43a8-aad7-3a907dc664fb",
+            "name": "ring:pre-dev-prd-creation"
+          },
+          {
+            "rank": 4,
+            "skill_id": "324b0338-a477-45f6-a954-9f1bf06a11e0",
+            "name": "ralph-tui-prd"
+          },
+          {
+            "rank": 5,
+            "skill_id": "8084a105-877d-4e91-8751-0a1278d72af0",
+            "name": "bmad-prd"
+          },
+          {
+            "rank": 6,
+            "skill_id": "af457164-6067-467b-8e2c-cb8455032fa0",
+            "name": "create-prd"
+          },
+          {
+            "rank": 7,
+            "skill_id": "174093f3-3389-4fae-bc25-7ecb0c16ab15",
+            "name": "pre-dev-prd-creation"
+          },
+          {
+            "rank": 8,
+            "skill_id": "c4aec837-2bb0-4c88-8a00-bb1a590fb3d5",
+            "name": "prd-management"
+          },
+          {
+            "rank": 9,
+            "skill_id": "4d1ec814-eaa0-403f-a2d6-ff3f32abd05f",
+            "name": "vibe-prd"
+          },
+          {
+            "rank": 10,
+            "skill_id": "b4924433-501f-49cb-a06d-0d6179722f84",
+            "name": "prd-facilitator"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 946
+      },
+      {
+        "branch": "requirements",
+        "query": "Write or update a PRD for dynamic logistics route recalculation with live traffic ingestion, an OSRM engine, a driver app, and a dispatcher dashboard. Define milestone acceptance criteria, validate the PRD, and break it into estimated tasks.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "fe8af643-505b-4a5d-97fc-dee899b930ae",
+            "name": "prd-generator"
+          },
+          {
+            "rank": 2,
+            "skill_id": "a2d5b605-e8b1-4d6d-80f4-2548308bf266",
+            "name": "PRD Generator for TaskMaster"
+          },
+          {
+            "rank": 3,
+            "skill_id": "f17517e5-2552-4d00-9fa6-7c0416cf278f",
+            "name": "prd-maker"
+          },
+          {
+            "rank": 4,
+            "skill_id": "4d1ec814-eaa0-403f-a2d6-ff3f32abd05f",
+            "name": "vibe-prd"
+          },
+          {
+            "rank": 5,
+            "skill_id": "029fac9d-7dbf-43a8-aad7-3a907dc664fb",
+            "name": "ring:pre-dev-prd-creation"
+          },
+          {
+            "rank": 6,
+            "skill_id": "174093f3-3389-4fae-bc25-7ecb0c16ab15",
+            "name": "pre-dev-prd-creation"
+          },
+          {
+            "rank": 7,
+            "skill_id": "8084a105-877d-4e91-8751-0a1278d72af0",
+            "name": "bmad-prd"
+          },
+          {
+            "rank": 8,
+            "skill_id": "af457164-6067-467b-8e2c-cb8455032fa0",
+            "name": "create-prd"
+          },
+          {
+            "rank": 9,
+            "skill_id": "c4aec837-2bb0-4c88-8a00-bb1a590fb3d5",
+            "name": "prd-management"
+          },
+          {
+            "rank": 10,
+            "skill_id": "b4924433-501f-49cb-a06d-0d6179722f84",
+            "name": "prd-facilitator"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 237
+      },
+      {
+        "branch": "pipeline",
+        "query": "Design GitHub Actions for a Rust, React and Flutter monorepo with unit and integration test gates, Trivy PR scans, semantic Docker tags in ECR, blue-green EKS staging deployments, and canary production releases with error-rate rollback.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "e7d355a5-f887-4a7c-a0fe-77aa0062364b",
+            "name": "ci-cd"
+          },
+          {
+            "rank": 2,
+            "skill_id": "54fefeba-4522-4936-9614-bf555702376b",
+            "name": "deployment-automation"
+          },
+          {
+            "rank": 3,
+            "skill_id": "e2dc91c3-6f3e-4347-a5c0-3fd75a4abf3a",
+            "name": "devops-expert"
+          },
+          {
+            "rank": 4,
+            "skill_id": "6b01f18a-8a3b-4366-8ea3-5717be7e6ba3",
+            "name": "deployment-manager"
+          },
+          {
+            "rank": 5,
+            "skill_id": "2a805873-4591-42ac-baa3-f10fbdc7b0cc",
+            "name": "devops-automator"
+          },
+          {
+            "rank": 6,
+            "skill_id": "1b44dd18-ca4b-44c6-909f-8338bbf9088c",
+            "name": "devops-engineer"
+          },
+          {
+            "rank": 7,
+            "skill_id": "921d6884-ef1b-4ba4-9065-931bac74cda9",
+            "name": "github-actions"
+          },
+          {
+            "rank": 8,
+            "skill_id": "892a8d00-930c-4445-b4d4-8767bdd24cb0",
+            "name": "ci-cd-devops"
+          },
+          {
+            "rank": 9,
+            "skill_id": "1d1b1471-b9de-4db1-b755-f98eebd1c920",
+            "name": "ci-cd-reviewer"
+          },
+          {
+            "rank": 10,
+            "skill_id": "049e8a99-98f3-4bd3-b542-0c48dc8efb04",
+            "name": "ci-cd-practices"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 250
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "fe8af643-505b-4a5d-97fc-dee899b930ae",
+        "name": "prd-generator"
+      },
+      {
+        "rank": 2,
+        "skill_id": "a2d5b605-e8b1-4d6d-80f4-2548308bf266",
+        "name": "PRD Generator for TaskMaster"
+      },
+      {
+        "rank": 3,
+        "skill_id": "029fac9d-7dbf-43a8-aad7-3a907dc664fb",
+        "name": "ring:pre-dev-prd-creation"
+      },
+      {
+        "rank": 4,
+        "skill_id": "f17517e5-2552-4d00-9fa6-7c0416cf278f",
+        "name": "prd-maker"
+      },
+      {
+        "rank": 5,
+        "skill_id": "4d1ec814-eaa0-403f-a2d6-ff3f32abd05f",
+        "name": "vibe-prd"
+      },
+      {
+        "rank": 6,
+        "skill_id": "e7d355a5-f887-4a7c-a0fe-77aa0062364b",
+        "name": "ci-cd"
+      },
+      {
+        "rank": 7,
+        "skill_id": "54fefeba-4522-4936-9614-bf555702376b",
+        "name": "deployment-automation"
+      },
+      {
+        "rank": 8,
+        "skill_id": "324b0338-a477-45f6-a954-9f1bf06a11e0",
+        "name": "ralph-tui-prd"
+      },
+      {
+        "rank": 9,
+        "skill_id": "8084a105-877d-4e91-8751-0a1278d72af0",
+        "name": "bmad-prd"
+      },
+      {
+        "rank": 10,
+        "skill_id": "af457164-6067-467b-8e2c-cb8455032fa0",
+        "name": "create-prd"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "e7d355a5-f887-4a7c-a0fe-77aa0062364b",
+        "name": "ci-cd"
+      },
+      {
+        "rank": 2,
+        "skill_id": "a2d5b605-e8b1-4d6d-80f4-2548308bf266",
+        "name": "PRD Generator for TaskMaster"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.6052602440527057,
+      "Recall@10": 1,
+      "Completeness@10": 1,
+      "Precision@10": 0.2,
+      "MAP@10": 0.41666666666666663
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1433
+  }
+}

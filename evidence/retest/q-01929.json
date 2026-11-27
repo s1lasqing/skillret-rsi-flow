@@ -1,0 +1,470 @@
+{
+  "a": {
+    "queryId": "q-01929",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We're launching a marketing push for our indie game studio \"Neon Forge\" and our upcoming Unity puzzle game called \"Chrono Shift.\" I need three things done together: (1) In our Unity project, refactor the `GameSessionManager.cs` script — extract the timer logic into a new `CountdownTimer` class, add a public event `OnTimerExpired`, and wire it up so `GameSessionManager` subscribes to that event instead of polling every frame. (2) Using three of our gameplay screenshot PNGs (I'll attach them), composite promotional ad creatives with overlaid text — the first should say \"Bend Time. Break Rules.\" with our logo in the corner, the second \"Coming Q3 2025\" with a Steam wishlist CTA button, and the third a square format with \"From the creators of Void Circuit\" tagline. (3) Write a set of launch announcement posts — a LinkedIn post targeting game devs and industry folks highlighting our custom ECS-based timer architecture as a technical achievement, a Twitter/X thread (5 tweets) building hype with emoji-heavy casual tone and a call to wishlist, and an Instagram caption to pair with the square creative. Make sure the social copy references the visual style shown in the creatives and that the Unity refactor follows SOLID principles.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "16ebcc86-ff4b-44b2-92bc-2f6dd89cf512",
+            "name": "unity-editor-operations"
+          },
+          {
+            "rank": 2,
+            "skill_id": "3411e1c2-8169-4957-b68b-2f1aae6bd157",
+            "name": "unity-ecs-patterns"
+          },
+          {
+            "rank": 3,
+            "skill_id": "752ca4eb-4de2-4f71-bfb7-00bd309ee454",
+            "name": "Unity Script Validator"
+          },
+          {
+            "rank": 4,
+            "skill_id": "c2e7a533-0843-4824-903a-1cd60c03db86",
+            "name": "unity-game-ugui-design"
+          },
+          {
+            "rank": 5,
+            "skill_id": "b1daca29-4d1c-4e3d-b2ed-961cceef9397",
+            "name": "social-media-generator"
+          },
+          {
+            "rank": 6,
+            "skill_id": "856d8f6f-0060-478f-9474-f0baeb757044",
+            "name": "unity-game-ui-toolkit-design"
+          },
+          {
+            "rank": 7,
+            "skill_id": "c2aa5f38-5e4f-498a-b1c5-c5b15e29924a",
+            "name": "unity-editor-imgui-design"
+          },
+          {
+            "rank": 8,
+            "skill_id": "0bf3bd33-d399-406e-a7c0-5eac071078e0",
+            "name": "unity-scene-management"
+          },
+          {
+            "rank": 9,
+            "skill_id": "eb07e5b5-c18d-4294-8281-4d8389cd83e4",
+            "name": "social-content"
+          },
+          {
+            "rank": 10,
+            "skill_id": "c24cbf2f-d33d-4b81-8f95-62a81cc6e04c",
+            "name": "ckm:banner-design"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 843
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "16ebcc86-ff4b-44b2-92bc-2f6dd89cf512",
+        "name": "unity-editor-operations"
+      },
+      {
+        "rank": 2,
+        "skill_id": "3411e1c2-8169-4957-b68b-2f1aae6bd157",
+        "name": "unity-ecs-patterns"
+      },
+      {
+        "rank": 3,
+        "skill_id": "752ca4eb-4de2-4f71-bfb7-00bd309ee454",
+        "name": "Unity Script Validator"
+      },
+      {
+        "rank": 4,
+        "skill_id": "c2e7a533-0843-4824-903a-1cd60c03db86",
+        "name": "unity-game-ugui-design"
+      },
+      {
+        "rank": 5,
+        "skill_id": "b1daca29-4d1c-4e3d-b2ed-961cceef9397",
+        "name": "social-media-generator"
+      },
+      {
+        "rank": 6,
+        "skill_id": "856d8f6f-0060-478f-9474-f0baeb757044",
+        "name": "unity-game-ui-toolkit-design"
+      },
+      {
+        "rank": 7,
+        "skill_id": "c2aa5f38-5e4f-498a-b1c5-c5b15e29924a",
+        "name": "unity-editor-imgui-design"
+      },
+      {
+        "rank": 8,
+        "skill_id": "0bf3bd33-d399-406e-a7c0-5eac071078e0",
+        "name": "unity-scene-management"
+      },
+      {
+        "rank": 9,
+        "skill_id": "eb07e5b5-c18d-4294-8281-4d8389cd83e4",
+        "name": "social-content"
+      },
+      {
+        "rank": 10,
+        "skill_id": "c24cbf2f-d33d-4b81-8f95-62a81cc6e04c",
+        "name": "ckm:banner-design"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "5f300f09-02b8-425e-aa1a-f336b078938f",
+        "name": "social-media"
+      },
+      {
+        "rank": 2,
+        "skill_id": "60115fe3-5a7a-4a90-b044-8f689512b45d",
+        "name": "unity-csharp-editing"
+      },
+      {
+        "rank": 3,
+        "skill_id": "5f228401-df25-469f-8b6e-e3b0289c819d",
+        "name": "generate-mixed-media"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0,
+      "Recall@10": 0,
+      "Completeness@10": 0,
+      "Precision@10": 0,
+      "MAP@10": 0
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 843
+  },
+  "b": {
+    "queryId": "q-01929",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We're launching a marketing push for our indie game studio \"Neon Forge\" and our upcoming Unity puzzle game called \"Chrono Shift.\" I need three things done together: (1) In our Unity project, refactor the `GameSessionManager.cs` script — extract the timer logic into a new `CountdownTimer` class, add a public event `OnTimerExpired`, and wire it up so `GameSessionManager` subscribes to that event instead of polling every frame. (2) Using three of our gameplay screenshot PNGs (I'll attach them), composite promotional ad creatives with overlaid text — the first should say \"Bend Time. Break Rules.\" with our logo in the corner, the second \"Coming Q3 2025\" with a Steam wishlist CTA button, and the third a square format with \"From the creators of Void Circuit\" tagline. (3) Write a set of launch announcement posts — a LinkedIn post targeting game devs and industry folks highlighting our custom ECS-based timer architecture as a technical achievement, a Twitter/X thread (5 tweets) building hype with emoji-heavy casual tone and a call to wishlist, and an Instagram caption to pair with the square creative. Make sure the social copy references the visual style shown in the creatives and that the Unity refactor follows SOLID principles.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "16ebcc86-ff4b-44b2-92bc-2f6dd89cf512",
+            "name": "unity-editor-operations"
+          },
+          {
+            "rank": 2,
+            "skill_id": "3411e1c2-8169-4957-b68b-2f1aae6bd157",
+            "name": "unity-ecs-patterns"
+          },
+          {
+            "rank": 3,
+            "skill_id": "752ca4eb-4de2-4f71-bfb7-00bd309ee454",
+            "name": "Unity Script Validator"
+          },
+          {
+            "rank": 4,
+            "skill_id": "c2e7a533-0843-4824-903a-1cd60c03db86",
+            "name": "unity-game-ugui-design"
+          },
+          {
+            "rank": 5,
+            "skill_id": "b1daca29-4d1c-4e3d-b2ed-961cceef9397",
+            "name": "social-media-generator"
+          },
+          {
+            "rank": 6,
+            "skill_id": "856d8f6f-0060-478f-9474-f0baeb757044",
+            "name": "unity-game-ui-toolkit-design"
+          },
+          {
+            "rank": 7,
+            "skill_id": "c2aa5f38-5e4f-498a-b1c5-c5b15e29924a",
+            "name": "unity-editor-imgui-design"
+          },
+          {
+            "rank": 8,
+            "skill_id": "0bf3bd33-d399-406e-a7c0-5eac071078e0",
+            "name": "unity-scene-management"
+          },
+          {
+            "rank": 9,
+            "skill_id": "eb07e5b5-c18d-4294-8281-4d8389cd83e4",
+            "name": "social-content"
+          },
+          {
+            "rank": 10,
+            "skill_id": "c24cbf2f-d33d-4b81-8f95-62a81cc6e04c",
+            "name": "ckm:banner-design"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 842
+      },
+      {
+        "branch": "timer",
+        "query": "Extract CountdownTimer from Unity GameSessionManager and publish an OnTimerExpired event to replace polling. Preserve SOLID principles in the puzzle game's timer component.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "fdc1b756-10ec-47e2-8811-d7af7f7cefb7",
+            "name": "SOLID Principles Code Review"
+          },
+          {
+            "rank": 2,
+            "skill_id": "752ca4eb-4de2-4f71-bfb7-00bd309ee454",
+            "name": "Unity Script Validator"
+          },
+          {
+            "rank": 3,
+            "skill_id": "c6217258-5262-4ee0-9f13-f84c0aa4b29d",
+            "name": "solid-drawing-mastery"
+          },
+          {
+            "rank": 4,
+            "skill_id": "00647745-a66d-46d9-a70f-db5f5fba9869",
+            "name": "java-design-principles"
+          },
+          {
+            "rank": 5,
+            "skill_id": "28fcec82-f430-4010-baee-fbb82907bbee",
+            "name": "game-skill-system-expert"
+          },
+          {
+            "rank": 6,
+            "skill_id": "6b32d388-4bdd-488e-af9b-d8f4e6f8f821",
+            "name": "code-quality-standards"
+          },
+          {
+            "rank": 7,
+            "skill_id": "c2e7a533-0843-4824-903a-1cd60c03db86",
+            "name": "unity-game-ugui-design"
+          },
+          {
+            "rank": 8,
+            "skill_id": "a5ee5da5-6a80-4bad-8edd-fc899c12cf41",
+            "name": "project-standards"
+          },
+          {
+            "rank": 9,
+            "skill_id": "b69d4248-3ca9-46ef-ae53-e78f6a3ee6fe",
+            "name": "development-guidelines"
+          },
+          {
+            "rank": 10,
+            "skill_id": "856d8f6f-0060-478f-9474-f0baeb757044",
+            "name": "unity-game-ui-toolkit-design"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 197
+      },
+      {
+        "branch": "creatives",
+        "query": "Composite three game screenshots into promotional creatives with overlaid copy, the studio logo, a Steam wishlist CTA, and a square variant for social channels.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "5f228401-df25-469f-8b6e-e3b0289c819d",
+            "name": "generate-mixed-media"
+          },
+          {
+            "rank": 2,
+            "skill_id": "982bbe87-dda7-44ff-adfb-e4782ba04bb1",
+            "name": "creative-variants"
+          },
+          {
+            "rank": 3,
+            "skill_id": "2e937415-a666-4abb-9177-cb2c99244a18",
+            "name": "bg3-steam-launcher"
+          },
+          {
+            "rank": 4,
+            "skill_id": "ec1c4e8f-0f4b-4a34-b599-20208a2d7ead",
+            "name": "nanobanana-skill"
+          },
+          {
+            "rank": 5,
+            "skill_id": "215c77c9-5465-4882-b943-1f28fc9f1a23",
+            "name": "creative-iteration-playbook"
+          },
+          {
+            "rank": 6,
+            "skill_id": "56465d61-ec4c-4aaf-b67f-5f7b60d43072",
+            "name": "content-variants"
+          },
+          {
+            "rank": 7,
+            "skill_id": "18240e68-4af4-4e74-8f44-17366dfa0c4d",
+            "name": "logo-with-variants"
+          },
+          {
+            "rank": 8,
+            "skill_id": "c24cbf2f-d33d-4b81-8f95-62a81cc6e04c",
+            "name": "ckm:banner-design"
+          },
+          {
+            "rank": 9,
+            "skill_id": "c4af0bbb-930a-4815-9fdd-9f5016bad800",
+            "name": "media-composition"
+          },
+          {
+            "rank": 10,
+            "skill_id": "16da541f-9a06-4d1b-8230-9031fb0c010b",
+            "name": "creative-qa-checklist"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 215
+      },
+      {
+        "branch": "social",
+        "query": "Draft a LinkedIn post on the game's technical architecture, a five-post X launch thread and an Instagram caption. Match the tone of each channel and link the copy to the promotional visuals and Steam wishlist.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "5f300f09-02b8-425e-aa1a-f336b078938f",
+            "name": "social-media"
+          },
+          {
+            "rank": 2,
+            "skill_id": "eb07e5b5-c18d-4294-8281-4d8389cd83e4",
+            "name": "social-content"
+          },
+          {
+            "rank": 3,
+            "skill_id": "fcea85a8-21cc-4ebe-b74b-27d7ebafce7d",
+            "name": "content-writer"
+          },
+          {
+            "rank": 4,
+            "skill_id": "e6c54522-5169-4449-9d44-7e9b0661320c",
+            "name": "game-recap-generator"
+          },
+          {
+            "rank": 5,
+            "skill_id": "31be50eb-c6ee-449a-9c9a-0cda3ed93966",
+            "name": "linkedin-post"
+          },
+          {
+            "rank": 6,
+            "skill_id": "15bae328-bb42-4609-916b-c8b57ba2b081",
+            "name": "blog-to-linkedin"
+          },
+          {
+            "rank": 7,
+            "skill_id": "b1daca29-4d1c-4e3d-b2ed-961cceef9397",
+            "name": "social-media-generator"
+          },
+          {
+            "rank": 8,
+            "skill_id": "2e937415-a666-4abb-9177-cb2c99244a18",
+            "name": "bg3-steam-launcher"
+          },
+          {
+            "rank": 9,
+            "skill_id": "9d29c0eb-8109-41e2-a7d4-75e1476aa293",
+            "name": "writer"
+          },
+          {
+            "rank": 10,
+            "skill_id": "1237a4eb-b195-458d-bf37-be3fb140a1dd",
+            "name": "bmad-architecture-design"
+          }
+        ],
+        "branchCount": 3,
+        "ms": 229
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "16ebcc86-ff4b-44b2-92bc-2f6dd89cf512",
+        "name": "unity-editor-operations"
+      },
+      {
+        "rank": 2,
+        "skill_id": "3411e1c2-8169-4957-b68b-2f1aae6bd157",
+        "name": "unity-ecs-patterns"
+      },
+      {
+        "rank": 3,
+        "skill_id": "752ca4eb-4de2-4f71-bfb7-00bd309ee454",
+        "name": "Unity Script Validator"
+      },
+      {
+        "rank": 4,
+        "skill_id": "fdc1b756-10ec-47e2-8811-d7af7f7cefb7",
+        "name": "SOLID Principles Code Review"
+      },
+      {
+        "rank": 5,
+        "skill_id": "c6217258-5262-4ee0-9f13-f84c0aa4b29d",
+        "name": "solid-drawing-mastery"
+      },
+      {
+        "rank": 6,
+        "skill_id": "5f228401-df25-469f-8b6e-e3b0289c819d",
+        "name": "generate-mixed-media"
+      },
+      {
+        "rank": 7,
+        "skill_id": "982bbe87-dda7-44ff-adfb-e4782ba04bb1",
+        "name": "creative-variants"
+      },
+      {
+        "rank": 8,
+        "skill_id": "5f300f09-02b8-425e-aa1a-f336b078938f",
+        "name": "social-media"
+      },
+      {
+        "rank": 9,
+        "skill_id": "eb07e5b5-c18d-4294-8281-4d8389cd83e4",
+        "name": "social-content"
+      },
+      {
+        "rank": 10,
+        "skill_id": "c2e7a533-0843-4824-903a-1cd60c03db86",
+        "name": "unity-game-ugui-design"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "5f300f09-02b8-425e-aa1a-f336b078938f",
+        "name": "social-media"
+      },
+      {
+        "rank": 2,
+        "skill_id": "60115fe3-5a7a-4a90-b044-8f689512b45d",
+        "name": "unity-csharp-editing"
+      },
+      {
+        "rank": 3,
+        "skill_id": "5f228401-df25-469f-8b6e-e3b0289c819d",
+        "name": "generate-mixed-media"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.3152014104491349,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.13888888888888887
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1483
+  }
+}

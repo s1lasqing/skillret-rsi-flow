@@ -12,11 +12,14 @@ import torch
 from retrieve import ASSETS, DATA, QUERY_PREFIX, Encoder, read_jsonl
 from search_rules import doc_text, load_qrels, partition, query_metrics, rrf
 
-CASES = {
-    case["id"]: case for case in json.loads(
-        (Path(__file__).resolve().parents[1] / "config/retrieval-cases.json").read_text(encoding="utf-8")
-    )
-}
+CONFIG = Path(__file__).resolve().parents[1] / "config"
+CASES = {}
+for filename in ("retrieval-cases.json", "retest-cases.json"):
+    for case in json.loads((CONFIG / filename).read_text(encoding="utf-8")):
+        case_id = case["id"]
+        if case_id in CASES:
+            raise ValueError(f"Duplicate SkillRet case: {case_id}")
+        CASES[case_id] = case
 
 
 class Search:

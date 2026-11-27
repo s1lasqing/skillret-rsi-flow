@@ -1,0 +1,379 @@
+[
+  {
+    "id": "q-03910",
+    "title": "提交前密钥扫描插件与提示文案",
+    "a": {
+      "NDCG@10": 0.3065735963827292,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.16666666666666666
+    },
+    "b": {
+      "NDCG@10": 0.5109559939712153,
+      "Recall@10": 1,
+      "Completeness@10": 1,
+      "Precision@10": 0.2,
+      "MAP@10": 0.30952380952380953
+    },
+    "stageCount": 3,
+    "expected": [
+      {
+        "id": "728b584e-58d2-4b8f-8940-eb119f65e46b",
+        "name": "plugin-creator",
+        "a": 3,
+        "b": 3,
+        "stages": {
+          "plugin": 3,
+          "messages": null
+        }
+      },
+      {
+        "id": "0bcd0648-7ebc-4002-9051-a8d67a215914",
+        "name": "ux-writing",
+        "a": null,
+        "b": 7,
+        "stages": {
+          "plugin": null,
+          "messages": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "q-00498",
+    "title": "跨平台日记应用审查与导航建模",
+    "a": {
+      "NDCG@10": 0.7653606369886217,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.6666666666666666
+    },
+    "b": {
+      "NDCG@10": 0.9674679834891693,
+      "Recall@10": 1,
+      "Completeness@10": 1,
+      "Precision@10": 0.3,
+      "MAP@10": 0.9166666666666666
+    },
+    "stageCount": 4,
+    "expected": [
+      {
+        "id": "c7dfd42c-3528-4641-bf13-3e9dcccb6f83",
+        "name": "review-view",
+        "a": null,
+        "b": 4,
+        "stages": {
+          "review": 1,
+          "guidelines": null,
+          "navigation": null
+        }
+      },
+      {
+        "id": "3cfe4436-d883-4bb4-8084-f26e958ae21d",
+        "name": "world-hopping",
+        "a": 2,
+        "b": 2,
+        "stages": {
+          "review": null,
+          "guidelines": null,
+          "navigation": 1
+        }
+      },
+      {
+        "id": "944b6db2-4f6a-4984-afbe-c31645e2a923",
+        "name": "coding-guidelines-gen",
+        "a": 1,
+        "b": 1,
+        "stages": {
+          "review": null,
+          "guidelines": 1,
+          "navigation": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "q-00095",
+    "title": "Vue 重连缺陷与 TypeScript 类型加固",
+    "a": {
+      "NDCG@10": 0.617319681505689,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.4166666666666667
+    },
+    "b": {
+      "NDCG@10": 0.6049306994552042,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.39999999999999997
+    },
+    "stageCount": 3,
+    "expected": [
+      {
+        "id": "8985c7ba-c234-4606-8c56-7fb0a20d83df",
+        "name": "vue-composables",
+        "a": 1,
+        "b": 1,
+        "stages": {
+          "reconnect": null,
+          "typing": 5
+        }
+      },
+      {
+        "id": "08b6d1fb-4252-4736-86ea-32d6f47b797b",
+        "name": "strict-typescript",
+        "a": null,
+        "b": null,
+        "stages": {
+          "reconnect": null,
+          "typing": 6
+        }
+      },
+      {
+        "id": "3c305f83-f624-427c-8ead-0847cf7a04ee",
+        "name": "issue-parser",
+        "a": 8,
+        "b": 10,
+        "stages": {
+          "reconnect": null,
+          "typing": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "q-00360",
+    "title": "动态路线 PRD 与发布流水线",
+    "a": {
+      "NDCG@10": 0.38685280723454163,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.25
+    },
+    "b": {
+      "NDCG@10": 0.6052602440527057,
+      "Recall@10": 1,
+      "Completeness@10": 1,
+      "Precision@10": 0.2,
+      "MAP@10": 0.41666666666666663
+    },
+    "stageCount": 3,
+    "expected": [
+      {
+        "id": "e7d355a5-f887-4a7c-a0fe-77aa0062364b",
+        "name": "ci-cd",
+        "a": null,
+        "b": 6,
+        "stages": {
+          "requirements": null,
+          "pipeline": 1
+        }
+      },
+      {
+        "id": "a2d5b605-e8b1-4d6d-80f4-2548308bf266",
+        "name": "PRD Generator for TaskMaster",
+        "a": 2,
+        "b": 2,
+        "stages": {
+          "requirements": 2,
+          "pipeline": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "q-00199",
+    "title": "跨服务追踪与事故分析提示词",
+    "a": {
+      "NDCG@10": 0.6131471927654584,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.5
+    },
+    "b": {
+      "NDCG@10": 0.6131471927654584,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.5
+    },
+    "stageCount": 3,
+    "expected": [
+      {
+        "id": "d82539f6-d8b7-488c-9c16-39bf1d495b47",
+        "name": "nexus-prompt-engineer",
+        "a": null,
+        "b": null,
+        "stages": {
+          "tracing": null,
+          "analysis": null
+        }
+      },
+      {
+        "id": "0ba2482e-0036-4052-b1ac-8abd24d8322b",
+        "name": "correlation-tracing",
+        "a": 1,
+        "b": 1,
+        "stages": {
+          "tracing": 1,
+          "analysis": 10
+        }
+      }
+    ]
+  },
+  {
+    "id": "q-02596",
+    "title": "多团队国际化与翻译同步",
+    "a": {
+      "NDCG@10": 0.6131471927654584,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.5
+    },
+    "b": {
+      "NDCG@10": 0.6131471927654584,
+      "Recall@10": 0.5,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.5
+    },
+    "stageCount": 3,
+    "expected": [
+      {
+        "id": "7f282173-6e82-45c7-b54c-00403799a922",
+        "name": "anti-conflict",
+        "a": null,
+        "b": null,
+        "stages": {
+          "namespaces": null,
+          "checks": null
+        }
+      },
+      {
+        "id": "5a42e192-1402-465f-83c8-66aa1e3cbf76",
+        "name": "software-localisation",
+        "a": 1,
+        "b": 1,
+        "stages": {
+          "namespaces": 1,
+          "checks": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "q-01929",
+    "title": "Unity 计时重构与发行素材",
+    "a": {
+      "NDCG@10": 0,
+      "Recall@10": 0,
+      "Completeness@10": 0,
+      "Precision@10": 0,
+      "MAP@10": 0
+    },
+    "b": {
+      "NDCG@10": 0.3152014104491349,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.13888888888888887
+    },
+    "stageCount": 4,
+    "expected": [
+      {
+        "id": "5f300f09-02b8-425e-aa1a-f336b078938f",
+        "name": "social-media",
+        "a": null,
+        "b": 8,
+        "stages": {
+          "timer": null,
+          "creatives": null,
+          "social": 1
+        }
+      },
+      {
+        "id": "60115fe3-5a7a-4a90-b044-8f689512b45d",
+        "name": "unity-csharp-editing",
+        "a": null,
+        "b": null,
+        "stages": {
+          "timer": null,
+          "creatives": null,
+          "social": null
+        }
+      },
+      {
+        "id": "5f228401-df25-469f-8b6e-e3b0289c819d",
+        "name": "generate-mixed-media",
+        "a": null,
+        "b": 6,
+        "stages": {
+          "timer": null,
+          "creatives": 1,
+          "social": null
+        }
+      }
+    ]
+  },
+  {
+    "id": "q-00306",
+    "title": "Go 服务骨架、安全审查与入门指南",
+    "a": {
+      "NDCG@10": 0,
+      "Recall@10": 0,
+      "Completeness@10": 0,
+      "Precision@10": 0,
+      "MAP@10": 0
+    },
+    "b": {
+      "NDCG@10": 0.1480409554829326,
+      "Recall@10": 0.3333333333333333,
+      "Completeness@10": 0,
+      "Precision@10": 0.1,
+      "MAP@10": 0.041666666666666664
+    },
+    "stageCount": 4,
+    "expected": [
+      {
+        "id": "2f335eb7-bc1d-44e3-851b-351aea472c0f",
+        "name": "ln-770-crosscutting-setup",
+        "a": null,
+        "b": null,
+        "stages": {
+          "scaffold": null,
+          "review": null,
+          "onboarding": null
+        }
+      },
+      {
+        "id": "f3634629-fd54-4742-88c9-26df6e3fb269",
+        "name": "detecting-arbitrary-read",
+        "a": null,
+        "b": null,
+        "stages": {
+          "scaffold": null,
+          "review": null,
+          "onboarding": null
+        }
+      },
+      {
+        "id": "e7455ec6-94e5-412a-a1e9-e737822de3b6",
+        "name": "onboarding-helper",
+        "a": null,
+        "b": 8,
+        "stages": {
+          "scaffold": null,
+          "review": null,
+          "onboarding": 1
+        }
+      }
+    ]
+  }
+]

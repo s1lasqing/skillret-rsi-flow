@@ -1,0 +1,412 @@
+{
+  "a": {
+    "queryId": "q-00095",
+    "variant": "A",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We have a GitHub issue (#347) on our internal `vue-dashboard` repo titled \"Race condition in useWebSocket composable causes stale data on reconnect — intermittent TypeError: Cannot read properties of undefined (reading 'status') in production\". The issue includes a full stack trace, reproduction steps mentioning rapid tab switching, and a code snippet of our current `useWebSocket` composable. I need you to parse out the actionable details from that issue, then rewrite the `useWebSocket` composable with proper fixes. The composable should use `shallowRef` for the socket instance, handle cleanup in `onScopeDispose`, and include a `withLoadingState` wrapper around the reconnection logic. For typing, make sure we're using `noUncheckedIndexedAccess`-safe patterns throughout — the message queue is a `Record<string, QueuedMessage[]>` and every indexed access needs to be guarded. Also use type-fest's `SetRequired` and `ReadonlyDeep` where appropriate for the config options type, and add `Simplify` for the return type so IntelliSense stays clean. The composable feeds into a Pinia store (`useNotificationStore`) that should also be refactored with the same strict typing discipline. Include the matching `eslint` rule config for `@typescript-eslint/no-unsafe-member-access` and `no-unnecessary-condition` so these patterns are enforced going forward, plus vitest unit tests for the reconnection edge case described in the issue.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "8985c7ba-c234-4606-8c56-7fb0a20d83df",
+            "name": "vue-composables"
+          },
+          {
+            "rank": 2,
+            "skill_id": "233fe245-7627-4a95-8d50-7b62cc552183",
+            "name": "vue-expert"
+          },
+          {
+            "rank": 3,
+            "skill_id": "670c73d9-5476-4d2b-b1ba-3d6d4f5579b0",
+            "name": "vue-development"
+          },
+          {
+            "rank": 4,
+            "skill_id": "513cc3e7-eccc-487f-a926-6991552c5417",
+            "name": "vue-best-practices"
+          },
+          {
+            "rank": 5,
+            "skill_id": "552f1c17-307c-49e8-932d-caee417f582f",
+            "name": "typescript-strict-config"
+          },
+          {
+            "rank": 6,
+            "skill_id": "7382bc41-af17-4b3e-839e-51b0d2e47ff2",
+            "name": "vue"
+          },
+          {
+            "rank": 7,
+            "skill_id": "87c152c5-c234-4345-b7d8-8e0b82704a63",
+            "name": "reproduce-bug"
+          },
+          {
+            "rank": 8,
+            "skill_id": "3c305f83-f624-427c-8ead-0847cf7a04ee",
+            "name": "issue-parser"
+          },
+          {
+            "rank": 9,
+            "skill_id": "eceaf6c4-0e73-4580-9999-9fa2a959af81",
+            "name": "vscode-extension-debugger"
+          },
+          {
+            "rank": 10,
+            "skill_id": "65b6f4a3-58b8-420e-b9e4-7179c10e0c47",
+            "name": "TypeScript Strict Mode"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 895
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "8985c7ba-c234-4606-8c56-7fb0a20d83df",
+        "name": "vue-composables"
+      },
+      {
+        "rank": 2,
+        "skill_id": "233fe245-7627-4a95-8d50-7b62cc552183",
+        "name": "vue-expert"
+      },
+      {
+        "rank": 3,
+        "skill_id": "670c73d9-5476-4d2b-b1ba-3d6d4f5579b0",
+        "name": "vue-development"
+      },
+      {
+        "rank": 4,
+        "skill_id": "513cc3e7-eccc-487f-a926-6991552c5417",
+        "name": "vue-best-practices"
+      },
+      {
+        "rank": 5,
+        "skill_id": "552f1c17-307c-49e8-932d-caee417f582f",
+        "name": "typescript-strict-config"
+      },
+      {
+        "rank": 6,
+        "skill_id": "7382bc41-af17-4b3e-839e-51b0d2e47ff2",
+        "name": "vue"
+      },
+      {
+        "rank": 7,
+        "skill_id": "87c152c5-c234-4345-b7d8-8e0b82704a63",
+        "name": "reproduce-bug"
+      },
+      {
+        "rank": 8,
+        "skill_id": "3c305f83-f624-427c-8ead-0847cf7a04ee",
+        "name": "issue-parser"
+      },
+      {
+        "rank": 9,
+        "skill_id": "eceaf6c4-0e73-4580-9999-9fa2a959af81",
+        "name": "vscode-extension-debugger"
+      },
+      {
+        "rank": 10,
+        "skill_id": "65b6f4a3-58b8-420e-b9e4-7179c10e0c47",
+        "name": "TypeScript Strict Mode"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "8985c7ba-c234-4606-8c56-7fb0a20d83df",
+        "name": "vue-composables"
+      },
+      {
+        "rank": 2,
+        "skill_id": "08b6d1fb-4252-4736-86ea-32d6f47b797b",
+        "name": "strict-typescript"
+      },
+      {
+        "rank": 3,
+        "skill_id": "3c305f83-f624-427c-8ead-0847cf7a04ee",
+        "name": "issue-parser"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.617319681505689,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.4166666666666667
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 895
+  },
+  "b": {
+    "queryId": "q-00095",
+    "variant": "B",
+    "stages": [
+      {
+        "branch": "whole",
+        "query": "We have a GitHub issue (#347) on our internal `vue-dashboard` repo titled \"Race condition in useWebSocket composable causes stale data on reconnect — intermittent TypeError: Cannot read properties of undefined (reading 'status') in production\". The issue includes a full stack trace, reproduction steps mentioning rapid tab switching, and a code snippet of our current `useWebSocket` composable. I need you to parse out the actionable details from that issue, then rewrite the `useWebSocket` composable with proper fixes. The composable should use `shallowRef` for the socket instance, handle cleanup in `onScopeDispose`, and include a `withLoadingState` wrapper around the reconnection logic. For typing, make sure we're using `noUncheckedIndexedAccess`-safe patterns throughout — the message queue is a `Record<string, QueuedMessage[]>` and every indexed access needs to be guarded. Also use type-fest's `SetRequired` and `ReadonlyDeep` where appropriate for the config options type, and add `Simplify` for the return type so IntelliSense stays clean. The composable feeds into a Pinia store (`useNotificationStore`) that should also be refactored with the same strict typing discipline. Include the matching `eslint` rule config for `@typescript-eslint/no-unsafe-member-access` and `no-unnecessary-condition` so these patterns are enforced going forward, plus vitest unit tests for the reconnection edge case described in the issue.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "8985c7ba-c234-4606-8c56-7fb0a20d83df",
+            "name": "vue-composables"
+          },
+          {
+            "rank": 2,
+            "skill_id": "233fe245-7627-4a95-8d50-7b62cc552183",
+            "name": "vue-expert"
+          },
+          {
+            "rank": 3,
+            "skill_id": "670c73d9-5476-4d2b-b1ba-3d6d4f5579b0",
+            "name": "vue-development"
+          },
+          {
+            "rank": 4,
+            "skill_id": "513cc3e7-eccc-487f-a926-6991552c5417",
+            "name": "vue-best-practices"
+          },
+          {
+            "rank": 5,
+            "skill_id": "552f1c17-307c-49e8-932d-caee417f582f",
+            "name": "typescript-strict-config"
+          },
+          {
+            "rank": 6,
+            "skill_id": "7382bc41-af17-4b3e-839e-51b0d2e47ff2",
+            "name": "vue"
+          },
+          {
+            "rank": 7,
+            "skill_id": "87c152c5-c234-4345-b7d8-8e0b82704a63",
+            "name": "reproduce-bug"
+          },
+          {
+            "rank": 8,
+            "skill_id": "3c305f83-f624-427c-8ead-0847cf7a04ee",
+            "name": "issue-parser"
+          },
+          {
+            "rank": 9,
+            "skill_id": "eceaf6c4-0e73-4580-9999-9fa2a959af81",
+            "name": "vscode-extension-debugger"
+          },
+          {
+            "rank": 10,
+            "skill_id": "65b6f4a3-58b8-420e-b9e4-7179c10e0c47",
+            "name": "TypeScript Strict Mode"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 896
+      },
+      {
+        "branch": "reconnect",
+        "query": "Extract reproduction steps for a Vue useWebSocket reconnect race during rapid tab switching. Refactor the socket to shallowRef, clean it up with onScopeDispose, wrap reconnection in withLoadingState, and cover the edge case with Vitest.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "c357c105-8a08-4275-b9cc-87a30492aa4a",
+            "name": "testing-patterns-vitest"
+          },
+          {
+            "rank": 2,
+            "skill_id": "3347b7a7-cc8e-410d-8824-618f3c76fd56",
+            "name": "writing-test-using-vitest"
+          },
+          {
+            "rank": 3,
+            "skill_id": "8eb1eb30-b7cb-4d14-9fdf-7d22466b5774",
+            "name": "migrating-to-vitest-4"
+          },
+          {
+            "rank": 4,
+            "skill_id": "8579ceed-b4b0-4856-8f84-0d72022c3833",
+            "name": "vitest-testing"
+          },
+          {
+            "rank": 5,
+            "skill_id": "d388f6b7-213d-4123-b36b-8783c2cdb661",
+            "name": "typescript-testing"
+          },
+          {
+            "rank": 6,
+            "skill_id": "6dfc3b1d-d1c6-4d37-bf64-2fa3570607b3",
+            "name": "front-end-testing"
+          },
+          {
+            "rank": 7,
+            "skill_id": "eceaf6c4-0e73-4580-9999-9fa2a959af81",
+            "name": "vscode-extension-debugger"
+          },
+          {
+            "rank": 8,
+            "skill_id": "3bb6add7-4900-42b4-8393-ab128e817e41",
+            "name": "testing-patterns"
+          },
+          {
+            "rank": 9,
+            "skill_id": "7edf022f-1243-4a9c-bd1d-a741a29c535e",
+            "name": "vitest-3-features"
+          },
+          {
+            "rank": 10,
+            "skill_id": "ea10cf5a-8b00-46fd-8a8f-875f7e3fff09",
+            "name": "vitest-targeted-testing"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 232
+      },
+      {
+        "branch": "typing",
+        "query": "Enforce noUncheckedIndexedAccess across a Vue composable and Pinia notification store. Guard indexed message queues, use type-fest SetRequired, ReadonlyDeep and Simplify, and configure ESLint rules for unsafe member access and unnecessary conditions.",
+        "skills": [
+          {
+            "rank": 1,
+            "skill_id": "670c73d9-5476-4d2b-b1ba-3d6d4f5579b0",
+            "name": "vue-development"
+          },
+          {
+            "rank": 2,
+            "skill_id": "233fe245-7627-4a95-8d50-7b62cc552183",
+            "name": "vue-expert"
+          },
+          {
+            "rank": 3,
+            "skill_id": "513cc3e7-eccc-487f-a926-6991552c5417",
+            "name": "vue-best-practices"
+          },
+          {
+            "rank": 4,
+            "skill_id": "7382bc41-af17-4b3e-839e-51b0d2e47ff2",
+            "name": "vue"
+          },
+          {
+            "rank": 5,
+            "skill_id": "8985c7ba-c234-4606-8c56-7fb0a20d83df",
+            "name": "vue-composables"
+          },
+          {
+            "rank": 6,
+            "skill_id": "08b6d1fb-4252-4736-86ea-32d6f47b797b",
+            "name": "strict-typescript"
+          },
+          {
+            "rank": 7,
+            "skill_id": "552f1c17-307c-49e8-932d-caee417f582f",
+            "name": "typescript-strict-config"
+          },
+          {
+            "rank": 8,
+            "skill_id": "92999ebb-2e86-4cf7-91d0-5de50a1d7ab4",
+            "name": "cui-javascript-linting"
+          },
+          {
+            "rank": 9,
+            "skill_id": "287388d4-eade-4435-8a83-6b27ce57ac1f",
+            "name": "vue-pinia-best-practices"
+          },
+          {
+            "rank": 10,
+            "skill_id": "85a85e6e-7453-44f5-a7a9-cf8b91e1af2b",
+            "name": "eslint-detector"
+          }
+        ],
+        "branchCount": 2,
+        "ms": 228
+      }
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "skill_id": "8985c7ba-c234-4606-8c56-7fb0a20d83df",
+        "name": "vue-composables"
+      },
+      {
+        "rank": 2,
+        "skill_id": "233fe245-7627-4a95-8d50-7b62cc552183",
+        "name": "vue-expert"
+      },
+      {
+        "rank": 3,
+        "skill_id": "670c73d9-5476-4d2b-b1ba-3d6d4f5579b0",
+        "name": "vue-development"
+      },
+      {
+        "rank": 4,
+        "skill_id": "c357c105-8a08-4275-b9cc-87a30492aa4a",
+        "name": "testing-patterns-vitest"
+      },
+      {
+        "rank": 5,
+        "skill_id": "3347b7a7-cc8e-410d-8824-618f3c76fd56",
+        "name": "writing-test-using-vitest"
+      },
+      {
+        "rank": 6,
+        "skill_id": "513cc3e7-eccc-487f-a926-6991552c5417",
+        "name": "vue-best-practices"
+      },
+      {
+        "rank": 7,
+        "skill_id": "7382bc41-af17-4b3e-839e-51b0d2e47ff2",
+        "name": "vue"
+      },
+      {
+        "rank": 8,
+        "skill_id": "552f1c17-307c-49e8-932d-caee417f582f",
+        "name": "typescript-strict-config"
+      },
+      {
+        "rank": 9,
+        "skill_id": "87c152c5-c234-4345-b7d8-8e0b82704a63",
+        "name": "reproduce-bug"
+      },
+      {
+        "rank": 10,
+        "skill_id": "3c305f83-f624-427c-8ead-0847cf7a04ee",
+        "name": "issue-parser"
+      }
+    ],
+    "expected": [
+      {
+        "rank": 1,
+        "skill_id": "8985c7ba-c234-4606-8c56-7fb0a20d83df",
+        "name": "vue-composables"
+      },
+      {
+        "rank": 2,
+        "skill_id": "08b6d1fb-4252-4736-86ea-32d6f47b797b",
+        "name": "strict-typescript"
+      },
+      {
+        "rank": 3,
+        "skill_id": "3c305f83-f624-427c-8ead-0847cf7a04ee",
+        "name": "issue-parser"
+      }
+    ],
+    "metrics": {
+      "NDCG@10": 0.6049306994552042,
+      "Recall@10": 0.6666666666666666,
+      "Completeness@10": 0,
+      "Precision@10": 0.2,
+      "MAP@10": 0.39999999999999997
+    },
+    "candidateCount": 6006,
+    "shardSizes": [
+      1964,
+      2032,
+      2010
+    ],
+    "ms": 1356
+  }
+}
