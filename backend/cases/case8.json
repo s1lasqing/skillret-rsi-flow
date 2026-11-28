@@ -1,0 +1,21 @@
+{
+  "id": "q-01921",
+  "title": "开发者门户三项需求",
+  "branches": [
+    {
+      "id": "interface",
+      "label": "设计开发者门户",
+      "query": "Design a production-grade dashboard UI with sidebar, top bar, environment cards, status badges and feature-flag search and filters. Include modern spacing, type hierarchy and dark mode."
+    },
+    {
+      "id": "prd",
+      "label": "编制环境功能 PRD",
+      "query": "Draft an ephemeral environments PRD for self-service provisioning, TTL teardown, cost tracking and namespace isolation. Include acceptance criteria, constraints and dependencies for TaskMaster."
+    },
+    {
+      "id": "workflow",
+      "label": "制定 Git 约定",
+      "query": "Define Git workflow guardrails with Husky conventional-commit checks, branch naming, a pull request template with screenshots and reviewer checklist, and a documented emergency hotfix procedure."
+    }
+  ]
+}

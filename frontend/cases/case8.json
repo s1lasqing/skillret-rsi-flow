@@ -1,0 +1,163 @@
+{
+  "case": {
+    "id": "q-01921",
+    "title": "开发者门户三项需求",
+    "branches": [
+      {
+        "id": "interface",
+        "label": "设计开发者门户"
+      },
+      {
+        "id": "prd",
+        "label": "编制环境功能 PRD"
+      },
+      {
+        "id": "workflow",
+        "label": "制定 Git 约定"
+      }
+    ]
+  },
+  "graph": {
+    "A": {
+      "nodes": [
+        {
+          "id": "INPUT",
+          "name": "原题 q-01921",
+          "color": "#337a76",
+          "column": 0.5,
+          "row": 0
+        },
+        {
+          "id": "SEARCH_WHOLE",
+          "name": "整题融合检索",
+          "color": "#416ca8",
+          "column": 0.5,
+          "row": 1
+        },
+        {
+          "id": "SEARCH_SCORE",
+          "name": "合并排名及评测",
+          "color": "#337a54",
+          "column": 0.5,
+          "row": 2
+        }
+      ],
+      "edges": [
+        {
+          "from": "INPUT",
+          "to": "SEARCH_WHOLE",
+          "label": "原题"
+        },
+        {
+          "from": "SEARCH_WHOLE",
+          "to": "SEARCH_SCORE",
+          "label": "整题候选"
+        }
+      ]
+    },
+    "B": {
+      "nodes": [
+        {
+          "id": "INPUT",
+          "name": "原题 q-01921",
+          "color": "#337a76",
+          "column": 0.5,
+          "row": 0
+        },
+        {
+          "id": "SEARCH_WHOLE",
+          "name": "整题融合检索",
+          "color": "#416ca8",
+          "column": 0,
+          "row": 1
+        },
+        {
+          "id": "interface",
+          "name": "设计开发者门户",
+          "color": "#8167a0",
+          "column": 0.3333333333333333,
+          "row": 1
+        },
+        {
+          "id": "prd",
+          "name": "编制环境功能 PRD",
+          "color": "#9d6d2c",
+          "column": 0.6666666666666666,
+          "row": 1
+        },
+        {
+          "id": "workflow",
+          "name": "制定 Git 约定",
+          "color": "#337b91",
+          "column": 1,
+          "row": 1
+        },
+        {
+          "id": "SEARCH_SCORE",
+          "name": "合并排名及评测",
+          "color": "#337a54",
+          "column": 0.5,
+          "row": 2
+        }
+      ],
+      "edges": [
+        {
+          "from": "INPUT",
+          "to": "SEARCH_WHOLE",
+          "label": "原题"
+        },
+        {
+          "from": "INPUT",
+          "to": "interface",
+          "label": "需求 1"
+        },
+        {
+          "from": "INPUT",
+          "to": "prd",
+          "label": "需求 2"
+        },
+        {
+          "from": "INPUT",
+          "to": "workflow",
+          "label": "需求 3"
+        },
+        {
+          "from": "SEARCH_WHOLE",
+          "to": "SEARCH_SCORE",
+          "label": "整题候选"
+        },
+        {
+          "from": "interface",
+          "to": "SEARCH_SCORE",
+          "label": "候选 1"
+        },
+        {
+          "from": "prd",
+          "to": "SEARCH_SCORE",
+          "label": "候选 2"
+        },
+        {
+          "from": "workflow",
+          "to": "SEARCH_SCORE",
+          "label": "候选 3"
+        }
+      ]
+    }
+  },
+  "requests": {
+    "A": {
+      "flowId": "@com.horsecoder.common.whuTalent.skillTesting.core/FLOW_SKILLRET_RETRIEVAL",
+      "params": {
+        "queryId": "q-01921",
+        "variant": "A"
+      }
+    },
+    "B": {
+      "flowId": "@com.horsecoder.common.whuTalent.skillTesting.core/FLOW_SKILLRET_RETRIEVAL",
+      "params": {
+        "queryId": "q-01921",
+        "variant": "B"
+      }
+    }
+  }
+}

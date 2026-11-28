@@ -1,0 +1,21 @@
+{
+  "id": "q-01364",
+  "title": "事故分级与响应式规格",
+  "branches": [
+    {
+      "id": "spec",
+      "label": "编制实施规格",
+      "query": "Plan spec-first implementation of a guided incident severity wizard with a review checkpoint, testable acceptance criteria, incremental implementation stages and atomic changes."
+    },
+    {
+      "id": "severity",
+      "label": "定义事故分级",
+      "query": "Define SEV1 through SEV5 using downtime, data loss, blast radius and business impact. Specify SLAs, escalation chains, communications and criteria to raise or lower severity."
+    },
+    {
+      "id": "responsive",
+      "label": "设计跨设备布局",
+      "query": "Design responsive wizard and incident cards for phones, tablets and war-room TVs. Use breakpoints, container queries, fluid type and accessible mobile touch targets."
+    }
+  ]
+}

@@ -2,13 +2,13 @@
 
 本项目在 rsi-skill-platform 上对同一批十道 SkillRet 题运行 A/B 检索。A 用整题检索，B 保留整题检索，并为人工拆出的 2–3 项需求分别补查。两组使用同一测试语料、索引和评分口径。
 
-进阶档另选 8 道 SkillRet 官方测试题，沿用同一流程和检索参数进行复试。召回提升 5 题，完全修复 3 题，平均 Recall@10 从 41.67% 到 70.83%。两批分别汇报。[八题复试总览](pages/retest.html) · [进阶档复试记录](docs/进阶档-八题复试.md) · [挑战档 LLM 编排设计](docs/挑战档-LLM自主编排设计.md)
+另选 8 道 SkillRet 官方测试题，沿用同一流程和检索参数复试。召回提升 5 题，完全修复 3 题，平均 Recall@10 从 41.67% 到 70.83%。 [八题复试总览](pages/retest.html) · [复试记录](docs/%E8%BF%9B%E9%98%B6%E6%A1%A3-%E5%85%AB%E9%A2%98%E5%A4%8D%E8%AF%95.md) · [LLM 编排设计](docs/%E6%8C%91%E6%88%98%E6%A1%A3-LLM%E8%87%AA%E4%B8%BB%E7%BC%96%E6%8E%92%E8%AE%BE%E8%AE%A1.md)
 
-## 提交材料
+## 案例与实验记录
 
-| 要求 | 查看入口 |
+| 内容 | 查看入口 |
 | --- | --- |
-| 成果链接（代码与报告） | [仓库](https://github.com/s1lasqing/skillret-rsi-flow) · [进阶档复试报告](docs/进阶档-八题复试.md) · [挑战档设计说明](docs/挑战档-LLM自主编排设计.md) |
+| 代码与报告 | [仓库](https://github.com/s1lasqing/skillret-rsi-flow) · [八题复试报告](docs/%E8%BF%9B%E9%98%B6%E6%A1%A3-%E5%85%AB%E9%A2%98%E5%A4%8D%E8%AF%95.md) · [LLM 编排设计](docs/%E6%8C%91%E6%88%98%E6%A1%A3-LLM%E8%87%AA%E4%B8%BB%E7%BC%96%E6%8E%92%E8%AE%BE%E8%AE%A1.md) |
 | 问题清单 | 下方列出 18 道题。点题号可查看原始输入、官方标注技能和检索分支。 |
 | 修复前后对照 | [原十题](pages/index.html) · [复试八题](pages/retest.html)。每题保留 A/B 最终排名、五项指标、平台截图和原始返回。 |
 | 失败项 | 逐题原因见下表，汇总见[失败项与原因](#失败项与原因)。 |
@@ -18,7 +18,7 @@
 
 A 使用整题检索，B 使用同一整题加人工配置的需求分支。表中的命中指官方标注技能进入最终 Top 10。期望结果为该题全部标注技能进入 Top 10。按此口径，原组 **2/10**、复试 **3/8** 完全修复，合计 **5/18**。
 
-| 批次 | 题号和任务 | A → B 命中 | B 的结果或仍存在的问题 |
+| 批次 | 题号与查询主题 | A → B 命中 | B 的结果或仍存在的问题 |
 | --- | --- | --- | --- |
 | 原十题 | [q-02592 Ruby 代码与工程报告](pages/q-02592.html) | 1/2 → 1/2 | 代码结构技能未进入节点候选前十。 |
 | 原十题 | [q-00821 旅行应用引导设计](pages/q-00821.html) | 1/2 → 1/2 | 代码查找技能未进入节点候选前十。 |
@@ -45,10 +45,27 @@ A 使用整题检索，B 使用同一整题加人工配置的需求分支。表�
 - **候选出现但合并未保留。** `q-01769` 的经验沉淀技能排在分支第 5，`q-00095` 的类型技能排在分支第 6。两个技能都超出固定的分支追加范围。
 - **已命中的技能被挤出或后移。** `q-01901` 和 `q-00095` 的召回持平，NDCG 下降。固定合并规则贯穿两批实验，失败和退化保留在结果中，供后续单独验证排序调整。
 
+### 十题独立配置
+
+[前端配置](frontend/cases/)记录各题 A/B 画布的节点、连线和实际执行请求体。网页运行时通过 `/skillret-runtime/cases` 读取配置并生成画布，导出的 JSON 可用于核对。[后端配置](backend/cases/)记录每题的需求分支和检索文本，与 `config/retrieval-cases.json` 中的对应条目一致。调整后端单题配置时，将对应条目改入汇总配置，再重启 Python 检索服务。各题共用同一份 Java 流程定义。结果原因见上方的问题清单。
+
+| 编号 | SkillRet 题号 | 前端配置 | 后端配置 | A/B 实跑 |
+| --- | --- | --- | --- | --- |
+| 1 | `q-02592` | [JSON](frontend/cases/case1.json) | [JSON](backend/cases/case1.json) | [结果](evidence/q-02592.json) |
+| 2 | `q-00821` | [JSON](frontend/cases/case2.json) | [JSON](backend/cases/case2.json) | [结果](evidence/q-00821.json) |
+| 3 | `q-03697` | [JSON](frontend/cases/case3.json) | [JSON](backend/cases/case3.json) | [结果](evidence/q-03697.json) |
+| 4 | `q-02870` | [JSON](frontend/cases/case4.json) | [JSON](backend/cases/case4.json) | [结果](evidence/q-02870.json) |
+| 5 | `q-01769` | [JSON](frontend/cases/case5.json) | [JSON](backend/cases/case5.json) | [结果](evidence/q-01769.json) |
+| 6 | `q-01901` | [JSON](frontend/cases/case6.json) | [JSON](backend/cases/case6.json) | [结果](evidence/q-01901.json) |
+| 7 | `q-01364` | [JSON](frontend/cases/case7.json) | [JSON](backend/cases/case7.json) | [结果](evidence/q-01364.json) |
+| 8 | `q-01921` | [JSON](frontend/cases/case8.json) | [JSON](backend/cases/case8.json) | [结果](evidence/q-01921.json) |
+| 9 | `q-00137` | [JSON](frontend/cases/case9.json) | [JSON](backend/cases/case9.json) | [结果](evidence/q-00137.json) |
+| 10 | `q-00463` | [JSON](frontend/cases/case10.json) | [JSON](backend/cases/case10.json) | [结果](evidence/q-00463.json) |
+
 ### AI 使用与核实
 
 - **开发和实验辅助。** 使用 Codex 协助整理、实现和排查运行流程，拟定部分需求分支，执行复试，整理截图、失败归因和报告。这里的「人工编排」指实验运行前配置分支并保存到 JSON。分支拟写有 AI 辅助，运行中由固定流程读取配置。
-- **运行时模型。** 本地 SkillRet-Embedding-0.6B 负责向量编码。搜索结果来自 RSI Flow 实际调用的检索服务，五项指标由程序根据最终排名和官方标注计算。挑战档的 LLM 自动编排是下一阶段设计。
+- **运行时模型。** 本地 SkillRet-Embedding-0.6B 负责向量编码。搜索结果来自 RSI Flow 实际调用的检索服务，五项指标由程序根据最终排名和官方标注计算。LLM 自动编排目前处于设计阶段。
 - **数据与评分核实。** 根据题号对照固定版本的官方 `queries/test.jsonl` 和 `qrels/test.jsonl`，核对原题及标注技能 ID。检查 A 和 B 的整题节点使用同一原题且返回相同整题排名，再根据 A/B 实际 Top 10 与标注的交集复算五项指标。两批 JSON 保留了逐节点候选，可追到漏召回或合并丢失发生在哪一层。[原十题原始记录](evidence/) · [复试八题原始记录](evidence/retest/)
 - **平台复核。** 在画布上选择 `q-01364`，重新点击「运行 A/B」，核对命中从 2/3 到 3/3，规格技能进入第 5。也可复跑 `q-00095` 核对失败案例，类型技能在分支第 6，最终前十仍缺失，问题解析技能从第 8 移到第 10。[主实验复核样例](pages/q-01364.html) · [复试失败样例](pages/q-00095.html)
 
@@ -95,7 +112,7 @@ A 使用整题检索，B 使用同一整题加人工配置的需求分支。表�
 | [rsi-skill-platform](https://github.com/ymxiong/rsi-skill-platform) | `ff97757481f70293807f81cec78df9eea25b3119` |
 | [rsi-flow-visual](https://github.com/ymxiong/rsi-flow-visual) | `43b8f53a7c77cbc6ea5f655820dfbe9336cb4452` |
 
-Java 流程引擎通过 Maven 使用 `cc.eamon.open:flow-spring-boot-starter:0.4.14`。从零准备环境时，还需通过课程渠道取得其依赖及课程后端所需的 Maven 缓存。下方离线构建在已有课程依赖的环境中验证过。先在包的根目录执行以下命令，将源码和开发配置应用到刚准备的上游工作目录：
+Java 流程引擎通过 Maven 使用 `cc.eamon.open:flow-spring-boot-starter:0.4.14`。首次配置需要通过可访问的 Maven 私服解析 RSI 依赖，或导入已准备的依赖缓存。下方离线构建在依赖已缓存的环境中验证过。在仓库根目录执行以下命令，将源码和开发配置应用到上游工作目录。
 
 ```powershell
 $package = (Get-Location).Path
@@ -119,7 +136,7 @@ $env:MKL_NUM_THREADS = '4'
 & $python -u retrieval/retrieval_demo.py
 ```
 
-若本机用 uv 管理 Python，可用 `uv venv --seed --python 3.12 .venv` 创建环境。首次需下载约 1.2 GB 模型权重并为 6,006 条技能编码。使用支持 CUDA 的 PyTorch 时，可用 `--device cuda --batch-size 24`，与留存索引采用相同的 GPU 编码方式。CPU 也可重建，数值精度和批大小可能使个别名次不同。若已有本课程实验的 `skillret-cuda-full-1024.npz`，可复制到 `local-assets/indexes/skillret-full-1024.npz` 并跳过建索引命令。产物目录默认为 `local-assets/`，可用 `SKILLRET_ASSETS` 指向另一个同结构目录。服务打印 `Search ready on localhost:18940` 后可查询。
+若本机用 uv 管理 Python，可用 `uv venv --seed --python 3.12 .venv` 创建环境。首次需下载约 1.2 GB 模型权重并为 6,006 条技能编码。使用支持 CUDA 的 PyTorch 时，可用 `--device cuda --batch-size 24`，与留存索引采用相同的 GPU 编码方式。CPU 也可重建，数值精度和批大小可能使个别名次不同。若已有原始索引 `skillret-cuda-full-1024.npz`，可复制到 `local-assets/indexes/skillret-full-1024.npz` 并跳过建索引命令。产物目录默认为 `local-assets/`，可用 `SKILLRET_ASSETS` 指向另一个同结构目录。服务打印 `Search ready on localhost:18940` 后可查询。
 
 ### 终端二 · 打包并启动 RSI Java 后端
 
@@ -159,4 +176,4 @@ pnpm dev --hostname 127.0.0.1 --port 3400
 - [SkillRet-Embedding-0.6B 权重](https://huggingface.co/anonymous-ed-benchmark/SKILLRET-Embedding-0.6B/tree/408aa6e2c1db2f89c791000000c70843154ed48b)，固定修订 `408aa6e2c1db2f89c791000000c70843154ed48b`。
 - 截图和 JSON 来自原十题及复试八题的 A/B 平台运行。可用 `python scripts/build-evidence.py` 从两批记录重新生成静态网页。
 
-交付验收在独立的上游源码目录进行。后端 Maven 打包成功，前端从画布重跑十题 A/B，各节点排名、最终排名和指标与留存证据一致。复跑使用已有模型权重、向量索引和依赖缓存。
+复现验证在独立的上游源码目录进行。后端 Maven 打包成功，前端从画布重跑十题 A/B，各节点排名、最终排名和指标与留存记录一致。复跑使用已有模型权重、向量索引和依赖缓存。

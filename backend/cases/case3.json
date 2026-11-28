@@ -1,0 +1,16 @@
+{
+  "id": "q-03697",
+  "title": "容器部署研究证据综述",
+  "branches": [
+    {
+      "id": "synthesis",
+      "label": "整理证据矩阵",
+      "query": "Synthesize 23 primary studies of CI/CD container deployment strategies in a Markdown evidence matrix with study ID, tools, strategies, outcomes, bias and findings. Summarize cross-study agreements and gaps."
+    },
+    {
+      "id": "pipeline",
+      "label": "接入验证工作流",
+      "query": "Extend GitHub Actions for pull requests that change docs/synthesis_matrix.md. Add dependent jobs for Python checks of required fields and duplicate IDs, Docker generation of sortable HTML, and upload a review artifact and summary."
+    }
+  ]
+}

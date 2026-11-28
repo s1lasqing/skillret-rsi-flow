@@ -1,0 +1,16 @@
+{
+  "id": "q-02870",
+  "title": "Fountain 剧本页数与 CI",
+  "branches": [
+    {
+      "id": "estimation",
+      "label": "估算页数时长",
+      "query": "Parse Fountain screenplay scenes, separate dialogue and action, estimate formatted page count and adjusted running time against a 110-minute feature target. Identify acts outside the target."
+    },
+    {
+      "id": "workflow",
+      "label": "编排自动检查",
+      "query": "Create a GitHub Actions YAML workflow and Python entry point for a Fountain screenplay repository. Trigger on main pushes, report page count and runtime drift, and open a length-warning issue when the deviation exceeds 15 minutes."
+    }
+  ]
+}

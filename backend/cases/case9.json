@@ -1,0 +1,21 @@
+{
+  "id": "q-00137",
+  "title": "终端式工具市场",
+  "branches": [
+    {
+      "id": "animation",
+      "label": "设计 ASCII 开场",
+      "query": "Create an animated CRT-style ASCII terminal splash banner that assembles a logo character by character before revealing the CLI tools marketplace."
+    },
+    {
+      "id": "routing",
+      "label": "规划 Next.js 内容呈现",
+      "query": "Plan transitions from an animated splash to streamed Next.js App Router server components. Use Suspense boundaries and compare intercepted and parallel routes for tool detail modals."
+    },
+    {
+      "id": "tools",
+      "label": "查找 MCP 服务工具",
+      "query": "Discover available MCP tools for Jira review tickets, Slack maintainer notifications, and Google Docs changelogs. Map the tools to the submission workflow."
+    }
+  ]
+}

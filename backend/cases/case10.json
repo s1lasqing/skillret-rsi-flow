@@ -1,0 +1,21 @@
+{
+  "id": "q-00463",
+  "title": "状态组件与环境交付",
+  "branches": [
+    {
+      "id": "component",
+      "label": "制作状态组件",
+      "query": "Define a React StatusBadge with Tailwind CSS v4 and CVA for appointment statuses, CSS variable color tokens, three size variants, and optional pulsing."
+    },
+    {
+      "id": "configuration",
+      "label": "分发环境配置",
+      "query": "Design Kubernetes configuration across local, staging, UAT and production. Use External Secrets Operator for AWS Secrets Manager, ConfigMaps for non-sensitive settings, and a rotation procedure."
+    },
+    {
+      "id": "validation",
+      "label": "策划系统验收",
+      "query": "Trace component rendering and configuration behavior to REQ-Portal-2024-v3. Plan system tests for variants and config injection, UAT for three stakeholder groups, and a defect traceability matrix."
+    }
+  ]
+}

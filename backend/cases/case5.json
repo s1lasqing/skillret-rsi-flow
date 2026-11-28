@@ -1,0 +1,21 @@
+{
+  "id": "q-01769",
+  "title": "沿海传感网络运维材料",
+  "branches": [
+    {
+      "id": "health",
+      "label": "网络健康报告",
+      "query": "Report health and performance for a 14-station coastal sensor network. Compare LoRaWAN loss, satellite latency and jitter, fiber utilization, and capacity for expansion to 22 stations."
+    },
+    {
+      "id": "documentation",
+      "label": "审查更新运维文档",
+      "query": "Audit runbooks and architecture documents against current network topology. Capture cellular-to-LoRaWAN migrations, new VLAN segmentation, and storm failover procedures in updated documentation."
+    },
+    {
+      "id": "lessons",
+      "label": "提炼可复用经验",
+      "query": "Record a reusable operational learning pattern from storm alerting. Explain the actual 40% loss paging threshold, the desired 15% threshold, threshold tuning and transferable best practices."
+    }
+  ]
+}

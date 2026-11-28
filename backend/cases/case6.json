@@ -1,0 +1,21 @@
+{
+  "id": "q-01901",
+  "title": "开户向导规格与交互",
+  "branches": [
+    {
+      "id": "spec",
+      "label": "核验向导规格",
+      "query": "Validate specs/onboarding-flow.superspec.yaml for required structure, completeness, edge cases, consistent state transitions, and testable acceptance criteria for identity, funding and preferences."
+    },
+    {
+      "id": "interactions",
+      "label": "设计向导交互",
+      "query": "Specify multi-step onboarding transitions, inclusive focus and hover states, error and success feedback, skeleton loading during async identity verification, and final completion interaction."
+    },
+    {
+      "id": "commit",
+      "label": "语义提交整组变更",
+      "query": "Stage the storefront onboarding specification corrections and onboarding-interactions documentation together, then prepare one semantic commit message for the changeset."
+    }
+  ]
+}

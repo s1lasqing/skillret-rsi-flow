@@ -1,0 +1,16 @@
+{
+  "id": "q-02592",
+  "title": "Ruby 代码结构与工程报告",
+  "branches": [
+    {
+      "id": "structure",
+      "label": "代码结构提取",
+      "query": "Analyze a Ruby on Rails codebase by walking app/services, app/controllers and lib. Extract the full class and module hierarchy, namespace and inheritance relationships, and public method signatures by parsing Ruby source files. Preserve filenames, method parameters, and counts per directory."
+    },
+    {
+      "id": "report",
+      "label": "工程报告组织",
+      "query": "Produce a standalone HTML engineering report from a Ruby code analysis. Include directory summary tables of file, class and method counts, a bar chart, grouped API signatures, and a short review highlighting unusually large classes."
+    }
+  ]
+}

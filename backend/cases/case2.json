@@ -1,0 +1,16 @@
+{
+  "id": "q-00821",
+  "title": "TripCraft 引导流程重设计",
+  "branches": [
+    {
+      "id": "repository",
+      "label": "查找引导代码",
+      "query": "Locate existing React and TypeScript onboarding step components and A/B test configuration under src/onboarding, and usability tests and user research in docs/research. Return relevant files and the current flow."
+    },
+    {
+      "id": "prd",
+      "label": "编制引导 PRD",
+      "query": "Design an onboarding PRD for a travel app with 11 screens and 68% drop-off by screen 5. Apply Hick's Law, progressive disclosure, RICE, Kano, user stories and an after-implementation usability checklist."
+    }
+  ]
+}
